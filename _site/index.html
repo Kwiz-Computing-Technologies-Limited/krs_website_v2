@@ -58,6 +58,16 @@ ul.task-list li input[type="checkbox"] {
     "search-submit-button-title": "Submit"
   }
 }</script>
+<script src="site_libs/htmlwidgets-1.6.2/htmlwidgets.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<link href="site_libs/leaflet-1.3.1/leaflet.css" rel="stylesheet">
+<script src="site_libs/leaflet-1.3.1/leaflet.js"></script>
+<link href="site_libs/leafletfix-1.0.0/leafletfix.css" rel="stylesheet">
+<script src="site_libs/proj4-2.6.2/proj4.min.js"></script>
+<script src="site_libs/Proj4Leaflet-1.0.1/proj4leaflet.js"></script>
+<link href="site_libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet">
+<script src="site_libs/leaflet-binding-2.2.0/leaflet.js"></script>
+<link href="site_libs/htmltools-fill-0.5.6.1/fill.css" rel="stylesheet">
 
 
 <link rel="stylesheet" href="styles.css">
@@ -107,6 +117,56 @@ ul.task-list li input[type="checkbox"] {
 
 
 
+<div class="cell">
+<div class="cell-output-display">
+
+
+<div id="slideshow" class="carousel slide" data-bs-ride="carousel">
+<div class="carousel-inner">
+<div class="carousel-item active">
+<div class="card">
+<div class="card-header">Interactive Maps</div>
+<div class="card-body">
+<div class="slide-in-top">
+<div class="leaflet html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-7f98defe61d14b6f45e2" style="width:100%;height:400px;"></div>
+<script type="application/json" data-for="htmlwidget-7f98defe61d14b6f45e2">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"https://openstreetmap.org/copyright/\">OpenStreetMap<\/a>,  <a href=\"https://opendatacommons.org/licenses/odbl/\">ODbL<\/a>"}]},{"method":"addCircleMarkers","args":[[35.2838,36.8063,36.8126,36.8167,36.8278,34.7617,39.6682,35.2699,36.08,36.9476],[0.0587,-1.3048,-1.2611,-1.2824,-1.2969,-0.1022,-4.0435,0.5204,-0.3031,-0.4201],5,null,null,{"interactive":true,"className":"","stroke":false,"color":"red","weight":5,"opacity":0.5,"fill":true,"fillColor":"red","fillOpacity":0.8},null,null,["<b>Moi Teaching and Referral Hospital<\/b><br>County: Uasin Gishu<br>Level: 3","<b>Kenyatta National Hospital<\/b><br>County: Nairobi<br>Level: 1","<b>Aga Khan University Hospital<\/b><br>County: Nairobi<br>Level: 1","<b>Nairobi Hospital<\/b><br>County: Nairobi<br>Level: 6","<b>Mater Hospital<\/b><br>County: Nairobi<br>Level: 1","<b>Kisumu County Hospital<\/b><br>County: Kisumu<br>Level: 4","<b>Mombasa Hospital<\/b><br>County: Mombasa<br>Level: 4","<b>Eldoret Hospital<\/b><br>County: Uasin Gishu<br>Level: 1","<b>Nakuru Hospital<\/b><br>County: Nakuru<br>Level: 5","<b>Nyeri Hospital<\/b><br>County: Nyeri<br>Level: 1"],null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]},{"method":"addLayersControl","args":[[],["County","Level"],{"collapsed":false,"autoZIndex":true,"position":"topright"}]}],"limits":{"lat":[34.7617,39.6682],"lng":[-4.0435,0.5204]}},"evals":[],"jsHooks":[]}</script>
+</div>
+<div class="slide-in-bottom"></div>
+</div>
+</div>
+</div>
+<div class="carousel-item">
+<div class="card">
+<div class="card-header">Card 2</div>
+<div class="card-body">
+<div class="slide-in-top">
+<div class="card-body bslib-gap-spacing html-fill-item html-fill-container" style="margin-top:auto;margin-bottom:auto;flex:1 1 auto;">This is the first body section of card 2</div>
+</div>
+<div class="slide-in-bottom">
+<div class="card-body bslib-gap-spacing html-fill-item html-fill-container" style="margin-top:auto;margin-bottom:auto;flex:1 1 auto;">This is the second body section of card 2</div>
+</div>
+</div>
+</div>
+</div>
+<div class="carousel-item">
+<div class="card">
+<div class="card-header">Card 3</div>
+<div class="card-body">
+<div class="slide-in-top">
+<div class="card-body bslib-gap-spacing html-fill-item html-fill-container" style="margin-top:auto;margin-bottom:auto;flex:1 1 auto;">This is the first body section of card 3</div>
+</div>
+<div class="slide-in-bottom">
+<div class="card-body bslib-gap-spacing html-fill-item html-fill-container" style="margin-top:auto;margin-bottom:auto;flex:1 1 auto;">This is the second body section of card 3</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+</div>
+</div>
 
 
 

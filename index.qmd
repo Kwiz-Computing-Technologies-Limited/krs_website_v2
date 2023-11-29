@@ -1,3 +1,67 @@
 ---
 title: " "
 ---
+
+```{r libraries, echo=FALSE, message=FALSE, warning=FALSE}
+source("./pages/functions/sliding_cards.R")
+source("./pages/functions/leaflet_map_demo.R")
+```
+
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+# Define the cards data
+cards <- list(
+  list(
+    header = "Interactive Maps",
+    body1 = card_body(
+      "This is the first body section of card 1"
+    ),
+    body2 = NULL
+  ),
+  list(
+    header = "Card 2",
+    body1 = card_body(
+    "This is the first body section of card 2"
+    ),
+    body2 = card_body(
+      "This is the second body section of card 2"
+    )
+  ),
+  list(
+    header = "Card 3",
+    body1 = card_body(
+      "This is the first body section of card 3"
+    ),
+    body2 = card_body(
+      "This is the second body section of card 3"
+    )
+  )
+)
+```
+
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+# Update the card 1 data with the map widget
+cards[[1]]$body1 <- map_widget()
+```
+
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+# Render the slideshow
+htmltools::browsable(
+  tags$html(
+    tags$head(
+      # Use Bootstrap 5
+      tags$link(
+        rel = "stylesheet",
+        href = "https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+      ),
+      # Add some custom CSS for the animations
+      card_animation()
+    ),
+    tags$body(
+      slideshow(cards)
+    )
+  )
+)
+```
