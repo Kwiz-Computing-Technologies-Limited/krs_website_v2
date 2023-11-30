@@ -4,17 +4,28 @@ project:
 website:
   title: "Kwiz Computing Technologies"
   navbar:
-    left:
+    right:
       - href: index.qmd
         text: Home
       - href: pages/about.qmd
         text: About Us
+        
+  page-footer: 
+    center: "Created by: Kwiz Computing Technologies Limited" 
+    left: "Copyright: Kwiz Computing Technologies Limited (2023)"
+    right: 
+      - icon: github
+        href: https://github.com/Kwiz-Computing-Technologies-Limited
+      - icon: linkedin
+        href: https://www.linkedin.com/company/kwizresearch/?viewAsMember=true
+      - icon: whatsapp
+        href: https://chat.whatsapp.com/D6QKPzWip0HGCPf8P3Z5Yb
 
 format:
   html:
     theme: cosmo
     css: styles.css
-    toc: true
+    toc: false
 
 editor: visual
 

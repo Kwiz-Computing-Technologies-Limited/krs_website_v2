@@ -2,51 +2,346 @@
 title: " "
 ---
 
-```{r libraries, echo=FALSE, message=FALSE, warning=FALSE}
+```{r functions, echo=FALSE, message=FALSE, warning=FALSE}
 source("./pages/functions/sliding_cards.R")
-source("./pages/functions/leaflet_map_demo.R")
+source("./pages/functions/landingpage_plotly.R")
+```
+
+```{r libraries, echo=FALSE, message=FALSE, warning=FALSE}
+library(htmltools)
+library(bslib)
+library(shiny)
 ```
 
 
-```{r, echo=FALSE, message=FALSE, warning=FALSE}
-# Define the cards data
-cards <- list(
+```{r styling, echo=FALSE, message=FALSE, warning=FALSE}
+# Add some custom CSS styling to the cards
+tags$style("
+  .title {
+    text-align: center;
+  }
+  
+  h1 {
+    text-align: center; font-size: 30px;
+  }
+  
+  h2 {
+    text-align: center;
+  }
+
+
+  a {
+    text-align: center;
+    text-decoration: none;
+    font-size: 30px;
+  }
+
+  button:hover, a:hover {
+    opacity: 0.7;
+  }
+  
+  /* Style the card container */
+  .card_right_slide {
+    box-shadow: 0px 0px 0px 0px;
+    max-width: 100%;
+    max-height:auto;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+    border-radius: 10px;
+    overflow: hidden;
+    border-top: 2px solid rgba(143, 151, 121, 0.5);
+    background: inherit;
+  }
+  
+  .card_left_slide {
+    box-shadow: 0px 0px 0px 0px;
+    max-width: 100%;
+    max-height:auto;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+    border-radius: 10px;
+    overflow: hidden;
+    border-top: 2px solid rgba(143, 151, 121, 0.5);
+    background: inherit;
+  }
+
+  /* Style the card header */
+  .card-header {
+    padding: 10px;
+    background-color: inherit;
+    text-align: center;
+    font-family: arial;
+    font-size: 30px;
+    font-weight: bold;
+    border-bottom: 2px solid rgba(143, 151, 121, 0.8);
+  }
+  
+  
+  
+  
+  
+  
+
+  /* Style the card image */
+  .card-image {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+  /* Style the card text */
+  .card-text {
+    color: grey90;
+    font-size: 30px;
+    position: relative;
+    background-color: inherit;
+    opacity: 0.8;
+    border-radius: 10px;
+  }
+  
+  /* Style button*/
+  button {
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    text-align: center;
+    cursor: pointer;
+    max-width: 60%;
+    font-size: 30px;
+    border-radius: 10px;
+    border: none;
+    border-bottom: 2px solid rgba(143, 151, 121, 1);
+    margin-left: 20%;
+    margin-right: 20%;
+    text-color: grey90;
+  }
+  
+  /* Container holding the image and the text */
+  .container {
+    position: relative;
+    text-align: center;
+    color: inherit;
+    object-fit: fill;
+    max-width: 100%;
+    max-height:auto;
+    margin: auto;
+  }
+
+  /* Top left text */
+  .top-left {
+    position: absolute;
+    max-top: 100px;
+    max-left: 205px;
+    max-right: 200px;
+    min-bottom: 100px;
+    color: grey90;
+    font-size: 30px;
+    background-color: inherit;
+    opacity: 0.8;
+    border-radius: 10px;
+  }
+")
+```
+
+
+```{r landingpage, echo=FALSE, message=FALSE, warning=FALSE}
+card_body(
+  # Add a div tag for the card text
+  htmltools::tags$div(
+    "Fullstack R for Enterprise and Research",
+    style = "font-size:30px; font-color: ; text-align: center; font-weight: bold;"))
+```
+
+# Services
+
+```{r services, echo=FALSE, message=FALSE, warning=FALSE}
+# Render the mission and vision cards
+landingpage_cards = list(
+  # landingpage card1
   list(
-    header = "Interactive Maps",
     body1 = card_body(
-      "This is the first body section of card 1"
-    ),
-    body2 = NULL
-  ),
-  list(
-    header = "Card 2",
-    body1 = card_body(
-    "This is the first body section of card 2"
-    ),
+      height = "100px",
+      
+      # Add a div tag for the card text
+      htmltools::tags$div(
+        "Fullstack R for Enterprise and Research",
+        class = "card-text",
+        style = "text-align: center;")),
+    
     body2 = card_body(
-      "This is the second body section of card 2"
-    )
-  ),
-  list(
-    header = "Card 3",
-    body1 = card_body(
-      "This is the first body section of card 3"
+      
+      # Add a div tag for the card text
+      htmltools::tags$div(
+        class = "card-header",
+        style = "text-align: center;",
+        "Interactive Charts"),
+      
+      htmltools::tags$div(
+        class = "card-image",
+        htmltools::tags$img(
+          landingpage_plotly()
+        )))
     ),
+  
+  # landingpage card 2
+  list(
+    body1 = card_body(
+      height = "100px",
+      
+      # Add a div tag for the card text
+      htmltools::tags$div(
+        "Fullstack R for Enterprise and Research",
+        class = "card-text",
+        style = "text-align: center;")),
+    
     body2 = card_body(
-      "This is the second body section of card 3"
+      
+      # Add a div tag for the card text
+      htmltools::tags$div(
+        class = "card-header",
+        style = "text-align: center;",
+        "Interactive Maps"),
+      
+      htmltools::tags$div(
+        class = "card-image",
+        htmltools::tags$img(
+          landingpage_plotly()
+        )))
+    ),
+  
+  # landingpage card 3
+  list(
+    body1 = card_body(
+      height = "100px",
+      
+      # Add a div tag for the card text
+      htmltools::tags$div(
+        "Fullstack R for Enterprise and Research",
+        class = "card-text",
+        style = "text-align: center;")),
+    
+    body2 = card_body(
+      
+      # Add a div tag for the card text
+      htmltools::tags$div(
+        class = "card-header",
+        style = "text-align: center;",
+        "Cloud Solutions"),
+      
+      htmltools::tags$div(
+        class = "card-image",
+        htmltools::tags$img(
+          landingpage_plotly()
+        )))
+    ),
+  
+  # landingpage card 4
+  list(
+    body1 = card_body(
+      height = "100px",
+      
+      # Add a div tag for the card text
+      htmltools::tags$div(
+        "Fullstack R for Enterprise and Research",
+        class = "card-text",
+        style = "text-align: center;")),
+    
+    body2 = card_body(
+      
+      # Add a div tag for the card text
+      htmltools::tags$div(
+        class = "card-header",
+        style = "text-align: center;",
+        "API Integration"),
+      
+      htmltools::tags$div(
+        class = "card-image",
+        htmltools::tags$img(
+          landingpage_plotly()
+        )))
+    ),
+  
+  # landingpage card 5
+  list(
+    body1 = card_body(
+      height = "100px",
+      
+      # Add a div tag for the card text
+      htmltools::tags$div(
+        "Fullstack R for Enterprise and Research",
+        class = "card-text",
+        style = "text-align: center;")),
+    
+    body2 = card_body(
+      
+      # Add a div tag for the card text
+      htmltools::tags$div(
+        class = "card-header",
+        style = "text-align: center;",
+        "Custom API Development Maps"),
+      
+      htmltools::tags$div(
+        class = "card-image",
+        htmltools::tags$img(
+          landingpage_plotly()
+        )))
+    ),
+  
+  # landingpage card 2
+  list(
+    body1 = card_body(
+      height = "100px",
+      
+      # Add a div tag for the card text
+      htmltools::tags$div(
+        "Fullstack R for Enterprise and Research",
+        class = "card-text",
+        style = "text-align: center;")),
+    
+    body2 = card_body(
+      
+      # Add a div tag for the card text
+      htmltools::tags$div(
+        class = "card-header",
+        style = "text-align: center;",
+        "Web Development"),
+      
+      htmltools::tags$div(
+        class = "card-image",
+        htmltools::tags$img(
+          landingpage_plotly()
+        )))
+    ),
+  
+  # landingpage card 2
+  list(
+    body1 = card_body(
+      height = "100px",
+      
+      # Add a div tag for the card text
+      htmltools::tags$div(
+        "Fullstack R for Enterprise and Research",
+        class = "card-text",
+        style = "text-align: center;")),
+    
+    body2 = card_body(
+      
+      # Add a div tag for the card text
+      htmltools::tags$div(
+        class = "card-header",
+        style = "text-align: center;",
+        "Technical Project Management"),
+      
+      htmltools::tags$div(
+        class = "card-image",
+        htmltools::tags$img(
+          landingpage_plotly()
+        )))
     )
-  )
 )
-```
 
-
-```{r, echo=FALSE, message=FALSE, warning=FALSE}
-# Update the card 1 data with the map widget
-cards[[1]]$body1 <- map_widget()
-```
-
-
-```{r, echo=FALSE, message=FALSE, warning=FALSE}
 # Render the slideshow
 htmltools::browsable(
   tags$html(
@@ -55,12 +350,238 @@ htmltools::browsable(
       tags$link(
         rel = "stylesheet",
         href = "https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
-      ),
+      )
+    ),
+    
+    tags$body(
+      slideshow_right_slide(landingpage_cards),
       # Add some custom CSS for the animations
       card_animation()
+    )
+  )
+)
+```
+
+
+
+# Mission and Vision
+
+```{r mission_vision, echo=FALSE, message=FALSE, warning=FALSE}
+# Render the mission and vision cards
+mission_vision_card = list(
+  # Mission
+  list(
+    body1 = card_body(
+      # Add a div tag for the card text
+      htmltools::tags$div(
+        "Our Mission",
+        style = "font-size:30px; font-color: ; text-align: center; font-weight: bold;")),
+    
+    body2 = card_body(
+      height = "100px",
+      
+      # Add a div tag for the card text
+      htmltools::tags$div(
+        "Fullstack R for Enterprise and Research",
+        class = "card-text",
+        style = "text-align: center;"))
     ),
+  
+  # Vision
+  list(
+    body1 = card_body(
+      # Add a div tag for the card text
+      htmltools::tags$div(
+        "Our Vision",
+        style = "font-size:30px; font-color: ; text-align: center; font-weight: bold;")),
+    
+    body2 = card_body(
+      height = "100px",
+      
+      # Add a div tag for the card text
+      htmltools::tags$div(
+        class = "card-text",
+        
+        "Fullstack R for Enterprise and Research",
+        class = "title",
+            style = "text-align: center;"))
+    )
+)
+
+# Render the slideshow
+htmltools::browsable(
+  tags$html(
+    tags$head(
+      # Use Bootstrap 5
+      tags$link(
+        rel = "stylesheet",
+        href = "https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+      )
+    ),
+    
     tags$body(
-      slideshow(cards)
+      slideshow_right_slide(mission_vision_card),
+      # Add some custom CSS for the animations
+      card_animation()
+    )
+  )
+)
+```
+
+
+```{r call_to_action, echo=FALSE, message=FALSE, warning=FALSE}
+bslib::card_body(
+  class = "card-body",
+  style = tags$style(
+    "
+    .slide-in-top {
+          animation: slide-in-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+        }
+    
+    @keyframes slide-in-top {
+          0% {
+            transform: translateY(-1000px);
+            opacity: 0;
+          }
+          100% {
+            transform: translateY(0);
+            opacity: 1;
+          }
+        }"),
+  
+  # Add a div tag for the chat whatsapp QR code
+  htmltools::tags$div(
+    class = "container",
+    htmltools::tags$image(
+      src = "./pages/images/chat_whatsapp.jpeg",
+      class = "card-image"
+      )),
+  
+  htmltools::tags$button(
+    class = "button",
+    htmltools::tags$a(
+      style = "color: black;",
+      href = "https://wa.link/ujtz0p",
+      "Contact Us"))
+)
+```
+
+# Testimonials
+
+```{r testimonials, echo=FALSE, message=FALSE, warning=FALSE}
+testimonials_styling_top <- function() {
+  tags$style("
+    .slide-in-top {
+          animation: slide-in-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    }
+    
+    @keyframes slide-in-top {
+      0% {
+        transform: translateY(-1000px);
+        opacity: 0;
+        }
+        100% {
+          transform: translateY(0);
+          opacity: 1;
+          }
+    }")
+}
+
+testimonials_styling_bottom <- function() {
+  tags$style("
+    .slide-in-bottom {
+          animation: slide-in-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+        }
+    
+    
+    @keyframes slide-in-bottom {
+          0% {
+            transform: translateY(1000px);
+            opacity: 0;
+          }
+          100% {
+            transform: translateY(0);
+            opacity: 1;
+          }
+        }")
+}
+
+# Render the mission and vision cards
+testimonials_cards = list(
+  # card 1
+  list(
+    body1 = card_body(
+      style = testimonials_styling_bottom(),
+      # Add a div tag for the card text
+      tags$a(
+        href = "https://canarytourske.onrender.com",
+    
+        htmltools::tags$img(
+        tags$style("
+                   height: 60%;
+                   "),
+        src = "./pages/images/testimonials/canary_tours_logo.jpeg"))),
+    
+    body2 = card_body(
+      style = testimonials_styling_top(),
+      # Add a div tag for the card text
+      htmltools::tags$div(
+        "Feedback",
+        class = "card-text",
+        style = "text-align: center;"))),
+  
+  # card 2
+  list(
+    body1 = card_body(
+      style = testimonials_styling_bottom(),
+      # Add a div tag for the card text
+      tags$a(
+        href = "https://canarytourske.onrender.com",
+      
+        htmltools::tags$img(
+        tags$style("
+                   height: 60%;
+                   "),
+        src = "./pages/images/testimonials/canary_tours_logo.jpeg"))),
+    
+    body2 = card_body(
+      style = testimonials_styling_top(),
+      # Add a div tag for the card text
+      htmltools::tags$div(
+        "Feedback",
+        class = "card-text",
+        style = "text-align: center;"))
+    )
+)
+
+# Render the slideshow
+htmltools::browsable(
+  tags$html(
+    tags$head(
+      # Use Bootstrap 5
+      tags$link(
+        rel = "stylesheet",
+        href = "https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+      )
+    ),
+    
+    tags$body(
+      tags$div(
+    id = "slideshow",
+    class = "carousel slide",
+    `data-bs-ride` = "carousel",
+    tags$div(
+      class = "carousel-inner",
+      lapply(seq_along(testimonials_cards), function(i) {
+        tags$div(
+          class = ifelse(i == 1, "carousel-item active", "carousel-item"),
+          card_left_slide(testimonials_cards[[i]])
+        )
+      })
+    )
+  ),
+      # Add some custom CSS for the animations
+      card_animation()
     )
   )
 )
