@@ -154,6 +154,8 @@ card_body(
     style = "font-size:30px; font-color: ; text-align: center; font-weight: bold;"))
 ```
 
+_________________________________
+
 # Services
 
 ```{r services, echo=FALSE, message=FALSE, warning=FALSE}
@@ -362,7 +364,7 @@ htmltools::browsable(
 )
 ```
 
-
+_________________________________
 
 # Mission and Vision
 
@@ -465,6 +467,9 @@ bslib::card_body(
       "Contact Us"))
 )
 ```
+
+
+_________________________________
 
 # Testimonials
 
