@@ -25,7 +25,7 @@ landingpage_plotly <- function() {
       yaxis = list(title = "MPG")
     ) |> 
     animation_opts(
-      4500, easing = "circle", redraw = TRUE,
+      1200, easing = "circle", redraw = TRUE,
       mode = "afterall"
     ) |>
     
