@@ -154,44 +154,95 @@ card_body(
     style = "font-size:30px; font-color: ; text-align: center; font-weight: bold;"))
 ```
 
-_________________________________
-
-# Services
-
-```{r services, echo=FALSE, message=FALSE, warning=FALSE}
+```{r mission_vision_data, echo=FALSE, message=FALSE, warning=FALSE}
 # Render the mission and vision cards
-landingpage_cards = list(
-  # landingpage card1
+mission_vision_card = list(
+  # Mission
   list(
     body1 = card_body(
-      height = "100px",
-      
+      # Add a div tag for the card text
+      htmltools::tags$div(
+        "Our Mission",
+        style = "font-size:30px; font-color: ; text-align: center; font-weight: bold;")),
+    
+    body2 = card_body(
+
       # Add a div tag for the card text
       htmltools::tags$div(
         "Fullstack R for Enterprise and Research",
         class = "card-text",
-        style = "text-align: center;")),
-    
-    body2 = card_body(
-      
+        style = "text-align: center;"))
+    ),
+  
+  # Vision
+  list(
+    body1 = card_body(
       # Add a div tag for the card text
       htmltools::tags$div(
-        class = "card-header",
-        style = "text-align: center;",
-        "Interactive Charts"),
-      
+        "Our Vision",
+        style = "font-size:30px; font-color: ; text-align: center; font-weight: bold;")),
+    
+    body2 = card_body(
+
+      # Add a div tag for the card text
       htmltools::tags$div(
-        class = "card-image",
-        htmltools::tags$img(
-          landingpage_plotly()
-        )))
-    ),
+        class = "card-text",
+        
+        "Fullstack R for Enterprise and Research",
+        class = "title",
+            style = "text-align: center;"))
+    )
+)
+```
+
+_________________________________
+
+```{r services, echo=FALSE, message=FALSE, warning=FALSE}
+# Render the mission and vision cards
+landingpage_cards = list(
+  # landingpage card 6
+  list(
+    body1 = card_body(
+
+      # Add a div tag for the card text
+      htmltools::tags$div(
+        "Showcase your data analysis, create interactive dashboards, and explore complex concepts with your audience dirctly on your website. Quarto websites can include interactive components such as Observable JS, Shiny and HTML Widgets for stunning and engaging websites. ",
+        class = "card-text",
+        style = "text-align: center;")),
+    
+    body2 = layout_column_wrap(
+        width = 1,
+        card_body(
+          htmltools::tags$div(
+            class = "card-image",
+            htmltools::tags$img(
+              landingpage_plotly()
+              ))
+          
+          ),
+        card_body(
+          
+          htmltools::tags$div(
+            class = "card-image",
+            htmltools::tags$img(
+              landingpage_plotly()
+              ))
+          
+        ),
+        card_body(
+        htmltools::tags$div(
+            class = "card-image",
+            htmltools::tags$img(
+              landingpage_plotly()
+              ))
+        )
+      )),
+  
   
   # landingpage card 2
   list(
     body1 = card_body(
-      height = "100px",
-      
+
       # Add a div tag for the card text
       htmltools::tags$div(
         "Fullstack R for Enterprise and Research",
@@ -216,8 +267,7 @@ landingpage_cards = list(
   # landingpage card 3
   list(
     body1 = card_body(
-      height = "100px",
-      
+
       # Add a div tag for the card text
       htmltools::tags$div(
         "Fullstack R for Enterprise and Research",
@@ -242,8 +292,7 @@ landingpage_cards = list(
   # landingpage card 4
   list(
     body1 = card_body(
-      height = "100px",
-      
+
       # Add a div tag for the card text
       htmltools::tags$div(
         "Fullstack R for Enterprise and Research",
@@ -268,8 +317,7 @@ landingpage_cards = list(
   # landingpage card 5
   list(
     body1 = card_body(
-      height = "100px",
-      
+
       # Add a div tag for the card text
       htmltools::tags$div(
         "Fullstack R for Enterprise and Research",
@@ -291,37 +339,10 @@ landingpage_cards = list(
         )))
     ),
   
-  # landingpage card 2
+  # landingpage card 7
   list(
     body1 = card_body(
-      height = "100px",
-      
-      # Add a div tag for the card text
-      htmltools::tags$div(
-        "Fullstack R for Enterprise and Research",
-        class = "card-text",
-        style = "text-align: center;")),
-    
-    body2 = card_body(
-      
-      # Add a div tag for the card text
-      htmltools::tags$div(
-        class = "card-header",
-        style = "text-align: center;",
-        "Web Development"),
-      
-      htmltools::tags$div(
-        class = "card-image",
-        htmltools::tags$img(
-          landingpage_plotly()
-        )))
-    ),
-  
-  # landingpage card 2
-  list(
-    body1 = card_body(
-      height = "100px",
-      
+
       # Add a div tag for the card text
       htmltools::tags$div(
         "Fullstack R for Enterprise and Research",
@@ -344,24 +365,7 @@ landingpage_cards = list(
     )
 )
 
-# Render the slideshow
-htmltools::browsable(
-  tags$html(
-    tags$head(
-      # Use Bootstrap 5
-      tags$link(
-        rel = "stylesheet",
-        href = "https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
-      )
-    ),
-    
-    tags$body(
-      slideshow_right_slide(landingpage_cards),
-      # Add some custom CSS for the animations
-      card_animation()
-    )
-  )
-)
+render_browsable_slideshow(cards = landingpage_cards, slide_id = "landingpage_slide")
 ```
 
 _________________________________
@@ -380,8 +384,7 @@ mission_vision_card = list(
         style = "font-size:30px; font-color: ; text-align: center; font-weight: bold;")),
     
     body2 = card_body(
-      height = "100px",
-      
+
       # Add a div tag for the card text
       htmltools::tags$div(
         "Fullstack R for Enterprise and Research",
@@ -398,8 +401,7 @@ mission_vision_card = list(
         style = "font-size:30px; font-color: ; text-align: center; font-weight: bold;")),
     
     body2 = card_body(
-      height = "100px",
-      
+
       # Add a div tag for the card text
       htmltools::tags$div(
         class = "card-text",
@@ -422,9 +424,9 @@ htmltools::browsable(
     ),
     
     tags$body(
-      slideshow_right_slide(mission_vision_card),
+      slideshow_right_slide(mission_vision_card, slide_id = "mission_vision_slide"),
       # Add some custom CSS for the animations
-      card_animation()
+      card_animation_slide()
     )
   )
 )
@@ -434,23 +436,7 @@ htmltools::browsable(
 ```{r call_to_action, echo=FALSE, message=FALSE, warning=FALSE}
 bslib::card_body(
   class = "card-body",
-  style = tags$style(
-    "
-    .slide-in-top {
-          animation: slide-in-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-        }
-    
-    @keyframes slide-in-top {
-          0% {
-            transform: translateY(-1000px);
-            opacity: 0;
-          }
-          100% {
-            transform: translateY(0);
-            opacity: 1;
-          }
-        }"),
-  
+
   # Add a div tag for the chat whatsapp QR code
   htmltools::tags$div(
     class = "container",
@@ -474,49 +460,11 @@ _________________________________
 # Testimonials
 
 ```{r testimonials, echo=FALSE, message=FALSE, warning=FALSE}
-testimonials_styling_top <- function() {
-  tags$style("
-    .slide-in-top {
-          animation: slide-in-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-    }
-    
-    @keyframes slide-in-top {
-      0% {
-        transform: translateY(-1000px);
-        opacity: 0;
-        }
-        100% {
-          transform: translateY(0);
-          opacity: 1;
-          }
-    }")
-}
-
-testimonials_styling_bottom <- function() {
-  tags$style("
-    .slide-in-bottom {
-          animation: slide-in-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-        }
-    
-    
-    @keyframes slide-in-bottom {
-          0% {
-            transform: translateY(1000px);
-            opacity: 0;
-          }
-          100% {
-            transform: translateY(0);
-            opacity: 1;
-          }
-        }")
-}
-
 # Render the mission and vision cards
 testimonials_cards = list(
   # card 1
   list(
     body1 = card_body(
-      style = testimonials_styling_bottom(),
       # Add a div tag for the card text
       tags$a(
         href = "https://canarytourske.onrender.com",
@@ -528,7 +476,6 @@ testimonials_cards = list(
         src = "./pages/images/testimonials/canary_tours_logo.jpeg"))),
     
     body2 = card_body(
-      style = testimonials_styling_top(),
       # Add a div tag for the card text
       htmltools::tags$div(
         "Feedback",
@@ -538,7 +485,6 @@ testimonials_cards = list(
   # card 2
   list(
     body1 = card_body(
-      style = testimonials_styling_bottom(),
       # Add a div tag for the card text
       tags$a(
         href = "https://canarytourske.onrender.com",
@@ -550,10 +496,9 @@ testimonials_cards = list(
         src = "./pages/images/testimonials/canary_tours_logo.jpeg"))),
     
     body2 = card_body(
-      style = testimonials_styling_top(),
       # Add a div tag for the card text
       htmltools::tags$div(
-        "Feedback",
+        "Feedback 2",
         class = "card-text",
         style = "text-align: center;"))
     )
@@ -572,7 +517,7 @@ htmltools::browsable(
     
     tags$body(
       tags$div(
-    id = "slideshow",
+    id = "slideshow-testimonials_slide",
     class = "carousel slide",
     `data-bs-ride` = "carousel",
     tags$div(
@@ -583,11 +528,14 @@ htmltools::browsable(
           card_left_slide(testimonials_cards[[i]])
         )
       })
-    )
+    ),
+          # Add the prev and next arrows
+          scroll_arrows("slideshow-testimonials_slide")
   ),
       # Add some custom CSS for the animations
-      card_animation()
+      card_animation_slide()
     )
   )
 )
+
 ```
