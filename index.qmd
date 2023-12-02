@@ -528,9 +528,7 @@ htmltools::browsable(
           card_left_slide(testimonials_cards[[i]])
         )
       })
-    ),
-          # Add the prev and next arrows
-          scroll_arrows("slideshow-testimonials_slide")
+    )
   ),
       # Add some custom CSS for the animations
       card_animation_slide()

@@ -48,7 +48,7 @@ scroll_arrows <- function(slide_id) {
       role = "button",
       `data-bs-slide` = "prev",
      tags$span(class = "carousel-control-prev-icon", `aria-hidden` = "true"),
-      tags$span(class = "visually-hidden", "Previous")
+      tags$span(class = "Previous")
   ),
   
     tags$a(
@@ -57,7 +57,7 @@ scroll_arrows <- function(slide_id) {
       role = "button",
       `data-bs-slide` = "next",
       tags$span(class = "carousel-control-next-icon", `aria-hidden` = "true"),
-     tags$span(class = "visually-hidden", "Next")
+     tags$span(class = "Next")
     ))
 }
 
@@ -93,13 +93,13 @@ slideshow_right_slide <- function(cards, slide_id) {
       lapply(seq_along(cards), function(i) {
         tags$div(
           class = ifelse(i == 1, "carousel-item active", "carousel-item"),
-          card_right_slide(cards[[i]]),
-          
-          # Add the prev and next arrows
-          scroll_arrows(slide_id)
+          card_right_slide(cards[[i]])
         )
       })
-    )
+    ),
+    
+    # Add the prev and next arrows
+    scroll_arrows(slide_id)
   )
 }
 
@@ -114,13 +114,13 @@ slideshow_static_slide <- function(cards, slide_id) {
       lapply(seq_along(cards), function(i) {
         tags$div(
           class = ifelse(i == 1, "carousel-item active", "carousel-item"),
-          bslib::card(cards[[i]]),
-          
-          # Add the prev and next arrows
-          scroll_arrows(slide_id)
+          bslib::card(cards[[i]])
         )
       })
-    )
+    ),
+    
+    # Add the prev and next arrows
+    scroll_arrows(slide_id)
   )
 }
 
