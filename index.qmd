@@ -154,47 +154,6 @@ card_body(
     style = "font-size:30px; font-color: ; text-align: center; font-weight: bold;"))
 ```
 
-```{r mission_vision_data, echo=FALSE, message=FALSE, warning=FALSE}
-# Render the mission and vision cards
-mission_vision_card = list(
-  # Mission
-  list(
-    body1 = card_body(
-      # Add a div tag for the card text
-      htmltools::tags$div(
-        "Our Mission",
-        style = "font-size:30px; font-color: ; text-align: center; font-weight: bold;")),
-    
-    body2 = card_body(
-
-      # Add a div tag for the card text
-      htmltools::tags$div(
-        "Fullstack R for Enterprise and Research",
-        class = "card-text",
-        style = "text-align: center;"))
-    ),
-  
-  # Vision
-  list(
-    body1 = card_body(
-      # Add a div tag for the card text
-      htmltools::tags$div(
-        "Our Vision",
-        style = "font-size:30px; font-color: ; text-align: center; font-weight: bold;")),
-    
-    body2 = card_body(
-
-      # Add a div tag for the card text
-      htmltools::tags$div(
-        class = "card-text",
-        
-        "Fullstack R for Enterprise and Research",
-        class = "title",
-            style = "text-align: center;"))
-    )
-)
-```
-
 _________________________________
 
 ```{r services, echo=FALSE, message=FALSE, warning=FALSE}
@@ -219,23 +178,7 @@ landingpage_cards = list(
               landingpage_plotly()
               ))
           
-          ),
-        card_body(
-          
-          htmltools::tags$div(
-            class = "card-image",
-            htmltools::tags$img(
-              landingpage_plotly()
-              ))
-          
-        ),
-        card_body(
-        htmltools::tags$div(
-            class = "card-image",
-            htmltools::tags$img(
-              landingpage_plotly()
-              ))
-        )
+          )
       )),
   
   

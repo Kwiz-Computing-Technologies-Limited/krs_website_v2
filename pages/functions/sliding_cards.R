@@ -61,12 +61,34 @@ scroll_arrows <- function(slide_id) {
     ))
 }
 
+library(htmltools)
+
+# Create a function that takes the id of the carousel element and the index of the slide as arguments
+slideshow_pause_slide <- function(id, slide) {
+  # Create a script element with a function that pauses the carousel when the card is clicked
+  script <- tags$script(HTML(paste0("
+    function pauseSlide(id, slide) {
+      var carouselElement = document.getElementById(id);
+      var carousel = new bootstrap.Carousel(carouselElement);
+      var card = carouselElement.querySelector('.carousel-item:nth-child(' + slide + ') .card');
+      card.addEventListener('click', function() {
+        carousel.pause();
+      });
+    }
+    pauseSlide('", id, "', ", slide, ");
+  ")))
+  # Return the script element
+  script
+}
+
+
 # Create a function to generate a slideshow for the "card_left_slides"
 slideshow_left_slide <- function(cards, slide_id) {
   tags$div(
     id = paste0("slideshow-", slide_id),
     class = "carousel slide",
     `data-bs-ride` = "carousel",
+
     tags$div(
       class = "carousel-inner",
       lapply(seq_along(cards), function(i) {
@@ -88,6 +110,7 @@ slideshow_right_slide <- function(cards, slide_id) {
     id = paste0("slideshow-", slide_id),
     class = "carousel slide",
     `data-bs-ride` = "carousel",
+
     tags$div(
       class = "carousel-inner",
       lapply(seq_along(cards), function(i) {
