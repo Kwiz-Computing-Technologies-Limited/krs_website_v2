@@ -159,23 +159,32 @@ _________________________________
 ```{r services, echo=FALSE, message=FALSE, warning=FALSE}
 # Render the mission and vision cards
 landingpage_cards = list(
-  # landingpage card 6
+  # landingpage card 1
   list(
     body1 = card_body(
-
+      style = "text-align: center;",
       # Add a div tag for the card text
       htmltools::tags$div(
-        "Showcase your data analysis, create interactive dashboards, and explore complex concepts with your audience dirctly on your website. Quarto websites can include interactive components such as Observable JS, Shiny and HTML Widgets for stunning and engaging websites. ",
-        class = "card-text",
-        style = "text-align: center;")),
+        "Showcase your data analysis, create interactive dashboards, and explore complex concepts with your audience directly on your website.",
+        class = "card-text"),
+      
+      htmltools::tags$div(
+        "We create Quarto websites embedding interactive components such as Observable JS, Shiny and HTML Widgets for stunning and engaging websites. ",
+        class = "card-text")),
     
-    body2 = layout_column_wrap(
-        width = 1,
+    body2 = card(
+      style = "text-align: center",
+  
+         # Add a div tag for the card text
+      htmltools::tags$div(
+        class = "card-header",
+        "Interactive Websites"),
+      
         card_body(
           htmltools::tags$div(
             class = "card-image",
             htmltools::tags$img(
-              landingpage_plotly()
+              src = landingpage_plotly("image_1")
               ))
           
           )
@@ -185,125 +194,99 @@ landingpage_cards = list(
   # landingpage card 2
   list(
     body1 = card_body(
-
+      style = "text-align: center",
       # Add a div tag for the card text
       htmltools::tags$div(
-        "Fullstack R for Enterprise and Research",
-        class = "card-text",
-        style = "text-align: center;")),
+        "Looking for a way to build and deploy interactive web applications that can handle large amounts of data and users? ",
+        class = "card-text"),
+      
+      htmltools::tags$div(
+        "We can help you design, develop and deploy fast, reliable and secure solutions for your business needs with R, shiny, databases, custom API development with plumber, integrating 3rd party API's and AWS cloud infrastructure.",
+        class = "card-text")),
     
     body2 = card_body(
-      
+      style = "text-align: center",
       # Add a div tag for the card text
       htmltools::tags$div(
         class = "card-header",
-        style = "text-align: center;",
-        "Interactive Maps"),
+        "Enterprise Applications"),
       
       htmltools::tags$div(
         class = "card-image",
         htmltools::tags$img(
-          landingpage_plotly()
+          src = landingpage_plotly("image_1")
         )))
     ),
   
   # landingpage card 3
   list(
     body1 = card_body(
+      style = "text-align: center",
 
       # Add a div tag for the card text
       htmltools::tags$div(
         "Fullstack R for Enterprise and Research",
-        class = "card-text",
-        style = "text-align: center;")),
+        class = "card-text")),
     
     body2 = card_body(
       
       # Add a div tag for the card text
       htmltools::tags$div(
         class = "card-header",
-        style = "text-align: center;",
-        "Cloud Solutions"),
+        "API Development and Integration"),
       
       htmltools::tags$div(
         class = "card-image",
         htmltools::tags$img(
-          landingpage_plotly()
-        )))
-    ),
-  
-  # landingpage card 4
-  list(
-    body1 = card_body(
-
-      # Add a div tag for the card text
-      htmltools::tags$div(
-        "Fullstack R for Enterprise and Research",
-        class = "card-text",
-        style = "text-align: center;")),
-    
-    body2 = card_body(
-      
-      # Add a div tag for the card text
-      htmltools::tags$div(
-        class = "card-header",
-        style = "text-align: center;",
-        "API Integration"),
-      
-      htmltools::tags$div(
-        class = "card-image",
-        htmltools::tags$img(
-          landingpage_plotly()
+          src = landingpage_plotly("image_1")
         )))
     ),
   
   # landingpage card 5
   list(
     body1 = card_body(
+      style = "text-align: center",
 
       # Add a div tag for the card text
       htmltools::tags$div(
         "Fullstack R for Enterprise and Research",
-        class = "card-text",
-        style = "text-align: center;")),
+        class = "card-text")),
     
     body2 = card_body(
       
       # Add a div tag for the card text
       htmltools::tags$div(
         class = "card-header",
-        style = "text-align: center;",
         "Custom API Development Maps"),
       
       htmltools::tags$div(
         class = "card-image",
         htmltools::tags$img(
-          landingpage_plotly()
+          src = landingpage_plotly("image_1")
         )))
     ),
   
   # landingpage card 7
   list(
     body1 = card_body(
+      style = "text-align: center",
 
       # Add a div tag for the card text
       htmltools::tags$div(
         "Fullstack R for Enterprise and Research",
-        class = "card-text",
-        style = "text-align: center;")),
+        class = "card-text")),
     
     body2 = card_body(
       
       # Add a div tag for the card text
       htmltools::tags$div(
         class = "card-header",
-        style = "text-align: center;",
         "Technical Project Management"),
       
       htmltools::tags$div(
         class = "card-image",
         htmltools::tags$img(
-          landingpage_plotly()
+          src = landingpage_plotly("image_1")
         )))
     )
 )
@@ -413,9 +396,6 @@ testimonials_cards = list(
         href = "https://canarytourske.onrender.com",
     
         htmltools::tags$img(
-        tags$style("
-                   height: 60%;
-                   "),
         src = "./pages/images/testimonials/canary_tours_logo.jpeg"))),
     
     body2 = card_body(
@@ -433,9 +413,6 @@ testimonials_cards = list(
         href = "https://canarytourske.onrender.com",
       
         htmltools::tags$img(
-        tags$style("
-                   height: 60%;
-                   "),
         src = "./pages/images/testimonials/canary_tours_logo.jpeg"))),
     
     body2 = card_body(
