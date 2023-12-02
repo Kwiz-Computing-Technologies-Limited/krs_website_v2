@@ -16,14 +16,13 @@ landingpage_plotly <- function(name) {
                disp = round(disp, 0),
                gear = factor(gear)),
       aes(x = hp, y = mpg, color = gear)) +
-      geom_point() + theme_bw() +
-        theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
-              panel.background = element_blank(), axis.line = element_blank()) +
+      geom_point() + theme(panel.grid = element_blank(),
+                           panel.background = element_blank()) + 
       transition_states(cyl, transition_length = 2, state_length = 1) +
-      enter_grow() + exit_fly() + labs(title = "Cyl: {closest_state}")} |>
+      enter_grow() + exit_fly() + labs(title = "Cyl: {closest_state}", xlab = "HP", ylab = "mpg")} |>
       animate()
     
-    anim_save(paste0("pages/images/gifs/",name,".gif"))
+    anim_save(paste0("pages/images/gifs/",name,".gif"), rewind = TRUE)
     src = paste0("pages/images/gifs/",name,".gif")
   }
   

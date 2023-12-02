@@ -1,6 +1,7 @@
 ---
 title: " "
 ---
+:::{.column-page}
 
 ```{r functions, echo=FALSE, message=FALSE, warning=FALSE}
 source("./pages/functions/sliding_cards.R")
@@ -180,14 +181,12 @@ landingpage_cards = list(
         class = "card-header",
         "Interactive Websites"),
       
-        card_body(
+        
           htmltools::tags$div(
             class = "card-image",
             htmltools::tags$img(
               src = landingpage_plotly("image_1")
               ))
-          
-          )
       )),
   
   
@@ -204,7 +203,7 @@ landingpage_cards = list(
         "We can help you design, develop and deploy fast, reliable and secure solutions for your business needs with R, shiny, databases, custom API development with plumber, integrating 3rd party API's and AWS cloud infrastructure.",
         class = "card-text")),
     
-    body2 = card_body(
+    body2 = card(
       style = "text-align: center",
       # Add a div tag for the card text
       htmltools::tags$div(
@@ -457,3 +456,5 @@ htmltools::browsable(
 )
 
 ```
+
+:::
