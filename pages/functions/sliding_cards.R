@@ -61,25 +61,6 @@ scroll_arrows <- function(slide_id) {
     ))
 }
 
-library(htmltools)
-
-# Create a function that takes the id of the carousel element and the index of the slide as arguments
-slideshow_pause_slide <- function(id, slide) {
-  # Create a script element with a function that pauses the carousel when the card is clicked
-  script <- tags$script(HTML(paste0("
-    function pauseSlide(id, slide) {
-      var carouselElement = document.getElementById(id);
-      var carousel = new bootstrap.Carousel(carouselElement);
-      var card = carouselElement.querySelector('.carousel-item:nth-child(' + slide + ') .card');
-      card.addEventListener('click', function() {
-        carousel.pause();
-      });
-    }
-    pauseSlide('", id, "', ", slide, ");
-  ")))
-  # Return the script element
-  script
-}
 
 
 # Create a function to generate a slideshow for the "card_left_slides"
@@ -88,12 +69,14 @@ slideshow_left_slide <- function(cards, slide_id) {
     id = paste0("slideshow-", slide_id),
     class = "carousel slide",
     `data-bs-ride` = "carousel",
-
+    
     tags$div(
       class = "carousel-inner",
       lapply(seq_along(cards), function(i) {
         tags$div(
           class = ifelse(i == 1, "carousel-item active", "carousel-item"),
+          `data-bs-interval` = "15000",
+          
           card_left_slide(cards[[i]]),
           
           # Add the prev and next arrows
@@ -110,19 +93,20 @@ slideshow_right_slide <- function(cards, slide_id) {
     id = paste0("slideshow-", slide_id),
     class = "carousel slide",
     `data-bs-ride` = "carousel",
-
+    
     tags$div(
       class = "carousel-inner",
       lapply(seq_along(cards), function(i) {
         tags$div(
           class = ifelse(i == 1, "carousel-item active", "carousel-item"),
-          card_right_slide(cards[[i]])
+          `data-bs-interval` = "15000",
+          card_right_slide(cards[[i]]),
+          
+          # Add the prev and next arrows
+          scroll_arrows(slide_id)
         )
       })
-    ),
-    
-    # Add the prev and next arrows
-    scroll_arrows(slide_id)
+    )
   )
 }
 
@@ -132,18 +116,20 @@ slideshow_static_slide <- function(cards, slide_id) {
     id = paste0("slideshow", slide_id),
     class = "carousel slide",
     `data-bs-ride` = "carousel",
+    
     tags$div(
       class = "carousel-inner",
       lapply(seq_along(cards), function(i) {
         tags$div(
           class = ifelse(i == 1, "carousel-item active", "carousel-item"),
-          bslib::card(cards[[i]])
+          `data-bs-interval` = "15000",
+          bslib::card(cards[[i]]),
+          
+          # Add the prev and next arrows
+          scroll_arrows(slide_id)
         )
       })
-    ),
-    
-    # Add the prev and next arrows
-    scroll_arrows(slide_id)
+    )
   )
 }
 
@@ -237,3 +223,5 @@ render_browsable_slideshow <- function (cards, slide_id) {
     )
   )
 }
+
+

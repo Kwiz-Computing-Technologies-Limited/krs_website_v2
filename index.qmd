@@ -162,8 +162,13 @@ _________________________________
 landingpage_cards = list(
   # landingpage card 1
   list(
+    header = # Add a div tag for the card text
+      htmltools::tags$div(
+        "Interactive Websites"),
+    
     body1 = card_body(
       style = "text-align: center;",
+      
       # Add a div tag for the card text
       htmltools::tags$div(
         "Showcase your data analysis, create interactive dashboards, and explore complex concepts with your audience directly on your website.",
@@ -175,25 +180,24 @@ landingpage_cards = list(
     
     body2 = card(
       style = "text-align: center",
-  
-         # Add a div tag for the card text
-      htmltools::tags$div(
-        class = "card-header",
-        "Interactive Websites"),
       
-        
-          htmltools::tags$div(
-            class = "card-image",
-            htmltools::tags$img(
-              src = landingpage_plotly("image_1")
-              ))
+      htmltools::tags$div(
+        class = "card-image",
+        htmltools::tags$img(
+          src = landingpage_plotly("image_1")
+          ))
       )),
   
   
   # landingpage card 2
   list(
+    header =  # Add a div tag for the card text
+      htmltools::tags$div(
+        "Enterprise Applications"),
+      
     body1 = card_body(
       style = "text-align: center",
+    
       # Add a div tag for the card text
       htmltools::tags$div(
         "Looking for a way to build and deploy interactive web applications that can handle large amounts of data and users? ",
@@ -205,10 +209,6 @@ landingpage_cards = list(
     
     body2 = card(
       style = "text-align: center",
-      # Add a div tag for the card text
-      htmltools::tags$div(
-        class = "card-header",
-        "Enterprise Applications"),
       
       htmltools::tags$div(
         class = "card-image",
@@ -219,20 +219,19 @@ landingpage_cards = list(
   
   # landingpage card 3
   list(
+    header =  # Add a div tag for the card text
+      htmltools::tags$div(
+        "API Development and Integration"),
+      
     body1 = card_body(
       style = "text-align: center",
-
+      
       # Add a div tag for the card text
       htmltools::tags$div(
         "Fullstack R for Enterprise and Research",
         class = "card-text")),
     
     body2 = card_body(
-      
-      # Add a div tag for the card text
-      htmltools::tags$div(
-        class = "card-header",
-        "API Development and Integration"),
       
       htmltools::tags$div(
         class = "card-image",
@@ -243,21 +242,19 @@ landingpage_cards = list(
   
   # landingpage card 5
   list(
+    header = # Add a div tag for the card text
+      htmltools::tags$div(
+        "Custom API Development Maps"),
+    
     body1 = card_body(
       style = "text-align: center",
-
+      
       # Add a div tag for the card text
       htmltools::tags$div(
         "Fullstack R for Enterprise and Research",
         class = "card-text")),
     
     body2 = card_body(
-      
-      # Add a div tag for the card text
-      htmltools::tags$div(
-        class = "card-header",
-        "Custom API Development Maps"),
-      
       htmltools::tags$div(
         class = "card-image",
         htmltools::tags$img(
@@ -267,6 +264,10 @@ landingpage_cards = list(
   
   # landingpage card 7
   list(
+    header = # Add a div tag for the card text
+      htmltools::tags$div(
+        "Technical Project Management"),
+      
     body1 = card_body(
       style = "text-align: center",
 
@@ -276,12 +277,6 @@ landingpage_cards = list(
         class = "card-text")),
     
     body2 = card_body(
-      
-      # Add a div tag for the card text
-      htmltools::tags$div(
-        class = "card-header",
-        "Technical Project Management"),
-      
       htmltools::tags$div(
         class = "card-image",
         htmltools::tags$img(
