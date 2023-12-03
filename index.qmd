@@ -285,7 +285,7 @@ landingpage_cards = list(
     )
 )
 
-render_browsable_slideshow(cards = landingpage_cards, slide_id = "landingpage_slide")
+render_browsable_slideshow(cards = landingpage_cards, slide_id = "landingpage_slide", interval = 20000)
 ```
 
 _________________________________
@@ -344,7 +344,7 @@ htmltools::browsable(
     ),
     
     tags$body(
-      slideshow_right_slide(mission_vision_card, slide_id = "mission_vision_slide"),
+      slideshow_right_slide(mission_vision_card, slide_id = "mission_vision_slide", interval = 10000),
       # Add some custom CSS for the animations
       card_animation_slide()
     )
@@ -439,6 +439,7 @@ htmltools::browsable(
       lapply(seq_along(testimonials_cards), function(i) {
         tags$div(
           class = ifelse(i == 1, "carousel-item active", "carousel-item"),
+          `data-bs-interval` = 5000,
           card_left_slide(testimonials_cards[[i]])
         )
       })

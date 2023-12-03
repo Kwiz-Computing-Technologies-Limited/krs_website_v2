@@ -18,7 +18,7 @@ landingpage_plotly <- function(name) {
       aes(x = hp, y = mpg, color = gear)) +
       geom_point() + theme(panel.grid = element_blank(),
                            panel.background = element_blank()) + 
-      transition_states(cyl, transition_length = 2, state_length = 1) +
+      transition_states(cyl, transition_length = 0.05, state_length = 0.1) +
       enter_grow() + exit_fly() + labs(title = "Cyl: {closest_state}", xlab = "HP", ylab = "mpg")} |>
       animate()
     

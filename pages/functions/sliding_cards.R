@@ -64,7 +64,7 @@ scroll_arrows <- function(slide_id) {
 
 
 # Create a function to generate a slideshow for the "card_left_slides"
-slideshow_left_slide <- function(cards, slide_id) {
+slideshow_left_slide <- function(cards, slide_id, interval) {
   tags$div(
     id = paste0("slideshow-", slide_id),
     class = "carousel slide",
@@ -75,7 +75,7 @@ slideshow_left_slide <- function(cards, slide_id) {
       lapply(seq_along(cards), function(i) {
         tags$div(
           class = ifelse(i == 1, "carousel-item active", "carousel-item"),
-          `data-bs-interval` = "15000",
+          `data-bs-interval` = interval,
           
           card_left_slide(cards[[i]]),
           
@@ -88,7 +88,7 @@ slideshow_left_slide <- function(cards, slide_id) {
 }
 
 # Create a function to generate a slideshow for the "card_right_slides"
-slideshow_right_slide <- function(cards, slide_id) {
+slideshow_right_slide <- function(cards, slide_id, interval) {
   tags$div(
     id = paste0("slideshow-", slide_id),
     class = "carousel slide",
@@ -99,7 +99,7 @@ slideshow_right_slide <- function(cards, slide_id) {
       lapply(seq_along(cards), function(i) {
         tags$div(
           class = ifelse(i == 1, "carousel-item active", "carousel-item"),
-          `data-bs-interval` = "15000",
+          `data-bs-interval` = interval,
           card_right_slide(cards[[i]]),
           
           # Add the prev and next arrows
@@ -111,7 +111,7 @@ slideshow_right_slide <- function(cards, slide_id) {
 }
 
 # Create a function to generate a slideshow for the "card_static_slides"
-slideshow_static_slide <- function(cards, slide_id) {
+slideshow_static_slide <- function(cards, slide_id, interval) {
   tags$div(
     id = paste0("slideshow", slide_id),
     class = "carousel slide",
@@ -122,7 +122,7 @@ slideshow_static_slide <- function(cards, slide_id) {
       lapply(seq_along(cards), function(i) {
         tags$div(
           class = ifelse(i == 1, "carousel-item active", "carousel-item"),
-          `data-bs-interval` = "15000",
+          `data-bs-interval` = interval,
           bslib::card(cards[[i]]),
           
           # Add the prev and next arrows
@@ -203,7 +203,7 @@ card_animation_slide <- function() {
   )
 }
 
-render_browsable_slideshow <- function (cards, slide_id) {
+render_browsable_slideshow <- function (cards, slide_id, interval) {
   # Render the slideshow
   htmltools::browsable(
     tags$html(
@@ -216,7 +216,7 @@ render_browsable_slideshow <- function (cards, slide_id) {
       ),
       
       tags$body(
-        slideshow_right_slide(cards, slide_id = slide_id),
+        slideshow_right_slide(cards, slide_id = slide_id, interval = interval),
         # Add some custom CSS for the animations
         card_animation_slide()
       )
