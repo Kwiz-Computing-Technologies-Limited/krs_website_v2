@@ -6,6 +6,7 @@ title: " "
 ```{r functions, echo=FALSE, message=FALSE, warning=FALSE}
 source("./pages/functions/sliding_cards.R")
 source("./pages/functions/landingpage_plotly.R")
+source("./pages/functions/animated_word_map.R")
 ```
 
 ```{r libraries, echo=FALSE, message=FALSE, warning=FALSE}
@@ -285,7 +286,7 @@ landingpage_cards = list(
     )
 )
 
-render_browsable_slideshow(cards = landingpage_cards, slide_id = "landingpage_slide", interval = 20000)
+render_browsable_slideshow(cards = landingpage_cards, slide_id = "landingpage_slide", interval = 40000)
 ```
 
 _________________________________

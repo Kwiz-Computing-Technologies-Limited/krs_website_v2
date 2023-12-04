@@ -4,7 +4,7 @@ project:
 website:
   title: "Kwiz Computing Technologies"
   navbar:
-    left:
+    right:
       - href: index.qmd
         text: Home
       - href: pages/about.qmd
