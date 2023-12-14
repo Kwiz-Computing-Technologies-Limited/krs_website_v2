@@ -163,10 +163,6 @@ card_body(
   
   htmltools::tags$div(
   "Welcome to Kwiz Computing Technologies, your partners in digital transformation! We believe in the power of R, leveraging its robust functionality for data and beyond. From static websites, data solutions to robust enterprise applications; our modular, adaptable solutions are designed to grow with your business.",
-        class = "card-text"),
-
-htmltools::tags$div(
-  "Ready to step into the future? Send us a message or book a 15-minute call with us. Let’s explore how we can drive your digital transformation together. Your journey to the future starts here!",
         class = "card-text")
 )
 ```
@@ -180,13 +176,13 @@ htmltools::tags$div(
 mission_vision_card = list(
   # Mission
   list(
-    body1 = card_body(
-      # Add a div tag for the card text
+    header = # Add a div tag for the card text
       htmltools::tags$div(
         "Our Mission",
-        style = "font-size:24px; font-color: ; text-align: center; font-weight: bold;")),
+        style = "font-size:24px; font-color: ; text-align: center; font-weight: bold;"),
     
     body2 = card_body(
+      style = "min-height: 300px;",
 
       # Add a div tag for the card text
       htmltools::tags$div(
@@ -197,13 +193,13 @@ mission_vision_card = list(
   
   # Vision
   list(
-    body1 = card_body(
-      # Add a div tag for the card text
+    header = # Add a div tag for the card text
       htmltools::tags$div(
         "Our Vision",
-        style = "font-size:24px; font-color: ; text-align: center; font-weight: bold;")),
+        style = "font-size:24px; font-color: ; text-align: center; font-weight: bold;"),
     
     body2 = card_body(
+      style = "min-height: 300px;",
 
       # Add a div tag for the card text
       htmltools::tags$div(
@@ -243,6 +239,10 @@ layout_column_wrap(
     bslib::card_body(
       class = "card-body",
       
+      htmltools::tags$div(
+  "Ready to step into the future? Send us a message or give us a call. Let’s explore how we can drive your digital transformation together. Your journey to the future starts here!",
+        class = "card-text"),
+      
       # Add a div tag for the chat whatsapp QR code
       htmltools::tags$div(
         class = "container",
@@ -256,10 +256,8 @@ layout_column_wrap(
         htmltools::tags$a(
           style = "color: black;",
           href = "https://wa.link/ujtz0p",
-          "Contact Us"))
-      )
-  )
-  )
+          "Contact Us")))
+  ))
 ```
 
 ------------------------------------------------------------------------
@@ -397,7 +395,7 @@ landingpage_cards = list(
     )
 )
 
-render_browsable_slideshow(cards = landingpage_cards, slide_id = "landingpage_slide", interval = 30000)
+render_browsable_slideshow(cards = landingpage_cards, slide_id = "landingpage_slide", interval = 20000)
 ```
 
 
