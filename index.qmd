@@ -1,12 +1,14 @@
 ---
 title: " "
+author: "Kwiz computing Technologies"
+format: 
+  html: 
+    page-layout: full
 ---
-:::{.column-page}
 
 ```{r functions, echo=FALSE, message=FALSE, warning=FALSE}
 source("./pages/functions/sliding_cards.R")
 source("./pages/functions/landingpage_plotly.R")
-source("./pages/functions/animated_word_map.R")
 ```
 
 ```{r libraries, echo=FALSE, message=FALSE, warning=FALSE}
@@ -14,7 +16,6 @@ library(htmltools)
 library(bslib)
 library(shiny)
 ```
-
 
 ```{r styling, echo=FALSE, message=FALSE, warning=FALSE}
 # Add some custom CSS styling to the cards
@@ -24,7 +25,7 @@ tags$style("
   }
   
   h1 {
-    text-align: center; font-size: 30px;
+    text-align: center; font-size: 24px;
   }
   
   h2 {
@@ -35,7 +36,7 @@ tags$style("
   a {
     text-align: center;
     text-decoration: none;
-    font-size: 30px;
+    font-size: 24px;
   }
 
   button:hover, a:hover {
@@ -75,7 +76,7 @@ tags$style("
     background-color: inherit;
     text-align: center;
     font-family: arial;
-    font-size: 30px;
+    font-size: 24px;
     font-weight: bold;
     border-bottom: 2px solid rgba(143, 151, 121, 0.8);
   }
@@ -96,7 +97,7 @@ tags$style("
   /* Style the card text */
   .card-text {
     color: grey90;
-    font-size: 30px;
+    font-size: 24px;
     position: relative;
     background-color: inherit;
     opacity: 0.8;
@@ -111,7 +112,7 @@ tags$style("
     text-align: center;
     cursor: pointer;
     max-width: 60%;
-    font-size: 30px;
+    font-size: 24px;
     border-radius: 10px;
     border: none;
     border-bottom: 2px solid rgba(143, 151, 121, 1);
@@ -139,7 +140,7 @@ tags$style("
     max-right: 200px;
     min-bottom: 100px;
     color: grey90;
-    font-size: 30px;
+    font-size: 24px;
     background-color: inherit;
     opacity: 0.8;
     border-radius: 10px;
@@ -147,16 +148,123 @@ tags$style("
 ")
 ```
 
-
 ```{r landingpage, echo=FALSE, message=FALSE, warning=FALSE}
-card_body(
-  # Add a div tag for the card text
+# Add a div tag for the card text
+card_header(
+  style = "text-align: center",
+  
   htmltools::tags$div(
-    "Fullstack R for Enterprise and Research",
-    style = "font-size:30px; font-color: ; text-align: center; font-weight: bold;"))
+  "Fullstack R for Enterprise and Research",
+  style = "font-size:24px; font-color: ; text-align: center; font-weight: bold;"))
+
+
+card_body(
+  style = "text-align: right",
+  
+  htmltools::tags$div(
+  "Welcome to Kwiz Computing Technologies, your partners in digital transformation! We believe in the power of R, leveraging its robust functionality for data and beyond. From static websites, data solutions to robust enterprise applications; our modular, adaptable solutions are designed to grow with your business.",
+        class = "card-text"),
+
+htmltools::tags$div(
+  "Ready to step into the future? Send us a message or book a 15-minute call with us. Let’s explore how we can drive your digital transformation together. Your journey to the future starts here!",
+        class = "card-text")
+)
 ```
 
-_________________________________
+
+------------------------------------------------------------------------
+
+
+```{r mission_vision, echo=FALSE, message=FALSE, warning=FALSE}
+# Render the mission and vision cards
+mission_vision_card = list(
+  # Mission
+  list(
+    body1 = card_body(
+      # Add a div tag for the card text
+      htmltools::tags$div(
+        "Our Mission",
+        style = "font-size:24px; font-color: ; text-align: center; font-weight: bold;")),
+    
+    body2 = card_body(
+
+      # Add a div tag for the card text
+      htmltools::tags$div(
+        "To Empower businesses, deliver excellence, drive innovation, and ensure our clients are at the forefront of digital transformation through robust, scalable, and innovative software solutions. ",
+        class = "card-text",
+        style = "text-align: center;")
+    )),
+  
+  # Vision
+  list(
+    body1 = card_body(
+      # Add a div tag for the card text
+      htmltools::tags$div(
+        "Our Vision",
+        style = "font-size:24px; font-color: ; text-align: center; font-weight: bold;")),
+    
+    body2 = card_body(
+
+      # Add a div tag for the card text
+      htmltools::tags$div(
+        class = "card-text",
+        
+        "To be create a future where every business, regardless of its size or industry, has access to top-tier digital solutions that drive growth, efficiency, and success.",
+        class = "title",
+            style = "text-align: center;"))
+    )
+)
+
+layout_column_wrap(
+  width = 0.5,
+  
+  card_body(
+    # Render the slideshow
+    htmltools::browsable(
+      tags$html(
+        tags$head(
+          # Use Bootstrap 5
+          tags$link(
+            rel = "stylesheet",
+            href = "https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+            )
+          ),
+        
+        tags$body(
+          slideshow_right_slide(mission_vision_card, slide_id = "mission_vision_slide", interval = 8000),
+          # Add some custom CSS for the animations
+          card_animation_slide()
+          )
+        )
+      )
+    ),
+  
+  card_body(
+    bslib::card_body(
+      class = "card-body",
+      
+      # Add a div tag for the chat whatsapp QR code
+      htmltools::tags$div(
+        class = "container",
+        htmltools::tags$image(
+          src = "./pages/images/chat_whatsapp.jpeg",
+          class = "card-image"
+          )),
+      
+      htmltools::tags$button(
+        class = "button",
+        htmltools::tags$a(
+          style = "color: black;",
+          href = "https://wa.link/ujtz0p",
+          "Contact Us"))
+      )
+  )
+  )
+```
+
+------------------------------------------------------------------------
+
+# Our Solutions
 
 ```{r services, echo=FALSE, message=FALSE, warning=FALSE}
 # Render the mission and vision cards
@@ -168,19 +276,28 @@ landingpage_cards = list(
         "Interactive Websites"),
     
     body1 = card_body(
-      style = "text-align: center;",
+      style = "text-align: right;",
       
       # Add a div tag for the card text
       htmltools::tags$div(
-        "Showcase your data analysis, create interactive dashboards, and explore complex concepts with your audience directly on your website.",
+        "Dive into the world of interactive websites with us! We leverage the power of Quarto in R to build dynamic, data-driven websites.",
         class = "card-text"),
       
+      htmltools::tags$p(),
+      
       htmltools::tags$div(
-        "We create Quarto websites embedding interactive components such as Observable JS, Shiny and HTML Widgets for stunning and engaging websites. ",
+        "Our creations don't just look good - they're smart, seamlessly integrating crucial data analytics right on the site. We believe in the power of data communication, and our websites reflect that. With us, your website won't just tell your story, it'll tell the story behind your data!",
         class = "card-text")),
     
-    body2 = card(
+    body2 = layout_column_wrap(
+      width = 0.5,
       style = "text-align: center",
+      
+      htmltools::tags$div(
+        class = "card-image",
+        htmltools::tags$img(
+          src = landingpage_plotly("image_1")
+          )),
       
       htmltools::tags$div(
         class = "card-image",
@@ -189,6 +306,65 @@ landingpage_cards = list(
           ))
       )),
   
+  # landingpage card 3
+  list(
+    header =  # Add a div tag for the card text
+      htmltools::tags$div(
+        "API Development and Integration"),
+      
+    body1 = card_body(
+      style = "text-align: right",
+      
+      # Add a div tag for the card text
+      htmltools::tags$div(
+        "Step into the future with our API's! We harness the power of the R development framework to build robust Plumber APIs.",
+        class = "card-text"),
+      
+      htmltools::tags$p(),
+        
+      # Add a div tag for the card text
+      htmltools::tags$div(
+        "Our APIs are versatile, designed to integrate seamlessly with applications and websites, irrespective of the language they’re written in. We’re not just about code; we’re about transforming your business with scalable solutions that speak your language!",
+        class = "card-text")),
+    
+    body2 = card_body(
+      
+      htmltools::tags$div(
+        class = "card-image",
+        htmltools::tags$img(
+          src = landingpage_plotly("image_1")
+        )))
+    ),
+  
+  
+  # landingpage card 5
+  list(
+    header = # Add a div tag for the card text
+      htmltools::tags$div(
+        "Cloud Solutions"),
+    
+    body1 = card_body(
+      style = "text-align: right",
+      
+      # Add a div tag for the card text
+      htmltools::tags$div(
+        "Embrace the cloud with us! We excel in designing and developing cloud-based solutions using AWS, integrating storage, database, compute, and security services.",
+        class = "card-text"),
+      
+      htmltools::tags$p(),
+      
+      htmltools::tags$div(
+        "Our focus is on building robust and highly scalable enterprise applications that can grow with your business. With us, you're not just getting a service, you're getting a future-proof solution that puts you ahead of the curve!",
+        class = "card-text"
+      )),
+    
+    body2 = card_body(
+      htmltools::tags$div(
+        class = "card-image",
+        htmltools::tags$img(
+          src = landingpage_plotly("image_1")
+        )))
+    ),
   
   # landingpage card 2
   list(
@@ -197,87 +373,22 @@ landingpage_cards = list(
         "Enterprise Applications"),
       
     body1 = card_body(
-      style = "text-align: center",
+      style = "text-align: right",
     
       # Add a div tag for the card text
       htmltools::tags$div(
-        "Looking for a way to build and deploy interactive web applications that can handle large amounts of data and users? ",
+        "Unleash the power of R and Shiny with us! We go beyond data, leveraging their robust functionality for general software development.",
         class = "card-text"),
       
-      htmltools::tags$div(
-        "We can help you design, develop and deploy fast, reliable and secure solutions for your business needs with R, shiny, databases, custom API development with plumber, integrating 3rd party API's and AWS cloud infrastructure.",
-        class = "card-text")),
-    
-    body2 = card(
-      style = "text-align: center",
+      htmltools::tags$p(),
       
       htmltools::tags$div(
-        class = "card-image",
-        htmltools::tags$img(
-          src = landingpage_plotly("image_1")
-        )))
-    ),
-  
-  # landingpage card 3
-  list(
-    header =  # Add a div tag for the card text
-      htmltools::tags$div(
-        "API Development and Integration"),
-      
-    body1 = card_body(
-      style = "text-align: center",
-      
-      # Add a div tag for the card text
-      htmltools::tags$div(
-        "Fullstack R for Enterprise and Research",
+        "Our expertise lies in integrating these tools with cloud resources, APIs, and other programming languages and applications. We're all about creating modular, scalable enterprise applications that are as dynamic and adaptable as your business needs. With us, you're not just building an application, you're building a future!",
         class = "card-text")),
     
     body2 = card_body(
-      
-      htmltools::tags$div(
-        class = "card-image",
-        htmltools::tags$img(
-          src = landingpage_plotly("image_1")
-        )))
-    ),
-  
-  # landingpage card 5
-  list(
-    header = # Add a div tag for the card text
-      htmltools::tags$div(
-        "Custom API Development Maps"),
-    
-    body1 = card_body(
       style = "text-align: center",
       
-      # Add a div tag for the card text
-      htmltools::tags$div(
-        "Fullstack R for Enterprise and Research",
-        class = "card-text")),
-    
-    body2 = card_body(
-      htmltools::tags$div(
-        class = "card-image",
-        htmltools::tags$img(
-          src = landingpage_plotly("image_1")
-        )))
-    ),
-  
-  # landingpage card 7
-  list(
-    header = # Add a div tag for the card text
-      htmltools::tags$div(
-        "Technical Project Management"),
-      
-    body1 = card_body(
-      style = "text-align: center",
-
-      # Add a div tag for the card text
-      htmltools::tags$div(
-        "Fullstack R for Enterprise and Research",
-        class = "card-text")),
-    
-    body2 = card_body(
       htmltools::tags$div(
         class = "card-image",
         htmltools::tags$img(
@@ -286,97 +397,11 @@ landingpage_cards = list(
     )
 )
 
-render_browsable_slideshow(cards = landingpage_cards, slide_id = "landingpage_slide", interval = 40000)
-```
-
-_________________________________
-
-# Mission and Vision
-
-```{r mission_vision, echo=FALSE, message=FALSE, warning=FALSE}
-# Render the mission and vision cards
-mission_vision_card = list(
-  # Mission
-  list(
-    body1 = card_body(
-      # Add a div tag for the card text
-      htmltools::tags$div(
-        "Our Mission",
-        style = "font-size:30px; font-color: ; text-align: center; font-weight: bold;")),
-    
-    body2 = card_body(
-
-      # Add a div tag for the card text
-      htmltools::tags$div(
-        "Fullstack R for Enterprise and Research",
-        class = "card-text",
-        style = "text-align: center;"))
-    ),
-  
-  # Vision
-  list(
-    body1 = card_body(
-      # Add a div tag for the card text
-      htmltools::tags$div(
-        "Our Vision",
-        style = "font-size:30px; font-color: ; text-align: center; font-weight: bold;")),
-    
-    body2 = card_body(
-
-      # Add a div tag for the card text
-      htmltools::tags$div(
-        class = "card-text",
-        
-        "Fullstack R for Enterprise and Research",
-        class = "title",
-            style = "text-align: center;"))
-    )
-)
-
-# Render the slideshow
-htmltools::browsable(
-  tags$html(
-    tags$head(
-      # Use Bootstrap 5
-      tags$link(
-        rel = "stylesheet",
-        href = "https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
-      )
-    ),
-    
-    tags$body(
-      slideshow_right_slide(mission_vision_card, slide_id = "mission_vision_slide", interval = 10000),
-      # Add some custom CSS for the animations
-      card_animation_slide()
-    )
-  )
-)
+render_browsable_slideshow(cards = landingpage_cards, slide_id = "landingpage_slide", interval = 30000)
 ```
 
 
-```{r call_to_action, echo=FALSE, message=FALSE, warning=FALSE}
-bslib::card_body(
-  class = "card-body",
-
-  # Add a div tag for the chat whatsapp QR code
-  htmltools::tags$div(
-    class = "container",
-    htmltools::tags$image(
-      src = "./pages/images/chat_whatsapp.jpeg",
-      class = "card-image"
-      )),
-  
-  htmltools::tags$button(
-    class = "button",
-    htmltools::tags$a(
-      style = "color: black;",
-      href = "https://wa.link/ujtz0p",
-      "Contact Us"))
-)
-```
-
-
-_________________________________
+------------------------------------------------------------------------
 
 # Testimonials
 
@@ -440,7 +465,7 @@ htmltools::browsable(
       lapply(seq_along(testimonials_cards), function(i) {
         tags$div(
           class = ifelse(i == 1, "carousel-item active", "carousel-item"),
-          `data-bs-interval` = 5000,
+          `data-bs-interval` = 4000,
           card_left_slide(testimonials_cards[[i]])
         )
       })
@@ -453,5 +478,3 @@ htmltools::browsable(
 )
 
 ```
-
-:::
