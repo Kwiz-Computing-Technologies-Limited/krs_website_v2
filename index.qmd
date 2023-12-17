@@ -157,6 +157,8 @@ tags$style("
     opacity: 0.8;
     border-radius: 10px;
   }
+  
+  
 ")
 ```
 
@@ -287,10 +289,12 @@ layout_column_wrap(
 ```{r services, echo=FALSE, message=FALSE, warning=FALSE}
 # Render the mission and vision cards
 navset_card_tab(
-  full_screen = FALSE,
+
+  full_screen = TRUE,
   
   # services card 1
   nav_panel(
+
     title =  # Add a div tag for the card text
       htmltools::tags$div(
         "Enterprise Applications",
@@ -333,7 +337,7 @@ navset_card_tab(
           ))))
     ),
   
-  nav_spacer(),
+  nav_spacer(), nav_spacer(),
   
   # services card 2
   nav_panel(
@@ -379,7 +383,7 @@ navset_card_tab(
           )))
       )),
   
-  nav_spacer(),
+  nav_spacer(), nav_spacer(),
   
   # services card 3
   nav_panel(
@@ -427,7 +431,7 @@ navset_card_tab(
           ))))
     ),
   
-  nav_spacer(),
+  nav_spacer(), nav_spacer(),
   
   
   # services card 4

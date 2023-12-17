@@ -99,12 +99,11 @@ cloud <- list(
     
     body1 = card_body(
       
-      # Add a div tag 
-      htmltools::tags$div(
-        class = "card-image",
-        htmltools::tags$img(
-          src = landingpage_plotly("image_1")
-        )))
+      # Add a img tag 
+      htmltools::tags$img(
+        src = landingpage_plotly("image_1"),
+        width = "100%"
+      ))
   )
 )
 
@@ -135,7 +134,7 @@ enterprise <- list(
         style = "font-size:24px; text-align: center; font-weight: bold;"),
     
     body1 = card_body(
-      
+
       # Add a div tag 
       htmltools::tags$div(
         class = "card-image",
