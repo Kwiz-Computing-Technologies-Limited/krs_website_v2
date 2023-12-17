@@ -4,11 +4,13 @@ author: "Kwiz computing Technologies"
 format: 
   html: 
     page-layout: full
+logo: pages/images/logo/Kwiz_Inverted_Color.jpg
 ---
 
 ```{r functions, echo=FALSE, message=FALSE, warning=FALSE}
 source("./pages/functions/sliding_cards.R")
 source("./pages/functions/landingpage_plotly.R")
+source("./pages/functions/solutions_media_cards.R")
 ```
 
 ```{r libraries, echo=FALSE, message=FALSE, warning=FALSE}
@@ -20,16 +22,18 @@ library(shiny)
 ```{r styling, echo=FALSE, message=FALSE, warning=FALSE}
 # Add some custom CSS styling to the cards
 tags$style("
+  
   .title {
     text-align: center;
+    color: #e9945b; 
   }
   
   h1 {
-    text-align: center; font-size: 24px;
+    text-align: center; font-size: 24px; color: #e9945b; 
   }
   
   h2 {
-    text-align: center;
+    text-align: center; color: #e9945b; 
   }
 
 
@@ -50,10 +54,10 @@ tags$style("
     max-height:auto;
     margin: auto;
     text-align: center;
-    font-family: arial;
+    font-family: ;
     border-radius: 10px;
     overflow: hidden;
-    border-top: 2px solid rgba(143, 151, 121, 0.5);
+    border-top: 2px solid #e9945b;
     background: inherit;
   }
   
@@ -63,10 +67,10 @@ tags$style("
     max-height:auto;
     margin: auto;
     text-align: center;
-    font-family: arial;
+    font-family: ;
     border-radius: 10px;
     overflow: hidden;
-    border-top: 2px solid rgba(143, 151, 121, 0.5);
+    border-top: 2px solid #e9945b;
     background: inherit;
   }
 
@@ -75,14 +79,20 @@ tags$style("
     padding: 10px;
     background-color: inherit;
     text-align: center;
-    font-family: arial;
+    font-family: ;
     font-size: 24px;
     font-weight: bold;
-    border-bottom: 2px solid rgba(143, 151, 121, 0.8);
+    border-bottom: 2px solid #e9945b;
+    color: #e9945b; 
   }
   
   
+  /* Style the card */
+  .card {
+    border-bottom: 2px solid #e9945b;
+  }
   
+ 
   
   
   
@@ -92,6 +102,7 @@ tags$style("
     width: 100%;
     object-fit: cover;
     border-radius: 10px;
+    align: center;
   }
 
   /* Style the card text */
@@ -115,10 +126,11 @@ tags$style("
     font-size: 24px;
     border-radius: 10px;
     border: none;
-    border-bottom: 2px solid rgba(143, 151, 121, 1);
+    border-bottom: 2px solid #e9945b;
     margin-left: 20%;
     margin-right: 20%;
     text-color: grey90;
+    background-color: ; 
   }
   
   /* Container holding the image and the text */
@@ -155,7 +167,7 @@ card_header(
   
   htmltools::tags$div(
   "Fullstack R for Enterprise and Research",
-  style = "font-size:24px; font-color: ; text-align: center; font-weight: bold;"))
+  style = "font-size:24px; color: #e9945b; text-align: center; font-weight: bold;"))
 
 
 card_body(
@@ -179,10 +191,10 @@ mission_vision_card = list(
     header = # Add a div tag for the card text
       htmltools::tags$div(
         "Our Mission",
-        style = "font-size:24px; font-color: ; text-align: center; font-weight: bold;"),
+        style = "font-size:24px; text-align: center; font-weight: bold;"),
     
-    body2 = card_body(
-      style = "min-height: 300px;",
+    body1 = card_body(
+      style = "min-height: 300px; ",
 
       # Add a div tag for the card text
       htmltools::tags$div(
@@ -196,17 +208,16 @@ mission_vision_card = list(
     header = # Add a div tag for the card text
       htmltools::tags$div(
         "Our Vision",
-        style = "font-size:24px; font-color: ; text-align: center; font-weight: bold;"),
+        style = "font-size:24px; text-align: center; font-weight: bold;"),
     
-    body2 = card_body(
+    body1 = card_body(
       style = "min-height: 300px;",
 
       # Add a div tag for the card text
       htmltools::tags$div(
         class = "card-text",
         
-        "To be create a future where every business, regardless of its size or industry, has access to top-tier digital solutions that drive growth, efficiency, and success.",
-        class = "title",
+        "To create a future where every business, regardless of its size or industry, has access to top-tier digital solutions that drive growth, efficiency, and success.",
             style = "text-align: center;"))
     )
 )
@@ -223,16 +234,13 @@ layout_column_wrap(
           tags$link(
             rel = "stylesheet",
             href = "https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
-            )
-          ),
+            )),
         
         tags$body(
           slideshow_right_slide(mission_vision_card, slide_id = "mission_vision_slide", interval = 8000),
           # Add some custom CSS for the animations
           card_animation_slide()
-          )
-        )
-      )
+          )))
     ),
   
   card_body(
@@ -240,8 +248,11 @@ layout_column_wrap(
       class = "card-body",
       
       htmltools::tags$div(
-  "Ready to step into the future? Send us a message or give us a call. Let’s explore how we can drive your digital transformation together. Your journey to the future starts here!",
-        class = "card-text"),
+  "Ready to step into the future? Send us a message or give us a call.",
+        class = "card-text", style = "text-align: center;"),
+  
+  htmltools::tags$p(),
+  
       
       # Add a div tag for the chat whatsapp QR code
       htmltools::tags$div(
@@ -256,24 +267,34 @@ layout_column_wrap(
         htmltools::tags$a(
           style = "color: black;",
           href = "https://wa.link/ujtz0p",
-          "Contact Us")))
+          "Contact Us")),
+  
+   htmltools::tags$p(),
+  
+  htmltools::tags$div(
+  "Let’s explore how we can drive your digital transformation together. Your journey to the future starts here!",
+        class = "card-text", style = "text-align: center;"))
   ))
 ```
 
 ------------------------------------------------------------------------
 
+::: {#Services}
 # Our Solutions
 
 ```{r services, echo=FALSE, message=FALSE, warning=FALSE}
 # Render the mission and vision cards
-landingpage_cards = list(
+navset_card_tab(
+  full_screen = FALSE,
+  
   # landingpage card 1
-  list(
-    header = # Add a div tag for the card text
+  nav_panel(
+    title =  # Add a div tag for the card text
       htmltools::tags$div(
-        "Interactive Websites"),
+        "Interactive Websites",
+        style = "color: #e9945b;"),
     
-    body1 = card_body(
+    card_body(
       style = "text-align: right;",
       
       # Add a div tag for the card text
@@ -287,30 +308,34 @@ landingpage_cards = list(
         "Our creations don't just look good - they're smart, seamlessly integrating crucial data analytics right on the site. We believe in the power of data communication, and our websites reflect that. With us, your website won't just tell your story, it'll tell the story behind your data!",
         class = "card-text")),
     
-    body2 = layout_column_wrap(
-      width = 0.5,
-      style = "text-align: center",
-      
-      htmltools::tags$div(
-        class = "card-image",
-        htmltools::tags$img(
-          src = landingpage_plotly("image_1")
-          )),
-      
-      htmltools::tags$div(
-        class = "card-image",
-        htmltools::tags$img(
-          src = landingpage_plotly("image_1")
-          ))
+    card_body(
+      # Render the slideshow
+      htmltools::browsable(
+        tags$html(
+          tags$head(
+            # Use Bootstrap 5
+            tags$link(
+              rel = "stylesheet",
+              href = "https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+              )),
+        
+        tags$body(
+          slideshow_right_slide(websites, slide_id = "websites_media", interval = 8000),
+          # Add some custom CSS for the animations
+          card_animation_slide()
+          )))
       )),
   
+  nav_spacer(),
+  
   # landingpage card 3
-  list(
-    header =  # Add a div tag for the card text
+  nav_panel(
+    title =    # Add a div tag for the card text
       htmltools::tags$div(
-        "API Development and Integration"),
+        "API Development and Integration",
+        style = "color: #e9945b;"),
       
-    body1 = card_body(
+    card_body(
       style = "text-align: right",
       
       # Add a div tag for the card text
@@ -325,23 +350,35 @@ landingpage_cards = list(
         "Our APIs are versatile, designed to integrate seamlessly with applications and websites, irrespective of the language they’re written in. We’re not just about code; we’re about transforming your business with scalable solutions that speak your language!",
         class = "card-text")),
     
-    body2 = card_body(
-      
-      htmltools::tags$div(
-        class = "card-image",
-        htmltools::tags$img(
-          src = landingpage_plotly("image_1")
-        )))
+    card_body(
+      # Render the slideshow
+      htmltools::browsable(
+        tags$html(
+          tags$head(
+            # Use Bootstrap 5
+            tags$link(
+              rel = "stylesheet",
+              href = "https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+              )),
+        
+        tags$body(
+          slideshow_right_slide(apis, slide_id = "api_media", interval = 8000),
+          # Add some custom CSS for the animations
+          card_animation_slide()
+          ))))
     ),
+  
+  nav_spacer(),
   
   
   # landingpage card 5
-  list(
-    header = # Add a div tag for the card text
+  nav_panel(
+    title =   # Add a div tag for the card text
       htmltools::tags$div(
-        "Cloud Solutions"),
+        "Cloud Solutions",
+        style = "color: #e9945b;"),
     
-    body1 = card_body(
+    card_body(
       style = "text-align: right",
       
       # Add a div tag for the card text
@@ -356,21 +393,34 @@ landingpage_cards = list(
         class = "card-text"
       )),
     
-    body2 = card_body(
-      htmltools::tags$div(
-        class = "card-image",
-        htmltools::tags$img(
-          src = landingpage_plotly("image_1")
-        )))
+    card_body(
+      # Render the slideshow
+      htmltools::browsable(
+        tags$html(
+          tags$head(
+            # Use Bootstrap 5
+            tags$link(
+              rel = "stylesheet",
+              href = "https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+              )),
+        
+        tags$body(
+          slideshow_right_slide(cloud, slide_id = "cloud_media", interval = 8000),
+          # Add some custom CSS for the animations
+          card_animation_slide()
+          ))))
     ),
   
+  nav_spacer(),
+  
   # landingpage card 2
-  list(
-    header =  # Add a div tag for the card text
+  nav_panel(
+    title =  # Add a div tag for the card text
       htmltools::tags$div(
-        "Enterprise Applications"),
+        "Enterprise Applications",
+        style = "color: #e9945b;"),
       
-    body1 = card_body(
+    card_body(
       style = "text-align: right",
     
       # Add a div tag for the card text
@@ -384,23 +434,114 @@ landingpage_cards = list(
         "Our expertise lies in integrating these tools with cloud resources, APIs, and other programming languages and applications. We're all about creating modular, scalable enterprise applications that are as dynamic and adaptable as your business needs. With us, you're not just building an application, you're building a future!",
         class = "card-text")),
     
-    body2 = card_body(
-      style = "text-align: center",
-      
-      htmltools::tags$div(
-        class = "card-image",
-        htmltools::tags$img(
-          src = landingpage_plotly("image_1")
-        )))
+    card_body(
+      # Render the slideshow
+      htmltools::browsable(
+        tags$html(
+          tags$head(
+            # Use Bootstrap 5
+            tags$link(
+              rel = "stylesheet",
+              href = "https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+              )),
+        
+        tags$body(
+          slideshow_right_slide(enterprise, slide_id = "enterprise_media", interval = 8000),
+          # Add some custom CSS for the animations
+          card_animation_slide()
+          ))))
     )
 )
 
-render_browsable_slideshow(cards = landingpage_cards, slide_id = "landingpage_slide", interval = 20000)
 ```
 
 
 ------------------------------------------------------------------------
+:::
 
+::: {#About}
+# Who we are
+
+```{r about, echo=FALSE, message=FALSE, warning=FALSE}
+card(
+  style = "text-align: right;",
+  
+  htmltools::tags$div(
+        "Kwiz Computing Technologies: Pioneering Digital Solutions.",
+        class = "card-text"),
+  
+  htmltools::tags$p(),
+  
+  htmltools::tags$div(
+        "Founded in February 2022 as ‘Kwiz Research Services’ and evolving into a limited company by January 2023, Kwiz Computing Technologies stands at the forefront of digital innovation.",
+        class = "card-text"),
+  
+  htmltools::tags$p(),
+  
+  htmltools::tags$div(
+        "Specializing in full stack R development, we offer a unique blend of expertise in statistics, computing methods, and big data solutions. Our commitment to excellence in solutions architecture, planning, and project management ensures that we deliver cutting-edge, end-to-end solutions tailored to propel your business into the future.",
+        class = "card-text"),
+  
+  htmltools::tags$p(),
+  
+  htmltools::tags$div(
+        "Embrace the digital transformation with Kwiz Computing Technologies – your partner in pioneering enterprise applications and driving growth.",
+        class = "card-text"),
+  
+  layout_column_wrap(
+    width = 1/3,
+    
+    card(
+      card_header(
+        htmltools::tags$div(
+        "Kwizera, Jean Victor: Cofounder - Technology")
+      ),
+      
+      card_image(file = "./pages/images/logo/Kwiz_Main_Logo.jpg"),
+      
+      card_body(
+        htmltools::tags$div(
+        "About Jean")
+      )
+    ),
+    
+    card(
+      card_header(
+        htmltools::tags$div(
+        "Iragena, Vincent De Paul: Cofounder - Business Development")
+      ),
+      
+      card_image(file = "./pages/images/logo/Kwiz_Main_Logo.jpg"),
+      
+      card_body(
+        htmltools::tags$div(
+        "About Vincent")
+      )
+    ),
+    
+    card(
+      card_header(
+        htmltools::tags$div(
+        "Raini, Catherine Nyasuguta: Project Management and Planning")
+      ),
+      
+      card_image(file = "./pages/images/logo/Kwiz_Main_Logo.jpg"),
+      
+      card_body(
+        htmltools::tags$div(
+        "About Raini")
+      )
+    )
+  )
+  
+)
+
+```
+:::
+
+------------------------------------------------------------------------
+
+::: {#Testimonials}
 # Testimonials
 
 ```{r testimonials, echo=FALSE, message=FALSE, warning=FALSE}
@@ -408,38 +549,41 @@ render_browsable_slideshow(cards = landingpage_cards, slide_id = "landingpage_sl
 testimonials_cards = list(
   # card 1
   list(
-    body1 = card_body(
-      # Add a div tag for the card text
-      tags$a(
-        href = "https://canarytourske.onrender.com",
-    
-        htmltools::tags$img(
-        src = "./pages/images/testimonials/canary_tours_logo.jpeg"))),
-    
-    body2 = card_body(
-      # Add a div tag for the card text
-      htmltools::tags$div(
-        "Feedback",
-        class = "card-text",
-        style = "text-align: center;"))),
-  
-  # card 2
-  list(
-    body1 = card_body(
+    body1 = layout_column_wrap(
+      width = 1/2,
+      
       # Add a div tag for the card text
       tags$a(
         href = "https://canarytourske.onrender.com",
       
         htmltools::tags$img(
-        src = "./pages/images/testimonials/canary_tours_logo.jpeg"))),
+        src = "./pages/images/testimonials/canary_tours_logo.jpeg")),
     
-    body2 = card_body(
-      # Add a div tag for the card text
+    # Add a div tag for the card text
       htmltools::tags$div(
         "Feedback 2",
         class = "card-text",
-        style = "text-align: center;"))
-    )
+        style = "text-align: center;")
+    )),
+  
+  # card 2
+  list(
+    body1 = layout_column_wrap(
+      width = 1/2,
+      
+      # Add a div tag for the card text
+      tags$a(
+        href = "https://canarytourske.onrender.com",
+      
+        htmltools::tags$img(
+        src = "./pages/images/testimonials/canary_tours_logo.jpeg")),
+    
+    # Add a div tag for the card text
+      htmltools::tags$div(
+        "Feedback 2",
+        class = "card-text",
+        style = "text-align: center;")
+    ))
 )
 
 # Render the slideshow
@@ -454,6 +598,7 @@ htmltools::browsable(
     ),
     
     tags$body(
+      
       tags$div(
     id = "slideshow-testimonials_slide",
     class = "carousel slide",
@@ -476,3 +621,4 @@ htmltools::browsable(
 )
 
 ```
+:::

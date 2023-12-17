@@ -13,13 +13,17 @@
 .carousel-control-next-icon:after
 {
   content: '>';
-  font-size: 30px;
-  color: rgba(143, 151, 121, 0.5);
+  font-size: 40px;
+  color: #e9945b;
 }
 
 .carousel-control-prev-icon:after {
   content: '<';
-  font-size: 30px;
-  color: rgba(143, 151, 121, 0.5);
+  font-size: 40px;
+  color: #e9945b;
 }
 
+@font-face {
+  font-family:"GeometrySoftPro";
+  src: url("pages/fonts/GeometrySoftPro.otf")
+}

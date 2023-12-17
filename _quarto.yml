@@ -3,12 +3,26 @@ project:
 
 website:
   title: "Kwiz Computing Technologies"
+  site-url: ""
+  favicon: ""
+  search: 
+    location: navbar
+    type: textbox
   navbar:
+    logo: "/pages/images/logo/Kwiz_Inverted_Color.jpg"
+    background: light
     right:
       - href: index.qmd
         text: Home
-      - href: pages/about.qmd
+      - href: "#Services"
+        text: Our Solutions
+      - href: "#About"
         text: About Us
+      - href: "#Demos"
+        text: Demos
+      - href: "#Testimonials"
+        text: Testimonials
+      
         
   page-footer: 
     center: "Created by: Kwiz Computing Technologies Limited" 
@@ -23,7 +37,7 @@ website:
 
 format:
   html:
-    theme: cosmo
+    mainfont: GeometrySoftPro;
     css: styles.css
     toc: false
 
