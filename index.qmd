@@ -287,7 +287,53 @@ layout_column_wrap(
 navset_card_tab(
   full_screen = FALSE,
   
-  # landingpage card 1
+  # services card 1
+  nav_panel(
+    title =  # Add a div tag for the card text
+      htmltools::tags$div(
+        "Enterprise Applications",
+        style = "color: #e9945b;"),
+      
+    card_body(
+      style = "text-align: right",
+    
+      htmltools::tags$div(
+        "Enterprise Applications",
+        style = "color: #e9945b; font-size: 24px;",
+        class = "title"),
+      
+      # Add a div tag for the card text
+      htmltools::tags$div(
+        "Unleash the power of R and Shiny with us! We go beyond data, leveraging their robust functionality for general software development.",
+        class = "card-text"),
+      
+      htmltools::tags$p(),
+      
+      htmltools::tags$div(
+        "Our expertise lies in integrating these tools with cloud resources, APIs, and other programming languages and applications. We're all about creating modular, scalable enterprise applications that are as dynamic and adaptable as your business needs. With us, you're not just building an application, you're building a future!",
+        class = "card-text")),
+    
+    card_body(
+      # Render the slideshow
+      htmltools::browsable(
+        tags$html(
+          tags$head(
+            # Use Bootstrap 5
+            tags$link(
+              rel = "stylesheet",
+              href = "https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+              )),
+        
+        tags$body(
+          slideshow_right_slide(enterprise, slide_id = "enterprise_media", interval = 8000),
+          # Add some custom CSS for the animations
+          card_animation_slide()
+          ))))
+    ),
+  
+  nav_spacer(),
+  
+  # services card 2
   nav_panel(
     title =  # Add a div tag for the card text
       htmltools::tags$div(
@@ -296,6 +342,11 @@ navset_card_tab(
     
     card_body(
       style = "text-align: right;",
+      
+      htmltools::tags$div(
+        "Interactive Websites",
+        style = "color: #e9945b; font-size: 24px;",
+        class = "title"),
       
       # Add a div tag for the card text
       htmltools::tags$div(
@@ -328,7 +379,7 @@ navset_card_tab(
   
   nav_spacer(),
   
-  # landingpage card 3
+  # services card 3
   nav_panel(
     title =    # Add a div tag for the card text
       htmltools::tags$div(
@@ -337,6 +388,12 @@ navset_card_tab(
       
     card_body(
       style = "text-align: right",
+      
+      
+      htmltools::tags$div(
+        "API Development and Integration",
+        style = "color: #e9945b; font-size: 24px;",
+        class = "title"),
       
       # Add a div tag for the card text
       htmltools::tags$div(
@@ -371,7 +428,7 @@ navset_card_tab(
   nav_spacer(),
   
   
-  # landingpage card 5
+  # services card 4
   nav_panel(
     title =   # Add a div tag for the card text
       htmltools::tags$div(
@@ -380,6 +437,11 @@ navset_card_tab(
     
     card_body(
       style = "text-align: right",
+      
+      htmltools::tags$div(
+        "Cloud Solutions",
+        style = "color: #e9945b; font-size: 24px;",
+        class = "title"),
       
       # Add a div tag for the card text
       htmltools::tags$div(
@@ -406,47 +468,6 @@ navset_card_tab(
         
         tags$body(
           slideshow_right_slide(cloud, slide_id = "cloud_media", interval = 8000),
-          # Add some custom CSS for the animations
-          card_animation_slide()
-          ))))
-    ),
-  
-  nav_spacer(),
-  
-  # landingpage card 2
-  nav_panel(
-    title =  # Add a div tag for the card text
-      htmltools::tags$div(
-        "Enterprise Applications",
-        style = "color: #e9945b;"),
-      
-    card_body(
-      style = "text-align: right",
-    
-      # Add a div tag for the card text
-      htmltools::tags$div(
-        "Unleash the power of R and Shiny with us! We go beyond data, leveraging their robust functionality for general software development.",
-        class = "card-text"),
-      
-      htmltools::tags$p(),
-      
-      htmltools::tags$div(
-        "Our expertise lies in integrating these tools with cloud resources, APIs, and other programming languages and applications. We're all about creating modular, scalable enterprise applications that are as dynamic and adaptable as your business needs. With us, you're not just building an application, you're building a future!",
-        class = "card-text")),
-    
-    card_body(
-      # Render the slideshow
-      htmltools::browsable(
-        tags$html(
-          tags$head(
-            # Use Bootstrap 5
-            tags$link(
-              rel = "stylesheet",
-              href = "https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
-              )),
-        
-        tags$body(
-          slideshow_right_slide(enterprise, slide_id = "enterprise_media", interval = 8000),
           # Add some custom CSS for the animations
           card_animation_slide()
           ))))
