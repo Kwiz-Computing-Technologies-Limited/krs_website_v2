@@ -17,6 +17,7 @@ source("./pages/functions/solutions_media_cards.R")
 library(htmltools)
 library(bslib)
 library(shiny)
+library(ggpubr)
 ```
 
 ```{r styling, echo=FALSE, message=FALSE, warning=FALSE}
@@ -185,9 +186,7 @@ card_body(
 )
 ```
 
-
 ------------------------------------------------------------------------
-
 
 ```{r mission_vision, echo=FALSE, message=FALSE, warning=FALSE}
 # Render the mission and vision cards
@@ -250,9 +249,7 @@ layout_column_wrap(
     ),
   
   card_body(
-    style = "border-radius: 10px;",
-    bslib::card_body(
-      style = "background-color: #f4ebe4;",
+      style = "background-image:url('/pages/images/logo/Kwiz_Main_Logo.jpg');",
       class = "card-body",
       
       htmltools::tags$div(
@@ -284,7 +281,7 @@ layout_column_wrap(
   
   htmltools::tags$div(
   "Let’s explore how we can drive your digital transformation together. Your journey to the future starts here!",
-        class = "card-text", style = "text-align: center;"))
+        class = "card-text", style = "text-align: center;")
   ))
 ```
 :::
@@ -302,7 +299,7 @@ navset_card_tab(
   
   # services card 1
   nav_panel(
-    style = "background-color: #f4ebe4;",
+    style = "background-color:#f4ebe4;",
 
     title =  # Add a div tag for the card text
       htmltools::tags$div(
@@ -351,7 +348,7 @@ navset_card_tab(
   # services card 2
   nav_panel(
     
-    style = "background-color: #f4ebe4;",
+    style = "background-color:#f4ebe4;",
     title =  # Add a div tag for the card text
       htmltools::tags$div(
         "Interactive Websites",
@@ -399,7 +396,7 @@ navset_card_tab(
   # services card 3
   nav_panel(
     
-    style = "background-color: #f4ebe4;",
+    style = "background-color:#f4ebe4;",
     title =    # Add a div tag for the card text
       htmltools::tags$div(
         "API Development and Integration",
@@ -450,7 +447,7 @@ navset_card_tab(
   # services card 4
   nav_panel(
     
-    style = "background-color: #f4ebe4;",
+    style = "background-color:#f4ebe4;",
     title =   # Add a div tag for the card text
       htmltools::tags$div(
         "Cloud Solutions",
@@ -496,7 +493,6 @@ navset_card_tab(
 )
 
 ```
-
 
 ------------------------------------------------------------------------
 :::

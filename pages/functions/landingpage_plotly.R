@@ -6,6 +6,10 @@ library(htmltools)
 library(htmlwidgets)
 library(later)
 library(gganimate)
+library(here)
+library(ggpubr)
+library(jpeg)
+
 
 # Create an animated scatterplot of mpg vs. hp, grouped by cyl
 landingpage_plotly <- function(name) {
@@ -15,9 +19,9 @@ landingpage_plotly <- function(name) {
         mutate(wt = round(wt, 0) * 5,
                disp = round(disp, 0),
                gear = factor(gear)),
-      aes(x = hp, y = mpg, color = gear)) +
-      geom_point() + theme(panel.grid = element_blank(),
-                           panel.background = element_blank()) + 
+      aes(x = hp, y = mpg, color = gear)) + 
+        background_image(readJPEG(here("pages", "images", "logo/Kwiz_Main_Logo.jpg"))) +
+      geom_point() + 
       transition_states(cyl, transition_length = 0.05, state_length = 0.1) +
       enter_grow() + exit_fly() + labs(title = "Cyl: {closest_state}", xlab = "HP", ylab = "mpg")} |>
       animate()
