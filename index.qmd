@@ -48,7 +48,7 @@ tags$style("
   a {
     text-align: center;
     text-decoration: none;
-    font-size: 24px;
+    font-size: 22px;
   }
 
   button:hover, a:hover {
@@ -116,7 +116,7 @@ tags$style("
   /* Style the card text */
   .card-text {
     color: grey90;
-    font-size: 24px;
+    font-size: 22px;
     position: relative;
     background-color: inherit;
     opacity: 0.8;
@@ -131,7 +131,7 @@ tags$style("
     text-align: center;
     cursor: pointer;
     max-width: 60%;
-    font-size: 24px;
+    font-size: 22px;
     border-radius: 10px;
     border: none;
     border-bottom: 2px solid #00faf0;
@@ -160,7 +160,7 @@ tags$style("
     max-right: 200px;
     min-bottom: 100px;
     color: grey90;
-    font-size: 24px;
+    font-size: 22px;
     background-color: inherit;
     opacity: 0.8;
     border-radius: 10px;
