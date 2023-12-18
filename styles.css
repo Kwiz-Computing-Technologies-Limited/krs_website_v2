@@ -27,3 +27,11 @@
   font-family:"GeometrySoftPro";
   src: url("pages/fonts/GeometrySoftPro.otf")
 }
+
+.navbar {
+  background-color: #00faf0;
+}
+
+.navbar li.nav-item a.nav-link span {
+  color: #e9945b !important;
+}

@@ -57,7 +57,7 @@ tags$style("
     font-family: ;
     border-radius: 10px;
     overflow: hidden;
-    border-top: 2px solid #e9945b;
+    border-top: 2px solid #00faf0;
     background: inherit;
   }
   
@@ -70,7 +70,7 @@ tags$style("
     font-family: ;
     border-radius: 10px;
     overflow: hidden;
-    border-top: 2px solid #e9945b;
+    border-top: 2px solid #00faf0;
     background: inherit;
   }
 
@@ -82,14 +82,14 @@ tags$style("
     font-family: ;
     font-size: 24px;
     font-weight: bold;
-    border-bottom: 2px solid #e9945b;
+    border-bottom: 2px solid #00faf0;
     color: #e9945b; 
   }
   
   
   /* Style the card */
   .card {
-    border-bottom: 2px solid #e9945b;
+    border-bottom: 2px solid #00faf0;
   }
   
  
@@ -126,7 +126,7 @@ tags$style("
     font-size: 24px;
     border-radius: 10px;
     border: none;
-    border-bottom: 2px solid #e9945b;
+    border-bottom: 2px solid #00faf0;
     margin-left: 20%;
     margin-right: 20%;
     text-color: grey90;
@@ -298,7 +298,7 @@ navset_card_tab(
     title =  # Add a div tag for the card text
       htmltools::tags$div(
         "Enterprise Applications",
-        style = "color: #e9945b;"),
+        style = "color: #e9945b; background-color: #00faf0; border-radius: 20%;"),
       
     card_body(
       style = "text-align: right",
@@ -344,7 +344,7 @@ navset_card_tab(
     title =  # Add a div tag for the card text
       htmltools::tags$div(
         "Interactive Websites",
-        style = "color: #e9945b;"),
+        style = "color: #e9945b;  background-color: #00faf0; border-radius: 20%;"),
     
     card_body(
       style = "text-align: right;",
@@ -390,7 +390,7 @@ navset_card_tab(
     title =    # Add a div tag for the card text
       htmltools::tags$div(
         "API Development and Integration",
-        style = "color: #e9945b;"),
+        style = "color: #e9945b;  background-color: #00faf0; border-radius: 20%;"),
       
     card_body(
       style = "text-align: right",
@@ -439,14 +439,14 @@ navset_card_tab(
     title =   # Add a div tag for the card text
       htmltools::tags$div(
         "Cloud Solutions",
-        style = "color: #e9945b;"),
+        style = "color: #e9945b;  background-color: #00faf0; border-radius: 20%;"),
     
     card_body(
       style = "text-align: right",
       
       htmltools::tags$div(
         "Cloud Solutions",
-        style = "color: #e9945b; font-size: 24px;",
+        style = "color: #e9945b; font-size: 24px; ",
         class = "title"),
       
       # Add a div tag for the card text
