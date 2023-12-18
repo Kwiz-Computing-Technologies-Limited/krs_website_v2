@@ -597,7 +597,6 @@ htmltools::browsable(
         
     tags$body(
        slideshow_right_slide(demos_cards, slide_id = "demos_slide", interval = 40000)
-      # Add the prev and next arrows
       )))
 ```
 :::

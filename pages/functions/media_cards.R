@@ -190,35 +190,30 @@ testimonials_cards = list(
 
 
 # demos cards
+#Define the list of demos
 demos_cards = list(
-  # card 2
   list(
     header = "Interactive Dashboard",
-    body1 =
-      # Add a div tag for the card text
-      tags$div("Interactive Dashboard"),
-      
-      # Add a div tag for the card iframe
-    body2 = htmltools::tags$iframe(
-      src="https://jean-kwizera-vic.shinyapps.io/Dashboard/",
+    body1 = "Interactive Dashboard",
+    body2 = tags$iframe(
+      style = "height: 900px;",
+      src = "https://jean-kwizera-vic.shinyapps.io/Dashboard/",
       id = "shiny_dashboard",
-      tags$script('
-                 var iframe = document.getElementById("shiny_dashboard"); 
-                 iframe.width = iframe.contentWindow.document.body.scrollWidth;
-                 iframe.height = iframe.contentWindow.document.body.Height;
-                  '))
-    ),
-  
-  # card 2
+      onload = 'this.contentWindow.postMessage("resize", "https://jean-kwizera-vic.shinyapps.io")'
+    )
+  ),
   list(
     header = "Mapping with Leaflet",
-    body1 = 
-      
-      # Add a div tag for the card text
-      tags$div(
-        "Species Mapping"),
-    
-    # Add a div tag for the card iframe
-    body2 = htmltools::tags$iframe(
-      src="https://zp1mwp-jean0victor-kwizera.shinyapps.io/Appsilon_code_challenge/"))
+    body1 = "Species Mapping",
+    body2 = tags$iframe(
+      style = "height: 900px;",
+      src = "https://zp1mwp-jean0victor-kwizera.shinyapps.io/Appsilon_code_challenge/",
+      id = "leaflet_map",
+      onload = 'this.contentWindow.postMessage("resize", "https://zp1mwp-jean0victor-kwizera.shinyapps.io")'
+    )
+  )
 )
+
+
+
+
