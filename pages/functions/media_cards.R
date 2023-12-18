@@ -202,11 +202,11 @@ demos_cards = list(
     body2 = htmltools::tags$iframe(
       src="https://jean-kwizera-vic.shinyapps.io/Dashboard/",
       id = "shiny_dashboard",
-      tags$script("
-                 var iframe = document.getElementById('shiny_dashboard'); 
+      tags$script('
+                 var iframe = document.getElementById("shiny_dashboard"); 
                  iframe.width = iframe.contentWindow.document.body.scrollWidth;
                  iframe.height = iframe.contentWindow.document.body.Height;
-                  "))
+                  '))
     ),
   
   # card 2

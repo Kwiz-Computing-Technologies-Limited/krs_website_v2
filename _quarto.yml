@@ -30,6 +30,8 @@ website:
       
         
   page-footer: 
+    background: "#1b4a9c"
+    foreground: "#e9945b"
     center: "Created by: Kwiz Computing Technologies Limited" 
     left: "Copyright: Kwiz Computing Technologies Limited (2023)"
     right: 
