@@ -605,7 +605,7 @@ htmltools::browsable(
 
 :::{.column-page #Testimonials}
 
-<h1 style = "color:#1b4a9c; background-color:#e9945b;">Testimonials</h1>
+<h1 style = "color:#e9945b; background-color:#1b4a9c;">Testimonials</h1>
 
 ```{r testimonials, echo=FALSE, message=FALSE, warning=FALSE}
 # Render the slideshow
