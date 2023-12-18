@@ -25,7 +25,10 @@ tags$style("
   
   .title {
     text-align: center;
-    color: #e9945b; 
+    color: #e9945b;
+    font-size: 24px; 
+    margin-left: 30%; 
+    margin-right: 30%;
   }
   
   h1 {
@@ -130,7 +133,7 @@ tags$style("
     margin-left: 20%;
     margin-right: 20%;
     text-color: grey90;
-    background-color: ; 
+    background-color: inherit; 
   }
   
   /* Container holding the image and the text */
@@ -247,7 +250,9 @@ layout_column_wrap(
     ),
   
   card_body(
+    style = "border-radius: 10px;",
     bslib::card_body(
+      style = "background-color: #f4ebe4;",
       class = "card-body",
       
       htmltools::tags$div(
@@ -262,9 +267,12 @@ layout_column_wrap(
         class = "container",
         htmltools::tags$image(
           src = "./pages/images/chat_whatsapp.jpeg",
-          class = "card-image"
+          class = "card-image",
+          style = "border-radius: 10px;",
           )),
       
+   htmltools::tags$p(),
+  
       htmltools::tags$button(
         class = "button",
         htmltools::tags$a(
@@ -294,18 +302,19 @@ navset_card_tab(
   
   # services card 1
   nav_panel(
+    style = "background-color: #f4ebe4;",
 
     title =  # Add a div tag for the card text
       htmltools::tags$div(
         "Enterprise Applications",
-        style = "color: #e9945b; background-color: #00faf0; border-radius: 20%;"),
+        style = "color: #e9945b; background-color: #f4ebe4; border-radius: 10px;"),
       
     card_body(
       style = "text-align: right",
     
       htmltools::tags$div(
         "Enterprise Applications",
-        style = "color: #e9945b; font-size: 24px;",
+        
         class = "title"),
       
       # Add a div tag for the card text
@@ -341,17 +350,19 @@ navset_card_tab(
   
   # services card 2
   nav_panel(
+    
+    style = "background-color: #f4ebe4;",
     title =  # Add a div tag for the card text
       htmltools::tags$div(
         "Interactive Websites",
-        style = "color: #e9945b;  background-color: #00faf0; border-radius: 20%;"),
+        style = "color: #e9945b;  background-color: #f4ebe4; border-radius: 10px;"),
     
     card_body(
       style = "text-align: right;",
       
       htmltools::tags$div(
         "Interactive Websites",
-        style = "color: #e9945b; font-size: 24px;",
+        
         class = "title"),
       
       # Add a div tag for the card text
@@ -387,10 +398,12 @@ navset_card_tab(
   
   # services card 3
   nav_panel(
+    
+    style = "background-color: #f4ebe4;",
     title =    # Add a div tag for the card text
       htmltools::tags$div(
         "API Development and Integration",
-        style = "color: #e9945b;  background-color: #00faf0; border-radius: 20%;"),
+        style = "color: #e9945b;  background-color: #f4ebe4; border-radius: 10px;"),
       
     card_body(
       style = "text-align: right",
@@ -398,7 +411,7 @@ navset_card_tab(
       
       htmltools::tags$div(
         "API Development and Integration",
-        style = "color: #e9945b; font-size: 24px;",
+        
         class = "title"),
       
       # Add a div tag for the card text
@@ -436,17 +449,19 @@ navset_card_tab(
   
   # services card 4
   nav_panel(
+    
+    style = "background-color: #f4ebe4;",
     title =   # Add a div tag for the card text
       htmltools::tags$div(
         "Cloud Solutions",
-        style = "color: #e9945b;  background-color: #00faf0; border-radius: 20%;"),
+        style = "color: #e9945b;  background-color: #f4ebe4; border-radius: 10px;"),
     
     card_body(
       style = "text-align: right",
       
       htmltools::tags$div(
         "Cloud Solutions",
-        style = "color: #e9945b; font-size: 24px; ",
+        
         class = "title"),
       
       # Add a div tag for the card text
@@ -524,7 +539,8 @@ card(
         "Kwizera, Jean Victor: Cofounder - Technology")
       ),
       
-      card_image(file = "./pages/images/logo/Kwiz_Main_Logo.jpg"),
+      card_image(file = "./pages/images/logo/Kwiz_Main_Logo.jpg",
+                 class = "card-image"),
       
       card_body(
         htmltools::tags$div(
@@ -538,7 +554,8 @@ card(
         "Iragena, Vincent De Paul: Cofounder - Business Development")
       ),
       
-      card_image(file = "./pages/images/logo/Kwiz_Main_Logo.jpg"),
+      card_image(file = "./pages/images/logo/Kwiz_Main_Logo.jpg",
+                 class = "card-image"),
       
       card_body(
         htmltools::tags$div(
@@ -552,7 +569,8 @@ card(
         "Raini, Catherine Nyasuguta: Project Management and Planning")
       ),
       
-      card_image(file = "./pages/images/logo/Kwiz_Main_Logo.jpg"),
+      card_image(file = "./pages/images/logo/Kwiz_Main_Logo.jpg",
+                 class = "card-image"),
       
       card_body(
         htmltools::tags$div(
@@ -578,17 +596,19 @@ testimonials_cards = list(
   list(
     body1 = layout_column_wrap(
       width = 1/2,
+      style = "background-color: #f4ebe4;",
       
       # Add a div tag for the card text
       tags$a(
         href = "https://canarytourske.onrender.com",
       
         htmltools::tags$img(
-        src = "./pages/images/testimonials/canary_tours_logo.jpeg")),
+        src = "./pages/images/testimonials/canary_tours_logo.jpeg",
+        height = "510px")),
     
     # Add a div tag for the card text
       htmltools::tags$div(
-        "Feedback 2",
+        "Feedback 1",
         class = "card-text",
         style = "text-align: center;")
     )),
@@ -597,13 +617,15 @@ testimonials_cards = list(
   list(
     body1 = layout_column_wrap(
       width = 1/2,
+      style = "background-color: #f4ebe4;",
       
       # Add a div tag for the card text
       tags$a(
-        href = "https://canarytourske.onrender.com",
+        href = "https://www.kwizresearch.com/",
       
         htmltools::tags$img(
-        src = "./pages/images/testimonials/canary_tours_logo.jpeg")),
+        src = "./pages/images/logo/Kwiz_White_bg_Logo.jpg",
+        height = "400px")),
     
     # Add a div tag for the card text
       htmltools::tags$div(
