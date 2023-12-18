@@ -26,14 +26,18 @@ tags$style("
   
   .title {
     text-align: center;
-    color: #e9945b;
+    color: #1b4a9c;
     font-size: 24px; 
     margin-left: 30%; 
     margin-right: 30%;
   }
   
   h1 {
-    text-align: center; font-size: 24px; color: #e9945b; 
+    text-align: center; 
+    font-size: 24px; 
+    color: #e9945b; 
+    background-color: #1b4a9c;
+    border-radius: 10px;
   }
   
   h2 {
@@ -174,7 +178,7 @@ card_header(
   
   htmltools::tags$div(
   "Fullstack R for Enterprise and Research",
-  style = "font-size:24px; color: #e9945b; text-align: center; font-weight: bold;"))
+  style = "font-size:24px; color: #e9945b; text-align: center; font-weight: bold; background-color: #1b4a9c;"))
 
 
 card_body(
@@ -249,7 +253,7 @@ layout_column_wrap(
     ),
   
   card_body(
-      style = "background-image:url('/pages/images/logo/Kwiz_Main_Logo.jpg');",
+      style = "background-image:url('pages/images/logo/Kwiz_Inverted_Color.jpg');",
       class = "card-body",
       
       htmltools::tags$div(
@@ -299,19 +303,18 @@ navset_card_tab(
   
   # services card 1
   nav_panel(
-    style = "background-color:#f4ebe4;",
+    style = "background-color:#e9945b;",
 
     title =  # Add a div tag for the card text
       htmltools::tags$div(
         "Enterprise Applications",
-        style = "color: #e9945b; background-color: #00faf0; border-radius: 10px;"),
+        style = "color: #1b4a9c; background-color: ; border-radius: 10px;"),
       
     card_body(
       style = "text-align: right",
     
       htmltools::tags$div(
         "Enterprise Applications",
-        
         class = "title"),
       
       # Add a div tag for the card text
@@ -348,11 +351,11 @@ navset_card_tab(
   # services card 2
   nav_panel(
     
-    style = "background-color:#f4ebe4;",
+    style = "background-color:#e9945b;",
     title =  # Add a div tag for the card text
       htmltools::tags$div(
         "Interactive Websites",
-        style = "color: #e9945b;  background-color: #00faf0; border-radius: 10px;"),
+        style = "color: #1b4a9c;  background-color: ; border-radius: 10px;"),
     
     card_body(
       style = "text-align: right;",
@@ -396,11 +399,11 @@ navset_card_tab(
   # services card 3
   nav_panel(
     
-    style = "background-color:#f4ebe4;",
+    style = "background-color:#e9945b;",
     title =    # Add a div tag for the card text
       htmltools::tags$div(
         "API Development and Integration",
-        style = "color: #e9945b;  background-color: #00faf0; border-radius: 10px;"),
+        style = "color: #1b4a9c;  background-color: ; border-radius: 10px;"),
       
     card_body(
       style = "text-align: right",
@@ -447,11 +450,11 @@ navset_card_tab(
   # services card 4
   nav_panel(
     
-    style = "background-color:#f4ebe4;",
+    style = "background-color:#e9945b;",
     title =   # Add a div tag for the card text
       htmltools::tags$div(
         "Cloud Solutions",
-        style = "color: #e9945b;  background-color: #00faf0; border-radius: 10px;"),
+        style = "color: #1b4a9c;  background-color: ; border-radius: 10px;"),
     
     card_body(
       style = "text-align: right",
@@ -532,7 +535,8 @@ card(
     card(
       card_header(
         htmltools::tags$div(
-        "Kwizera, Jean Victor: Cofounder - Technology")
+        "Kwizera, Jean Victor: Cofounder - Technology",
+        style = "color: #1b4a9c; background-color: #e9945b; border-radius: 10px;",)
       ),
       
       card_image(file = "./pages/images/logo/Kwiz_Main_Logo.jpg",
@@ -547,7 +551,8 @@ card(
     card(
       card_header(
         htmltools::tags$div(
-        "Iragena, Vincent De Paul: Cofounder - Business Development")
+        "Iragena, Vincent De Paul: Cofounder - Business Development",
+        style = "color: #1b4a9c; background-color: #e9945b; border-radius: 10px;")
       ),
       
       card_image(file = "./pages/images/logo/Kwiz_Main_Logo.jpg",
@@ -562,7 +567,8 @@ card(
     card(
       card_header(
         htmltools::tags$div(
-        "Raini, Catherine Nyasuguta: Project Management and Planning")
+        "Raini, Catherine Nyasuguta: Project Management and Planning",
+        style = "color: #1b4a9c; background-color: #e9945b; border-radius: 10px;")
       ),
       
       card_image(file = "./pages/images/logo/Kwiz_Main_Logo.jpg",
