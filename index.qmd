@@ -292,7 +292,7 @@ navset_card_tab(
 
     title =  # Add a div tag for the card text
       htmltools::tags$div(
-        "Enterprise Applications",
+        "Enterprise Applications |",
         style = "color: #1b4a9c; background-color: ; border-radius: 10px;"),
       
     card_body(
@@ -340,7 +340,7 @@ navset_card_tab(
     style = "background-color:#e9945b;",
     title =  # Add a div tag for the card text
       htmltools::tags$div(
-        "Interactive Websites",
+        "Interactive Websites |",
         style = "color: #1b4a9c;  background-color: ; border-radius: 10px;"),
     
     card_body(
@@ -390,7 +390,7 @@ navset_card_tab(
     style = "background-color:#e9945b;",
     title =    # Add a div tag for the card text
       htmltools::tags$div(
-        "API Development and Integration",
+        "API Development and Integration |",
         style = "color: #1b4a9c;  background-color: ; border-radius: 10px;"),
       
     card_body(
