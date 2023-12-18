@@ -598,18 +598,18 @@ testimonials_cards = list(
   list(
     body1 = layout_column_wrap(
       width = 1/2,
-      style = "background-color: #f4ebe4;",
-      
+
       # Add a div tag for the card text
       tags$a(
         href = "https://canarytourske.onrender.com",
       
         htmltools::tags$img(
         src = "./pages/images/testimonials/canary_tours_logo.jpeg",
-        style = "max-height: 500px;")),
+        style = "max-height: 400px;")),
     
     # Add a div tag for the card text
       htmltools::tags$div(
+        style = "background-color: #f4ebe4; height: 400px;",
         "Feedback 1",
         class = "card-text",
         style = "text-align: center;")
@@ -619,7 +619,6 @@ testimonials_cards = list(
   list(
     body1 = layout_column_wrap(
       width = 1/2,
-      style = "background-color: #f4ebe4;",
       
       # Add a div tag for the card text
       tags$a(
@@ -627,10 +626,11 @@ testimonials_cards = list(
       
         htmltools::tags$img(
         src = "./pages/images/logo/Kwiz_White_bg_Logo.jpg",
-        style = "max-height: 500px;")),
+        style = "max-height: 400px;")),
     
     # Add a div tag for the card text
       htmltools::tags$div(
+        style = "background-color: #f4ebe4; height: 400px;",
         "Feedback 2",
         class = "card-text",
         style = "text-align: center;")
