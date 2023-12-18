@@ -307,7 +307,7 @@ navset_card_tab(
     title =  # Add a div tag for the card text
       htmltools::tags$div(
         "Enterprise Applications",
-        style = "color: #e9945b; background-color: #f4ebe4; border-radius: 10px;"),
+        style = "color: #e9945b; background-color: #00faf0; border-radius: 10px;"),
       
     card_body(
       style = "text-align: right",
@@ -355,7 +355,7 @@ navset_card_tab(
     title =  # Add a div tag for the card text
       htmltools::tags$div(
         "Interactive Websites",
-        style = "color: #e9945b;  background-color: #f4ebe4; border-radius: 10px;"),
+        style = "color: #e9945b;  background-color: #00faf0; border-radius: 10px;"),
     
     card_body(
       style = "text-align: right;",
@@ -403,7 +403,7 @@ navset_card_tab(
     title =    # Add a div tag for the card text
       htmltools::tags$div(
         "API Development and Integration",
-        style = "color: #e9945b;  background-color: #f4ebe4; border-radius: 10px;"),
+        style = "color: #e9945b;  background-color: #00faf0; border-radius: 10px;"),
       
     card_body(
       style = "text-align: right",
@@ -454,7 +454,7 @@ navset_card_tab(
     title =   # Add a div tag for the card text
       htmltools::tags$div(
         "Cloud Solutions",
-        style = "color: #e9945b;  background-color: #f4ebe4; border-radius: 10px;"),
+        style = "color: #e9945b;  background-color: #00faf0; border-radius: 10px;"),
     
     card_body(
       style = "text-align: right",
