@@ -201,7 +201,7 @@ card_header(
   
   htmltools::tags$div(
   "Fullstack R for Enterprise and Research",
-  style = "font-size:24px; color: #e9945b; text-align: center; font-weight: bold; background-color: #1b4a9c;"))
+  style = "font-size:24px; color: #e9945b; text-align: center; font-weight: bold; background-color: #1b4a9c; border-radius: 10px;"))
 
 
 card_body(
