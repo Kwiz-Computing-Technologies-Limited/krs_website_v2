@@ -2,15 +2,20 @@ project:
   type: website
 
 website:
-  title: "Kwiz Computing Technologies"
   site-url: ""
   favicon: ""
   search: 
     location: navbar
     type: textbox
   navbar:
+    title: "Kwiz Computing Technologies"
     logo: "/pages/images/logo/Kwiz_Inverted_Color.jpg"
-    background: light
+    logo-alt: "Kwiz Computing Technologies"
+    logo-href: "#Home"
+    background: "#e9945b"
+    foreground: "#e9945b"
+    pinned: true
+    collapse: false
     right:
       - href: "#Home"
         text: Home

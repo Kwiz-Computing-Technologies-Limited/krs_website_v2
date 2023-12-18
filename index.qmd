@@ -1,16 +1,39 @@
 ---
-title: " "
-author: "Kwiz computing Technologies"
 format: 
   html: 
     page-layout: full
-logo: pages/images/logo/Kwiz_Inverted_Color.jpg
 ---
+
+<!-- fontawesome icons  -->
+
+```{=html}
+<script src="https://kit.fontawesome.com/c807397498.js" crossorigin="anonymous"></script>
+```
+<!-- /fontawesome icons {/literal} -->
+
+<!-- Sendinblue Conversations {literal} -->
+
+```{=html}
+<script>
+    (function(d, w, c) {
+        w.SibConversationsID = '643fda89e758061ca338bf4f';
+        w[c] = w[c] || function() {
+            (w[c].q = w[c].q || []).push(arguments);
+        };
+        var s = d.createElement('script');
+        s.async = true;
+        s.src = 'https://conversations-widget.sendinblue.com/sib-conversations.js';
+        if (d.head) d.head.appendChild(s);
+    })(document, window, 'SibConversations');
+</script>
+```
+<!-- /Sendinblue Conversations {/literal} -->
+
 
 ```{r functions, echo=FALSE, message=FALSE, warning=FALSE}
 source("./pages/functions/sliding_cards.R")
 source("./pages/functions/landingpage_plotly.R")
-source("./pages/functions/solutions_media_cards.R")
+source("./pages/functions/media_cards.R")
 ```
 
 ```{r libraries, echo=FALSE, message=FALSE, warning=FALSE}
@@ -27,7 +50,7 @@ tags$style("
   .title {
     text-align: center;
     color: #1b4a9c;
-    font-size: 24px; 
+    font-size: 30px; 
     margin-left: 30%; 
     margin-right: 30%;
   }
@@ -65,7 +88,7 @@ tags$style("
     font-family: ;
     border-radius: 10px;
     overflow: hidden;
-    border-top: 2px solid #00faf0;
+    border-top: 2px solid #1b4a9c;
     background: inherit;
   }
   
@@ -78,7 +101,7 @@ tags$style("
     font-family: ;
     border-radius: 10px;
     overflow: hidden;
-    border-top: 2px solid #00faf0;
+    border-top: 2px solid #1b4a9c;
     background: inherit;
   }
 
@@ -90,14 +113,14 @@ tags$style("
     font-family: ;
     font-size: 24px;
     font-weight: bold;
-    border-bottom: 2px solid #00faf0;
+    border-bottom: 2px solid #1b4a9c;
     color: #e9945b; 
   }
   
   
   /* Style the card */
   .card {
-    border-bottom: 2px solid #00faf0;
+    border-bottom: 2px solid #1b4a9c;
   }
   
  
@@ -134,7 +157,7 @@ tags$style("
     font-size: 22px;
     border-radius: 10px;
     border: none;
-    border-bottom: 2px solid #00faf0;
+    border-bottom: 2px solid #1b4a9c;
     margin-left: 20%;
     margin-right: 20%;
     text-color: grey90;
@@ -170,7 +193,7 @@ tags$style("
 ")
 ```
 
-::: {#Home}
+:::{.column-page #Home}
 ```{r landingpage, echo=FALSE, message=FALSE, warning=FALSE}
 # Add a div tag for the card text
 card_header(
@@ -193,44 +216,6 @@ card_body(
 ------------------------------------------------------------------------
 
 ```{r mission_vision, echo=FALSE, message=FALSE, warning=FALSE}
-# Render the mission and vision cards
-mission_vision_card = list(
-  # Mission
-  list(
-    header = # Add a div tag for the card text
-      htmltools::tags$div(
-        "Our Mission",
-        style = "font-size:24px; text-align: center; font-weight: bold;"),
-    
-    body1 = card_body(
-      style = "min-height: 300px; ",
-
-      # Add a div tag for the card text
-      htmltools::tags$div(
-        "To Empower businesses, deliver excellence, drive innovation, and ensure our clients are at the forefront of digital transformation through robust, scalable, and innovative software solutions. ",
-        class = "card-text",
-        style = "text-align: center;")
-    )),
-  
-  # Vision
-  list(
-    header = # Add a div tag for the card text
-      htmltools::tags$div(
-        "Our Vision",
-        style = "font-size:24px; text-align: center; font-weight: bold;"),
-    
-    body1 = card_body(
-      style = "min-height: 300px;",
-
-      # Add a div tag for the card text
-      htmltools::tags$div(
-        class = "card-text",
-        
-        "To create a future where every business, regardless of its size or industry, has access to top-tier digital solutions that drive growth, efficiency, and success.",
-            style = "text-align: center;"))
-    )
-)
-
 layout_column_wrap(
   width = 0.5,
   
@@ -292,14 +277,14 @@ layout_column_wrap(
 
 ------------------------------------------------------------------------
 
-::: {#Services}
+:::{.column-page #Services}
 # Our Solutions
 
 ```{r services, echo=FALSE, message=FALSE, warning=FALSE}
 # Render the mission and vision cards
 navset_card_tab(
 
-  full_screen = TRUE,
+  full_screen = FALSE,
   
   # services card 1
   nav_panel(
@@ -311,7 +296,7 @@ navset_card_tab(
         style = "color: #1b4a9c; background-color: ; border-radius: 10px;"),
       
     card_body(
-      style = "text-align: right",
+      style = "text-align: right;",
     
       htmltools::tags$div(
         "Enterprise Applications",
@@ -329,6 +314,7 @@ navset_card_tab(
         class = "card-text")),
     
     card_body(
+      style = "background-color: #1b4a9c;",
       # Render the slideshow
       htmltools::browsable(
         tags$html(
@@ -377,6 +363,8 @@ navset_card_tab(
         class = "card-text")),
     
     card_body(
+      style = "background-color: #1b4a9c;",
+      
       # Render the slideshow
       htmltools::browsable(
         tags$html(
@@ -427,6 +415,8 @@ navset_card_tab(
         class = "card-text")),
     
     card_body(
+      style = "background-color: #1b4a9c;",
+      
       # Render the slideshow
       htmltools::browsable(
         tags$html(
@@ -477,6 +467,8 @@ navset_card_tab(
       )),
     
     card_body(
+      style = "background-color: #1b4a9c;",
+      
       # Render the slideshow
       htmltools::browsable(
         tags$html(
@@ -500,8 +492,9 @@ navset_card_tab(
 ------------------------------------------------------------------------
 :::
 
-::: {#About}
-# Who we are
+:::{.column-page #About}
+
+<h1 style = "color:#1b4a9c; background-color:#e9945b;">Who we are</h1>
 
 ```{r about, echo=FALSE, message=FALSE, warning=FALSE}
 card(
@@ -588,55 +581,34 @@ card(
 
 ------------------------------------------------------------------------
 
-::: {#Testimonials}
-# Testimonials
+:::{.column-page #Demos}
+<h1 style = "color:#1b4a9c; background-color:#e9945b;">Demos</h1>
+
+```{r demos, echo=FALSE, message=FALSE, warning=FALSE}
+# Render the slideshow
+htmltools::browsable(
+  tags$html(
+    tags$head(
+      # Use Bootstrap 5
+      tags$link(
+         rel = "stylesheet",
+        href = "https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+        )),
+        
+    tags$body(
+       slideshow_right_slide(demos_cards, slide_id = "demos_slide", interval = 40000)
+      # Add the prev and next arrows
+      )))
+```
+:::
+
+------------------------------------------------------------------------
+
+:::{.column-page #Testimonials}
+
+<h1 style = "color:#1b4a9c; background-color:#e9945b;">Testimonials</h1>
 
 ```{r testimonials, echo=FALSE, message=FALSE, warning=FALSE}
-# Render the mission and vision cards
-testimonials_cards = list(
-  # card 1
-  list(
-    body1 = layout_column_wrap(
-      width = 1/2,
-
-      # Add a div tag for the card text
-      tags$a(
-        href = "https://canarytourske.onrender.com",
-      
-        htmltools::tags$img(
-        src = "./pages/images/testimonials/canary_tours_logo.jpeg",
-        style = "max-height: 400px;")),
-    
-    # Add a div tag for the card text
-      htmltools::tags$div(
-        style = "background-color: #f4ebe4; height: 400px;",
-        "Feedback 1",
-        class = "card-text",
-        style = "text-align: center;")
-    )),
-  
-  # card 2
-  list(
-    body1 = layout_column_wrap(
-      width = 1/2,
-      
-      # Add a div tag for the card text
-      tags$a(
-        href = "https://www.kwizresearch.com/",
-      
-        htmltools::tags$img(
-        src = "./pages/images/logo/Kwiz_White_bg_Logo.jpg",
-        style = "max-height: 400px;")),
-    
-    # Add a div tag for the card text
-      htmltools::tags$div(
-        style = "background-color: #f4ebe4; height: 400px;",
-        "Feedback 2",
-        class = "card-text",
-        style = "text-align: center;")
-    ))
-)
-
 # Render the slideshow
 htmltools::browsable(
   tags$html(

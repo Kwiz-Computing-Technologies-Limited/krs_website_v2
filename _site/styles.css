@@ -8,19 +8,18 @@
   border-radius: 50%;
   border: inherit;
   background-image: none;
+  font-size: 40px;
+  color: #e9945b;
 }
 
 .carousel-control-next-icon:after
 {
   content: '>';
-  font-size: 40px;
-  color: #e9945b;
+  
 }
 
 .carousel-control-prev-icon:after {
   content: '<';
-  font-size: 40px;
-  color: #e9945b;
 }
 
 @font-face {
@@ -29,7 +28,8 @@
 }
 
 .navbar {
-  background-color: #00faf0;
+  background-color: #1b4a9c;
+  align-content: left;
 }
 
 .navbar li.nav-item a.nav-link span {

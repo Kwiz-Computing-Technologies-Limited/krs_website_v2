@@ -144,3 +144,81 @@ enterprise <- list(
   )
 )
 
+testimonials_cards = list(
+  # card 1
+  list(
+    body1 = layout_column_wrap(
+      width = 1/2,
+      
+      # Add a div tag for the card text
+      tags$a(
+        href = "https://canarytourske.onrender.com",
+        
+        htmltools::tags$img(
+          src = "./pages/images/testimonials/canary_tours_logo.jpeg",
+          style = "max-height: 400px;")),
+      
+      # Add a div tag for the card text
+      htmltools::tags$div(
+        style = "background-color: #f4ebe4; height: 400px;",
+        "Feedback 1",
+        class = "card-text",
+        style = "text-align: center;")
+    )),
+  
+  # card 2
+  list(
+    body1 = layout_column_wrap(
+      width = 1/2,
+      
+      # Add a div tag for the card text
+      tags$a(
+        href = "https://www.kwizresearch.com/",
+        
+        htmltools::tags$img(
+          src = "./pages/images/logo/Kwiz_White_bg_Logo.jpg",
+          style = "max-height: 400px;")),
+      
+      # Add a div tag for the card text
+      htmltools::tags$div(
+        style = "background-color: #f4ebe4; height: 400px;",
+        "Feedback 2",
+        class = "card-text",
+        style = "text-align: center;")
+    ))
+)
+
+
+# demos cards
+demos_cards = list(
+  # card 2
+  list(
+    header = "Interactive Dashboard",
+    body1 =
+      # Add a div tag for the card text
+      tags$div("Interactive Dashboard"),
+      
+      # Add a div tag for the card iframe
+    body2 = htmltools::tags$iframe(
+      src="https://jean-kwizera-vic.shinyapps.io/Dashboard/",
+      id = "shiny_dashboard",
+      tags$script("
+                 var iframe = document.getElementById('shiny_dashboard'); 
+                 iframe.width = iframe.contentWindow.document.body.scrollWidth;
+                 iframe.height = iframe.contentWindow.document.body.Height;
+                  "))
+    ),
+  
+  # card 2
+  list(
+    header = "Mapping with Leaflet",
+    body1 = 
+      
+      # Add a div tag for the card text
+      tags$div(
+        "Species Mapping"),
+    
+    # Add a div tag for the card iframe
+    body2 = htmltools::tags$iframe(
+      src="https://zp1mwp-jean0victor-kwizera.shinyapps.io/Appsilon_code_challenge/"))
+)

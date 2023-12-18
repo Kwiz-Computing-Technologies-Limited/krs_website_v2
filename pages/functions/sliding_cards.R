@@ -2,6 +2,45 @@
 library(htmltools)
 library(bslib)
 
+# Render the mission and vision cards
+mission_vision_card = list(
+  # Mission
+  list(
+    header = # Add a div tag for the card text
+      htmltools::tags$div(
+        "Our Mission",
+        style = "font-size:24px; text-align: center; font-weight: bold;"),
+    
+    body1 = card_body(
+      style = "min-height: 300px; ",
+      
+      # Add a div tag for the card text
+      htmltools::tags$div(
+        "To Empower businesses, deliver excellence, drive innovation, and ensure our clients are at the forefront of digital transformation through robust, scalable, and innovative software solutions. ",
+        class = "card-text",
+        style = "text-align: center;")
+    )),
+  
+  # Vision
+  list(
+    header = # Add a div tag for the card text
+      htmltools::tags$div(
+        "Our Vision",
+        style = "font-size:24px; text-align: center; font-weight: bold;"),
+    
+    body1 = card_body(
+      style = "min-height: 300px;",
+      
+      # Add a div tag for the card text
+      htmltools::tags$div(
+        class = "card-text",
+        
+        "To create a future where every business, regardless of its size or industry, has access to top-tier digital solutions that drive growth, efficiency, and success.",
+        style = "text-align: center;"))
+  )
+)
+
+
 # Create a function to generate a card sliding top bottom 
 card_right_slide <- function(data) {
   div(
@@ -202,6 +241,8 @@ card_animation_slide <- function() {
         "
   )
 }
+
+# Render the testimonials cards
 
 render_browsable_slideshow <- function (cards, slide_id, interval) {
   # Render the slideshow
