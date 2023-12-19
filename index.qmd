@@ -494,7 +494,7 @@ navset_card_tab(
 
 :::{.column-page #About}
 
-<h1 style = "color:#1b4a9c; background-color:#e9945b;">Who we are</h1>
+<h1 style = "color:#e9945b; background-color:#1b4a9c;">Who we are</h1>
 ```{r company_profile, echo=FALSE, message=FALSE, warning=FALSE}
 htmltools::tags$div(
         "Kwiz Computing Technologies: Pioneering Digital Solutions.",
