@@ -44,7 +44,7 @@ website:
 
 format:
   html:
-    mainfont: GeometrySoftPro;
+    mainfont: nexaLight;
     css: styles.css
     toc: false
 

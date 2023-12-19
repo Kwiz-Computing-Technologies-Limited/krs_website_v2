@@ -27,6 +27,11 @@
   src: url("pages/fonts/GeometrySoftPro.otf")
 }
 
+@font-face {
+  font-family:"nexaLight";
+  src: url("pages/fonts/NexaLight/Nexa Light.otf")
+}
+
 .navbar {
   background-color: #1b4a9c;
   align-content: left;
