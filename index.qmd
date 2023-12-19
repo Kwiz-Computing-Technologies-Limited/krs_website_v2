@@ -581,7 +581,7 @@ layout_column_wrap(
 ------------------------------------------------------------------------
 
 :::{.column-page #Demos}
-<h1 style = "color:#1b4a9c; background-color:#e9945b;">Demos</h1>
+<h1 style = "color:#e9945b; background-color:#1b4a9c;">Demos</h1>
 
 ```{r demos, echo=FALSE, message=FALSE, warning=FALSE}
 #| column: screen-inset-shaded
