@@ -15,7 +15,7 @@ website:
     background: "#e9945b"
     foreground: "#e9945b"
     pinned: true
-    collapse: false
+    collapse: true
     right:
       - href: "#Home"
         text: Home
