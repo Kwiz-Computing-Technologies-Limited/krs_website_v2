@@ -649,7 +649,7 @@ htmltools::browsable(
       lapply(seq_along(testimonials_cards), function(i) {
         tags$div(
           class = ifelse(i == 1, "carousel-item active", "carousel-item"),
-          `data-bs-interval` = 4000,
+          `data-bs-interval` = 10000,
           card_left_slide(testimonials_cards[[i]])
         )
       })

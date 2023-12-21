@@ -156,12 +156,33 @@ testimonials_cards = list(
         
         htmltools::tags$img(
           src = "./pages/images/testimonials/canary_tours_logo.jpeg",
-          style = "max-height: 400px;")),
+          style = "max-height: 100%;")),
       
       # Add a div tag for the card text
       htmltools::tags$div(
-        style = "background-color: #f4ebe4; height: 400px;",
-        "Feedback 1",
+        style = "background-color: ; width: 100%;",
+        style = "background-color: ; width: 100%;",
+        
+        "Charity Begins at Home!",
+        tags$p(),
+        
+        "At Kwiz Research, we believe in the power of data, the potential of technology and full-stack
+        R as a wholistic development framework for data science and software development.",
+        tags$p(),
+        
+        "We have harnessed these tools to create our own website (using Quarto in R), 
+        successfully integrated cloud APIs; deploying resources on AWS for storage, databases, security, web hosting, compute, ...
+        to ensure optimal performance and scalability",
+        tags$p(),
+        
+        "not only honing our skills and demonstrating our expertise and commitment to innovation, 
+        but also deepening our understanding of our clients' needs.",
+        tags$p(),
+        
+        "We're proud of what we've built - because at Kwiz Research, we don't just deliver solutions, we create them.",
+        
+        class = "card-text",
+        style = "text-align: center;",
         class = "card-text",
         style = "text-align: center;")
     )),
@@ -176,15 +197,13 @@ testimonials_cards = list(
         href = "https://www.kwizresearch.com/",
         
         htmltools::tags$img(
-          src = "./pages/images/logo/Kwiz_White_bg_Logo.jpg",
-          style = "max-height: 400px;")),
+          src = "/pages/images/logo/Kwiz_White_bg_Logo.jpg",
+          style = "max-width: 100%;")),
       
       # Add a div tag for the card text
       htmltools::tags$div(
-        style = "background-color: #f4ebe4; height: 400px;",
-        "Feedback 2",
-        class = "card-text",
-        style = "text-align: center;")
+        "Feedback 2"
+        )
     ))
 )
 
