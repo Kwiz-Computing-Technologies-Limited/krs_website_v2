@@ -1,7 +1,7 @@
 ---
 format: 
   html: 
-    page-layout: full
+    toc: false
 ---
 
 <!-- fontawesome icons  -->
@@ -276,8 +276,14 @@ layout_column_wrap(
 
 ------------------------------------------------------------------------
 
-::: {#Services .column-page}
-# Our Solutions
+::: {#Solutions .column-page}
+<a href="pages/services.qmd">
+<h1 style="color:#e9945b; background-color:#1b4a9c;">
+
+Our Solutions
+
+</h1>
+</a>
 
 ```{r services, echo=FALSE, message=FALSE, warning=FALSE}
 # Render the mission and vision cards
@@ -492,6 +498,7 @@ navset_card_tab(
 :::
 
 ::: {#About .column-page}
+
 <h1 style="color:#e9945b; background-color:#1b4a9c;">
 
 Who we are
@@ -584,11 +591,13 @@ layout_column_wrap(
 ------------------------------------------------------------------------
 
 ::: {#Demos .column-page}
+<a href="pages/demos.qmd">
 <h1 style="color:#e9945b; background-color:#1b4a9c;">
 
 Demos
 
 </h1>
+</a>
 
 ```{r demos, echo=FALSE, message=FALSE, warning=FALSE}
 #| column: screen-inset-shaded

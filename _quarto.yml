@@ -11,24 +11,38 @@ website:
   navbar:
     logo: "/pages/images/logo/Kwiz_Inverted_Color.jpg"
     logo-alt: "Kwiz Computing Technologies"
-    logo-href: "#Home"
+    logo-href: "/index.qmd"
     background: "#e9945b"
     foreground: "#e9945b"
     pinned: true
     collapse: true
     right:
-      - href: "#Home"
-        text: Home
-      - href: "#Services"
-        text: Our Solutions
-      - href: "#About"
-        text: About Us
-      - href: "#Demos"
-        text: Demos
-      - href: "#Testimonials"
-        text: Testimonials
-      
+      - text: "Main Menu"
+        menu:
+          - href: index.qmd#Home
+            text: Home
+          - href: index.qmd#Solutions
+            text: Our Solutions
+          - href: index.qmd#About
+            text: About Us
+          - href: index.qmd#Demos
+            text: Demos
+          - href: index.qmd#Testimonials
+            text: Testimonials
+            
+      - text: Services
+        href: pages/services.qmd
         
+      - text: Demos
+        href: pages/demos.qmd
+        
+      - text: "Resources"
+        menu:
+          - href: pages/resources.qmd#Blogs
+            text: Blogs
+          - href: pages/resources.qmd#Tutorials
+            text: Tutorials
+      
   page-footer: 
     background: "#1b4a9c"
     foreground: "#e9945b"

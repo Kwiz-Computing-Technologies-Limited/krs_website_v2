@@ -40,3 +40,13 @@
 .navbar li.nav-item a.nav-link span {
   color: #e9945b !important;
 }
+
+
+.menu {
+  background-color: #1b4a9c;
+  align-content: left;
+}
+
+.menu li.menu-item a.menu-link span {
+  color: #e9945b !important;
+}

@@ -1,0 +1,14 @@
+---
+title: "Resources"
+---
+
+::: {#Blogs .column-page}
+# Blogs
+
+:::
+
+
+::: {#Tutorials .column-page}
+# Tutorials
+
+:::
