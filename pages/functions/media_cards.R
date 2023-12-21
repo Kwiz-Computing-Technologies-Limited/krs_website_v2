@@ -155,8 +155,8 @@ testimonials_cards = list(
         href = "https://canarytourske.onrender.com",
         
         htmltools::tags$img(
-          src = "./pages/images/testimonials/canary_tours_logo.jpeg",
-          style = "max-height: 100%;")),
+          src = "/pages/images/logo/Kwiz_White_bg_Logo.jpg",
+          style = "max-width: 100%;")),
       
       # Add a div tag for the card text
       htmltools::tags$div(
@@ -197,7 +197,7 @@ testimonials_cards = list(
         href = "https://www.kwizresearch.com/",
         
         htmltools::tags$img(
-          src = "/pages/images/logo/Kwiz_White_bg_Logo.jpg",
+          src = "./pages/images/testimonials/canary_tours_logo.jpeg",
           style = "max-width: 100%;")),
       
       # Add a div tag for the card text
