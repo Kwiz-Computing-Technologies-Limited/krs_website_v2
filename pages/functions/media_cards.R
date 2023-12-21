@@ -205,7 +205,7 @@ testimonials_cards = list(
         "Charity Begins at Home!",
         tags$p(),
         
-        "At Kwiz Research, we believe in the power of data, the potential of technology and full-stack
+        "At Kwiz Computing Technologies, we believe in the power of data, the potential of technology and full-stack
         R as a wholistic development framework for data science and software development.",
         tags$p(),
         
@@ -218,7 +218,7 @@ testimonials_cards = list(
         but also deepening our understanding of our clients' needs.",
         tags$p(),
         
-        "We're proud of what we've built - because at Kwiz Research, we don't just deliver solutions, we create them.")
+        "We're proud of what we've built - because at Kwiz  Computing Technologies, we don't just deliver solutions, we are empowered by them.")
     )),
   
   # card 2
