@@ -126,6 +126,30 @@ slideshow_left_slide <- function(cards, slide_id, interval) {
   )
 }
 
+# Create a function to generate a slideshow for the "card_left_slides" without "card_left_slide()" function
+slideshow_left_slide_v2 <- function(cards, slide_id, interval) {
+  tags$div(
+    id = paste0("slideshow-", slide_id),
+    class = "carousel slide",
+    `data-bs-ride` = "carousel",
+    
+    tags$div(
+      class = "carousel-inner",
+      lapply(seq_along(cards), function(i) {
+        tags$div(
+          class = ifelse(i == 1, "carousel-item active", "carousel-item"),
+          `data-bs-interval` = interval,
+          
+          (cards[[i]])
+        )
+      }),
+      
+      # Add the prev and next arrows
+      scroll_arrows(slide_id)
+    )
+  )
+}
+
 # Create a function to generate a slideshow for the "card_right_slides"
 slideshow_right_slide <- function(cards, slide_id, interval) {
   tags$div(

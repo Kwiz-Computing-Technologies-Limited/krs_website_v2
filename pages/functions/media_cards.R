@@ -152,17 +152,17 @@ testimonials_cards = list(
       
       # Add a div tag for the card text
       tags$a(
-        href = "https://canarytourske.onrender.com",
+        href = "https://www.kwizresearch.com/",
         
         htmltools::tags$img(
           src = "/pages/images/logo/Kwiz_White_bg_Logo.jpg",
-          style = "max-width: 100%;")),
+          style = "max-width: 60%; height: auto;")),
       
       # Add a div tag for the card text
       htmltools::tags$div(
-        style = "background-color: ; width: 100%;",
-        style = "background-color: ; width: 100%;",
-        
+        style = "background-color: ; margin-right: 30%; text-align: right;",
+        class = "card-text",
+
         "Charity Begins at Home!",
         tags$p(),
         
@@ -179,12 +179,7 @@ testimonials_cards = list(
         but also deepening our understanding of our clients' needs.",
         tags$p(),
         
-        "We're proud of what we've built - because at Kwiz Research, we don't just deliver solutions, we create them.",
-        
-        class = "card-text",
-        style = "text-align: center;",
-        class = "card-text",
-        style = "text-align: center;")
+        "We're proud of what we've built - because at Kwiz Research, we don't just deliver solutions, we create them.")
     )),
   
   # card 2
@@ -194,14 +189,15 @@ testimonials_cards = list(
       
       # Add a div tag for the card text
       tags$a(
-        href = "https://www.kwizresearch.com/",
+        href = "https://canarytourske.onrender.com",
         
         htmltools::tags$img(
           src = "./pages/images/testimonials/canary_tours_logo.jpeg",
-          style = "max-width: 100%;")),
+          style = "max-width: 60%; height: auto;")),
       
       # Add a div tag for the card text
       htmltools::tags$div(
+        style = "background-color: ; margin-right: 30%; text-align: right;",
         "Feedback 2"
         )
     ))
