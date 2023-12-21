@@ -19,30 +19,30 @@ website:
     right:
       - text: "Main Menu"
         menu:
-          - href: index.qmd#Home
-            text: Home
-          - href: index.qmd#Solutions
-            text: Our Solutions
-          - href: index.qmd#About
-            text: About Us
-          - href: index.qmd#Demos
-            text: Demos
-          - href: index.qmd#Testimonials
-            text: Testimonials
-            
-      - text: Services
+          - text: "Home"
+            href: index.qmd#Home
+          - text: "Our Solutions"
+            href: index.qmd#Solutions
+          - text: "About Us"
+            href: index.qmd#About
+          - text: "Demos"
+            href: index.qmd#Demos
+          - text: "Testimonials"
+            href: index.qmd#Testimonials
+
+      - text: "Services"
         href: pages/services.qmd
-        
-      - text: Demos
+
+      - text: "Demos"
         href: pages/demos.qmd
         
       - text: "Resources"
         menu:
-          - href: pages/resources.qmd#Blogs
-            text: Blogs
-          - href: pages/resources.qmd#Tutorials
-            text: Tutorials
-      
+          - text: "Blogs"
+            href: pages/resources.qmd#Blogs
+          - text: "Tutorials"
+            href: pages/resources.qmd#Tutorials
+
   page-footer: 
     background: "#1b4a9c"
     foreground: "#e9945b"
