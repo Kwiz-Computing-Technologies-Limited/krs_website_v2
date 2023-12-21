@@ -1,3 +1,42 @@
+# Render the mission and vision cards
+mission_vision_card = list(
+  # Mission
+  list(
+    header = # Add a div tag for the card text
+      card_header(
+        "Our Mission",
+        style = "font-size:24px; text-align: center; font-weight: bold; background-color: #1b4a9c;"),
+    
+    body1 = card_body(
+      style = "min-height: 300px; ",
+      
+      # Add a div tag for the card text
+      htmltools::tags$div(
+        "To Empower businesses, deliver excellence, drive innovation, and ensure our clients are at the forefront of digital transformation through robust, scalable, and innovative software solutions. ",
+        class = "card-text",
+        style = "text-align: center;")
+    )),
+  
+  # Vision
+  list(
+    header = # Add a div tag for the card text
+      card_header(
+        "Our Vision",
+        style = "font-size:24px; text-align: center; font-weight: bold; background-color: #1b4a9c;"),
+    
+    body1 = card_body(
+      style = "min-height: 300px;",
+      
+      # Add a div tag for the card text
+      htmltools::tags$div(
+        class = "card-text",
+        
+        "To create a future where every business, regardless of its size or industry, has access to top-tier digital solutions that drive growth, efficiency, and success.",
+        style = "text-align: center;"))
+  )
+)
+
+
 websites <- list(
   # figure 1
   list(
@@ -208,23 +247,30 @@ testimonials_cards = list(
 #Define the list of demos
 demos_cards = list(
   list(
-    header = "Interactive Dashboard",
-    body1 = "Interactive Dashboard",
-    body2 = tags$iframe(
-      style = "height: 900px;",
-      src = "https://jean-kwizera-vic.shinyapps.io/Dashboard/",
-      id = "shiny_dashboard",
-      onload = 'this.contentWindow.postMessage("resize", "https://jean-kwizera-vic.shinyapps.io")'
+    header = card_header("Interactive Dashboard"),
+    body1 = card_body("Interactive Dashboard"),
+    body2 = card_body(
+      style = "margin-left: 7.5%; margin-right: 7.5%;",
+      tags$iframe(
+        style = "height: 900px;",
+        src = "https://jean-kwizera-vic.shinyapps.io/Dashboard/",
+        id = "shiny_dashboard",
+        onload = 'this.contentWindow.postMessage("resize", "https://jean-kwizera-vic.shinyapps.io")'
+      )
     )
   ),
+  
   list(
-    header = "Mapping with Leaflet",
-    body1 = "Species Mapping",
-    body2 = tags$iframe(
-      style = "height: 850px;",
-      src = "https://zp1mwp-jean0victor-kwizera.shinyapps.io/Appsilon_code_challenge/",
-      id = "leaflet_map",
-      onload = 'this.contentWindow.postMessage("resize", "https://zp1mwp-jean0victor-kwizera.shinyapps.io")'
+    header = card_header("Mapping with Leaflet"),
+    body1 = card_body("Species Mapping"),
+    body2 = card_body(
+      style = "margin-left: 7.5%; margin-right: 7.5%;",
+      tags$iframe(
+        style = "height: 850px;",
+        src = "https://zp1mwp-jean0victor-kwizera.shinyapps.io/Appsilon_code_challenge/",
+        id = "leaflet_map",
+        onload = 'this.contentWindow.postMessage("resize", "https://zp1mwp-jean0victor-kwizera.shinyapps.io")'
+      )
     )
   )
 )
