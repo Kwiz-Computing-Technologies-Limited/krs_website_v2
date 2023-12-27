@@ -56,7 +56,7 @@ tags$style("
     text-align: center; 
     font-size: 24px; 
     color: #e9945b; 
-    background-color: #1b4a9c;
+    background-color: ;
     border-radius: 10px;
   }
   
@@ -198,7 +198,7 @@ card_header(
   
   htmltools::tags$div(
   "Fullstack R for Enterprise and Research",
-  style = "font-size:24px; color: #e9945b; text-align: center; font-weight: bold; background-color: #1b4a9c; border-radius: 10px;"))
+  style = "font-size:24px; color: #e9945b; text-align: center; font-weight: bold;"))
 
 
 card_body(
@@ -276,7 +276,7 @@ layout_column_wrap(
 
 ::: {#Solutions .column-page}
 <a href="pages/services.qmd">
-<h1 style="color:#e9945b; background-color:#1b4a9c;">
+<h1 style="color:#e9945b; background-color: ;">
 
 Explore Our Solutions
 
@@ -497,7 +497,7 @@ navset_card_tab(
 
 ::: {#About .column-page}
 
-<h1 style="color:#e9945b; background-color:#1b4a9c;">
+<h1 style="color:#e9945b; background-color: ;">
 
 Who we are
 
@@ -595,7 +595,7 @@ layout_column_wrap(
 
 ::: {#Demos .column-page}
 <a href="pages/demos.qmd">
-<h1 style="color:#e9945b; background-color:#1b4a9c;">
+<h1 style="color:#e9945b; background-color:;">
 
 Interact with Demos
 
@@ -624,7 +624,7 @@ htmltools::browsable(
 ------------------------------------------------------------------------
 
 ::: {#Testimonials .column-page}
-<h1 style="color:#e9945b; background-color:#1b4a9c;">
+<h1 style="color:#e9945b; background-color:;">
 
 Testimonials
 

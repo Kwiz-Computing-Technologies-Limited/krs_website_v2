@@ -5,7 +5,7 @@ mission_vision_card = list(
     header = # Add a div tag for the card text
       card_header(
         "Our Mission",
-        style = "font-size:24px; text-align: center; font-weight: bold; background-color: #1b4a9c;"),
+        style = "font-size:24px; text-align: center; font-weight: bold; background-color: ;"),
     
     body1 = card_body(
       style = "min-height: 300px; ",
@@ -22,7 +22,7 @@ mission_vision_card = list(
     header = # Add a div tag for the card text
       card_header(
         "Our Vision",
-        style = "font-size:24px; text-align: center; font-weight: bold; background-color: #1b4a9c;"),
+        style = "font-size:24px; text-align: center; font-weight: bold; background-color: ;"),
     
     body1 = card_body(
       style = "min-height: 300px;",
