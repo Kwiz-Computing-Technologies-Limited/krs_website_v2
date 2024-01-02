@@ -25,14 +25,14 @@ website:
             href: index.qmd#Solutions
           - text: "About Us"
             href: index.qmd#About
+          - text: "Demos"
+            href: pages/demos.qmd#Demos
           - text: "Testimonials"
             href: index.qmd#Testimonials
 
       - text: "Services"
         href: pages/services.qmd
 
-      - text: "Demos"
-        href: pages/demos.qmd
         
       - text: "Resources"
         menu:
