@@ -26,7 +26,7 @@ website:
           - text: "About Us"
             href: index.qmd#About
           - text: "Demos"
-            href: pages/demos.qmd#Demos
+            href: index.qmd#Demos
           - text: "Testimonials"
             href: index.qmd#Testimonials
 
