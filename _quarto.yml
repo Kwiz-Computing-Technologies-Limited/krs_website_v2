@@ -25,8 +25,6 @@ website:
             href: index.qmd#Solutions
           - text: "About Us"
             href: index.qmd#About
-          - text: "Demos"
-            href: index.qmd#Demos
           - text: "Testimonials"
             href: index.qmd#Testimonials
 
