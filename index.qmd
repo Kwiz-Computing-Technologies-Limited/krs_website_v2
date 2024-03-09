@@ -274,239 +274,24 @@ layout_column_wrap(
 
 ------------------------------------------------------------------------
 
-::: {#Solutions .column-page}
+::: {#Solutions}
 <a href="pages/services.qmd">
+
 <h1 style="color:#e9945b; background-color: ;">
 
 Explore Our Solutions
 
 </h1>
+
 </a>
 
-```{r services, echo=FALSE, message=FALSE, warning=FALSE}
-# Render the mission and vision cards
-navset_card_tab(
-
-  full_screen = FALSE,
-  
-  # services card 1
-  nav_panel(
-    style = "background-color:#e9945b;",
-
-    title =  # Add a div tag for the card text
-      htmltools::tags$div(
-        "Enterprise Applications |",
-        style = "color: #1b4a9c; background-color: ; border-radius: 10px;"),
-      
-    card_body(
-      style = "text-align: right;",
-    
-      htmltools::tags$div(
-        "Enterprise Applications",
-        class = "title"),
-      
-      # Add a div tag for the card text
-      htmltools::tags$div(
-        "Unleash the power of R and Shiny with us! We go beyond data, leveraging their robust functionality for general software development.",
-        class = "card-text"),
-      
-      htmltools::tags$p(),
-      
-      htmltools::tags$div(
-        "Our expertise lies in integrating these tools with cloud resources, APIs, and other programming languages and applications. We're all about creating modular, scalable enterprise applications that are as dynamic and adaptable as your business needs. With us, you're not just building an application, you're building a future!",
-        class = "card-text")),
-    
-    card_body(
-      style = "background-color: #1b4a9c;",
-      # Render the slideshow
-      htmltools::browsable(
-        tags$html(
-          tags$head(
-            # Use Bootstrap 5
-            tags$link(
-              rel = "stylesheet",
-              href = "https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
-              )),
-        
-        tags$body(
-          slideshow_right_slide(enterprise, slide_id = "enterprise_media", interval = 8000),
-          # Add some custom CSS for the animations
-          card_animation_slide()
-          ))))
-    ),
-  
-  nav_spacer(), nav_spacer(),
-  
-  # services card 2
-  nav_panel(
-    
-    style = "background-color:#e9945b;",
-    title =  # Add a div tag for the card text
-      htmltools::tags$div(
-        "Interactive Websites |",
-        style = "color: #1b4a9c;  background-color: ; border-radius: 10px;"),
-    
-    card_body(
-      style = "text-align: right;",
-      
-      htmltools::tags$div(
-        "Interactive Websites",
-        
-        class = "title"),
-      
-      # Add a div tag for the card text
-      htmltools::tags$div(
-        "Dive into the world of interactive websites with us! We leverage the power of Quarto in R to build dynamic, data-driven websites.",
-        class = "card-text"),
-      
-      htmltools::tags$p(),
-      
-      htmltools::tags$div(
-        "Our creations don't just look good - they're smart, seamlessly integrating crucial data analytics right on the site. We believe in the power of data communication, and our websites reflect that. With us, your website won't just tell your story, it'll tell the story behind your data!",
-        class = "card-text")),
-    
-    card_body(
-      style = "background-color: #1b4a9c;",
-      
-      # Render the slideshow
-      htmltools::browsable(
-        tags$html(
-          tags$head(
-            # Use Bootstrap 5
-            tags$link(
-              rel = "stylesheet",
-              href = "https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
-              )),
-        
-        tags$body(
-          slideshow_right_slide(websites, slide_id = "websites_media", interval = 8000),
-          # Add some custom CSS for the animations
-          card_animation_slide()
-          )))
-      )),
-  
-  nav_spacer(), nav_spacer(),
-  
-  # services card 3
-  nav_panel(
-    
-    style = "background-color:#e9945b;",
-    title =    # Add a div tag for the card text
-      htmltools::tags$div(
-        "API Development and Integration |",
-        style = "color: #1b4a9c;  background-color: ; border-radius: 10px;"),
-      
-    card_body(
-      style = "text-align: right",
-      
-      
-      htmltools::tags$div(
-        "API Development and Integration",
-        
-        class = "title"),
-      
-      # Add a div tag for the card text
-      htmltools::tags$div(
-        "Step into the future with our API's! We harness the power of the R development framework to build robust Plumber APIs.",
-        class = "card-text"),
-      
-      htmltools::tags$p(),
-        
-      # Add a div tag for the card text
-      htmltools::tags$div(
-        "Our APIs are versatile, designed to integrate seamlessly with applications and websites, irrespective of the language they’re written in. We’re not just about code; we’re about transforming your business with scalable solutions that speak your language!",
-        class = "card-text")),
-    
-    card_body(
-      style = "background-color: #1b4a9c;",
-      
-      # Render the slideshow
-      htmltools::browsable(
-        tags$html(
-          tags$head(
-            # Use Bootstrap 5
-            tags$link(
-              rel = "stylesheet",
-              href = "https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
-              )),
-        
-        tags$body(
-          slideshow_right_slide(apis, slide_id = "api_media", interval = 8000),
-          # Add some custom CSS for the animations
-          card_animation_slide()
-          ))))
-    ),
-  
-  nav_spacer(), nav_spacer(),
-  
-  
-  # services card 4
-  nav_panel(
-    
-    style = "background-color:#e9945b;",
-    title =   # Add a div tag for the card text
-      htmltools::tags$div(
-        "Cloud Solutions",
-        style = "color: #1b4a9c;  background-color: ; border-radius: 10px;"),
-    
-    card_body(
-      style = "text-align: right",
-      
-      htmltools::tags$div(
-        "Cloud Solutions",
-        
-        class = "title"),
-      
-      # Add a div tag for the card text
-      htmltools::tags$div(
-        "Embrace the cloud with us! We excel in designing and developing cloud-based solutions using AWS, integrating storage, database, compute, and security services.",
-        class = "card-text"),
-      
-      htmltools::tags$p(),
-      
-      htmltools::tags$div(
-        "Our focus is on building robust and highly scalable enterprise applications that can grow with your business. With us, you're not just getting a service, you're getting a future-proof solution that puts you ahead of the curve!",
-        class = "card-text"
-      )),
-    
-    card_body(
-      style = "background-color: #1b4a9c;",
-      
-      # Render the slideshow
-      htmltools::browsable(
-        tags$html(
-          tags$head(
-            # Use Bootstrap 5
-            tags$link(
-              rel = "stylesheet",
-              href = "https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
-              )),
-        
-        tags$body(
-          slideshow_right_slide(cloud, slide_id = "cloud_media", interval = 8000),
-          # Add some custom CSS for the animations
-          card_animation_slide()
-          ))))
-    )
-)
-
-```
-
-------------------------------------------------------------------------
-:::
-
-::: {#About .column-page}
-
-<h1 style="color:#e9945b; background-color: ;">
-
-Who we are
-
-</h1>
-
 ```{r company_profile, echo=FALSE, message=FALSE, warning=FALSE}
+#| column: screen-inset-shaded
+#| margin-left: 20%
+
 htmltools::tags$div(
         "Kwiz Computing Technologies: Pioneering Digital Solutions.",
-        style = "text-align: right;", class = "card-text")
+        style = "text-align: center;", class = "card-text")
   
   htmltools::tags$p()
   
@@ -526,6 +311,238 @@ htmltools::tags$div(
         "Embrace the digital transformation with Kwiz Computing Technologies – your partner in pioneering enterprise applications and driving growth.",
         style = "text-align: right;", class = "card-text")
 ```
+
+------------------------------------------------------------------------
+
+```{r services, echo=FALSE, message=FALSE, warning=FALSE}
+#| column: screen-inset-shaded
+#| margin-left: 20%
+# Render the mission and vision cards
+navset_card_tab(
+
+  full_screen = FALSE,
+  
+  # services card 1
+  nav_panel(
+    style = "background-color:#e9945b;",
+
+    title =  # Add a div tag for the card text
+      htmltools::tags$div(
+        "Enterprise Applications |",
+        style = "color: #1b4a9c; background-color: ; border-radius: 10px; text-align: center;"),
+      
+    card_body(
+      style = "text-align: right;",
+    
+      htmltools::tags$div(
+        "Enterprise Applications",
+        class = "title"),
+      
+      # Add a div tag for the card text
+      htmltools::tags$div(
+        "Unleash the power of R and Shiny with us! We go beyond data, leveraging their robust functionality for general software development.",
+        class = "card-text",
+        style = "text-align: center; margin-left: 15%; margin-right: 15%;"),
+      
+      htmltools::tags$p(),
+      
+      htmltools::tags$div(
+        "Our expertise lies in integrating these tools with cloud resources, APIs, and other programming languages and applications. We're all about creating modular, scalable enterprise applications that are as dynamic and adaptable as your business needs. With us, you're not just building an application, you're building a future!",
+        class = "card-text",
+        style = "text-align: center; margin-left: 15%; margin-right: 15%;")),
+    
+    card_body(
+      style = "background-color: #1b4a9c;",
+      # Render the slideshow
+      htmltools::browsable(
+        tags$html(
+          tags$head(
+            # Use Bootstrap 5
+            tags$link(
+              rel = "stylesheet",
+              href = "https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+              )),
+        
+        tags$body(
+          slideshow_right_slide(enterprise, slide_id = "enterprise_media", interval = 20000),
+          # Add some custom CSS for the animations
+          card_animation_slide()
+          ))))
+    ),
+  
+  nav_spacer(), nav_spacer(),
+  
+  # services card 2
+  nav_panel(
+    
+    style = "background-color:#e9945b;",
+    title =  # Add a div tag for the card text
+      htmltools::tags$div(
+        "Interactive Websites |",
+        style = "color: #1b4a9c;  background-color: ; border-radius: 10px; text-align: center;"),
+    
+    card_body(
+      style = "text-align: right;",
+      
+      htmltools::tags$div(
+        "Interactive Websites",
+        
+        class = "title"),
+      
+      # Add a div tag for the card text
+      htmltools::tags$div(
+        "Dive into the world of interactive websites with us! We leverage the power of Quarto in R to build dynamic, data-driven websites.",
+        class = "card-text",
+        style = "text-align: center; margin-left: 15%; margin-right: 15%;"),
+      
+      htmltools::tags$p(),
+      
+      htmltools::tags$div(
+        "Our creations don't just look good - they're smart, seamlessly integrating crucial data analytics right on the site. We believe in the power of data communication, and our websites reflect that. With us, your website won't just tell your story, it'll tell the story behind your data!",
+        class = "card-text",
+        style = "text-align: center; margin-left: 15%; margin-right: 15%;")),
+    
+    card_body(
+      style = "background-color: #1b4a9c;",
+      
+      # Render the slideshow
+      htmltools::browsable(
+        tags$html(
+          tags$head(
+            # Use Bootstrap 5
+            tags$link(
+              rel = "stylesheet",
+              href = "https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+              )),
+        
+        tags$body(
+          slideshow_right_slide(websites, slide_id = "websites_media", interval = 20000),
+          # Add some custom CSS for the animations
+          card_animation_slide()
+          )))
+      )),
+  
+  nav_spacer(), nav_spacer(),
+  
+  # services card 3
+  nav_panel(
+    
+    style = "background-color:#e9945b;",
+    title =    # Add a div tag for the card text
+      htmltools::tags$div(
+        "API Development and Integration |",
+        style = "color: #1b4a9c;  background-color: ; border-radius: 10px; text-align: center;"),
+      
+    card_body(
+      style = "text-align: right",
+      
+      
+      htmltools::tags$div(
+        "API Development and Integration",
+        
+        class = "title"),
+      
+      # Add a div tag for the card text
+      htmltools::tags$div(
+        "Step into the future with our API's! We harness the power of the R development framework to build robust Plumber APIs.",
+        class = "card-text",
+        style = "text-align: center; margin-left: 15%; margin-right: 15%;"),
+      
+      htmltools::tags$p(),
+        
+      # Add a div tag for the card text
+      htmltools::tags$div(
+        "Our APIs are versatile, designed to integrate seamlessly with applications and websites, irrespective of the language they’re written in. We’re not just about code; we’re about transforming your business with scalable solutions that speak your language!",
+        class = "card-text",
+        style = "text-align: center; margin-left: 15%; margin-right: 15%;")),
+    
+    card_body(
+      style = "background-color: #1b4a9c;",
+      
+      # Render the slideshow
+      htmltools::browsable(
+        tags$html(
+          tags$head(
+            # Use Bootstrap 5
+            tags$link(
+              rel = "stylesheet",
+              href = "https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+              )),
+        
+        tags$body(
+          slideshow_right_slide(apis, slide_id = "api_media", interval = 20000),
+          # Add some custom CSS for the animations
+          card_animation_slide()
+          ))))
+    ),
+  
+  nav_spacer(), nav_spacer(),
+  
+  
+  # services card 4
+  nav_panel(
+    
+    style = "background-color:#e9945b;",
+    title =   # Add a div tag for the card text
+      htmltools::tags$div(
+        "Cloud Solutions",
+        style = "color: #1b4a9c;  background-color: ; border-radius: 10px; text-align: center;"),
+    
+    card_body(
+      style = "text-align: right",
+      
+      htmltools::tags$div(
+        "Cloud Solutions",
+        
+        class = "title"),
+      
+      # Add a div tag for the card text
+      htmltools::tags$div(
+        "Embrace the cloud with us! We excel in designing and developing cloud-based solutions using AWS, integrating storage, database, compute, and security services.",
+        class = "card-text",
+        style = "text-align: center; margin-left: 15%; margin-right: 15%;"),
+      
+      htmltools::tags$p(),
+      
+      htmltools::tags$div(
+        "Our focus is on building robust and highly scalable enterprise applications that can grow with your business. With us, you're not just getting a service, you're getting a future-proof solution that puts you ahead of the curve!",
+        class = "card-text",
+        style = "text-align: center; margin-left: 15%; margin-right: 15%;"
+      )),
+    
+    card_body(
+      style = "background-color: #1b4a9c;",
+      
+      # Render the slideshow
+      htmltools::browsable(
+        tags$html(
+          tags$head(
+            # Use Bootstrap 5
+            tags$link(
+              rel = "stylesheet",
+              href = "https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+              )),
+        
+        tags$body(
+          slideshow_right_slide(cloud, slide_id = "cloud_media", interval = 20000),
+          # Add some custom CSS for the animations
+          card_animation_slide()
+          ))))
+    )
+)
+
+```
+
+------------------------------------------------------------------------
+:::
+
+::: {#About}
+<h1 style="color:#e9945b; background-color: ;">
+
+Who we are
+
+</h1>
+
 
 ```{r about, echo=FALSE, message=FALSE, warning=FALSE}
 #| column: screen-inset-shaded
@@ -593,35 +610,6 @@ layout_column_wrap(
 
 ------------------------------------------------------------------------
 
-::: {#Demos .column-page}
-<a href="pages/demos.qmd">
-<h1 style="color:#e9945b; background-color:;">
-
-Interact with Demos
-
-</h1>
-</a>
-
-```{r demos, echo=FALSE, message=FALSE, warning=FALSE}
-#| column: screen-inset-shaded
-#| margin-left: 20%
-# Render the slideshow
-htmltools::browsable(
-  tags$html(
-    tags$head(
-      # Use Bootstrap 5
-      tags$link(
-         rel = "stylesheet",
-        href = "https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
-        )),
-        
-    tags$body(
-       slideshow_right_slide(demos_cards, slide_id = "demos_slide", interval = 40000)
-      )))
-```
-:::
-
-------------------------------------------------------------------------
 
 ::: {#Testimonials .column-page}
 <h1 style="color:#e9945b; background-color:;">

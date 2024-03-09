@@ -42,18 +42,19 @@ websites <- list(
   list(
     header = # Add a div tag for the card text
       htmltools::tags$div(
-        "charts",
+        "landing pages",
         style = "font-size:24px; text-align: center; font-weight: bold;"),
     
     body1 = card_body(
-
-      # Add a div tag 
-      htmltools::tags$div(
-        class = "card-image",
-        htmltools::tags$img(
-          src = landingpage_plotly("image_1")
-        ))
-    )),
+      style = "margin-left: 7.5%; margin-right: 7.5%;",
+      tags$iframe(
+        style = "height: 3500px;",
+        src = "https://canarytourske.onrender.com",
+        id = "leaflet_map",
+        onload = 'this.contentWindow.postMessage("resize", "https://canarytourske.onrender.com")'
+      )
+    )
+  ),
   
   # figure 2
   list(
@@ -63,14 +64,33 @@ websites <- list(
         style = "font-size:24px; text-align: center; font-weight: bold;"),
     
     body1 = card_body(
-
+      # style = "margin-left: 2.5%; margin-right: 2.5%;",
+      tags$iframe(
+        style = "height: 1200px;",
+        src = "https://zp1mwp-jean0victor-kwizera.shinyapps.io/Appsilon_code_challenge/",
+        id = "leaflet_map",
+        onload = 'this.contentWindow.postMessage("resize", "https://zp1mwp-jean0victor-kwizera.shinyapps.io")'
+      )
+    )
+  ),
+  
+  # Figure 3
+  list(
+    header = # Add a div tag for the card text
+      htmltools::tags$div(
+        "charts",
+        style = "font-size:24px; text-align: center; font-weight: bold;"),
+    
+    body1 = card_body(
+      
       # Add a div tag 
       htmltools::tags$div(
         class = "card-image",
         htmltools::tags$img(
           src = landingpage_plotly("image_1")
-        )))
-  )
+        ))
+    ))
+  
 )
 
 
@@ -152,7 +172,26 @@ enterprise <- list(
   list(
     header = # Add a div tag for the card text
       htmltools::tags$div(
-        "Shiny",
+        "Shiny Dashboards",
+        style = "font-size:24px; text-align: center; font-weight: bold;"),
+    
+    body1 = card_body(
+      style = "margin-left: 7.5%; margin-right: 7.5%;",
+      tags$iframe(
+        style = "height: 900px;",
+        src = "https://jean-kwizera-vic.shinyapps.io/Dashboard/",
+        id = "shiny_dashboard",
+        onload = 'this.contentWindow.postMessage("resize", "https://jean-kwizera-vic.shinyapps.io")',
+        style = "height: 1200px;"
+      )
+    )
+  ),
+  
+  # figure 2
+  list(
+    header = # Add a div tag for the card text
+      htmltools::tags$div(
+        "Tools",
         style = "font-size:24px; text-align: center; font-weight: bold;"),
     
     body1 = card_body(
@@ -163,24 +202,7 @@ enterprise <- list(
         htmltools::tags$img(
           src = landingpage_plotly("image_1")
         ))
-    )),
-  
-  # figure 2
-  list(
-    header = # Add a div tag for the card text
-      htmltools::tags$div(
-        "Dashboards",
-        style = "font-size:24px; text-align: center; font-weight: bold;"),
-    
-    body1 = card_body(
-
-      # Add a div tag 
-      htmltools::tags$div(
-        class = "card-image",
-        htmltools::tags$img(
-          src = landingpage_plotly("image_1")
-        )))
-  )
+    ))
 )
 
 testimonials_cards = list(
@@ -243,37 +265,7 @@ testimonials_cards = list(
 )
 
 
-# demos cards
-#Define the list of demos
-demos_cards = list(
-  list(
-    header = card_header("Interactive Dashboard"),
-    body1 = card_body("Interactive Dashboard"),
-    body2 = card_body(
-      style = "margin-left: 7.5%; margin-right: 7.5%;",
-      tags$iframe(
-        style = "height: 900px;",
-        src = "https://jean-kwizera-vic.shinyapps.io/Dashboard/",
-        id = "shiny_dashboard",
-        onload = 'this.contentWindow.postMessage("resize", "https://jean-kwizera-vic.shinyapps.io")'
-      )
-    )
-  ),
-  
-  list(
-    header = card_header("Mapping with Leaflet"),
-    body1 = card_body("Species Mapping"),
-    body2 = card_body(
-      style = "margin-left: 7.5%; margin-right: 7.5%;",
-      tags$iframe(
-        style = "height: 850px;",
-        src = "https://zp1mwp-jean0victor-kwizera.shinyapps.io/Appsilon_code_challenge/",
-        id = "leaflet_map",
-        onload = 'this.contentWindow.postMessage("resize", "https://zp1mwp-jean0victor-kwizera.shinyapps.io")'
-      )
-    )
-  )
-)
+
 
 
 
