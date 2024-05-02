@@ -136,7 +136,7 @@ tags$style("
   /* Style the card text */
   .card-text {
     color: grey90;
-    font-size: 22px;
+    font-size: 16px;
     position: relative;
     background-color: inherit;
     opacity: 0.8;
@@ -194,7 +194,7 @@ tags$style("
 ```{r landingpage, echo=FALSE, message=FALSE, warning=FALSE}
 # Add a div tag for the card text
 card_header(
-  style = "text-align: center",
+  style = "text-align: center; padding: 50px;",
   
   htmltools::tags$div(
   "Fullstack R for Enterprise and Research",
@@ -202,7 +202,7 @@ card_header(
 
 
 card_body(
-  style = "text-align: right",
+  style = "text-align: right; padding: 50px;",
   
   htmltools::tags$div(
   "Welcome to Kwiz Computing Technologies, your partners in digital transformation! We believe in the power of R, leveraging its robust functionality for data and beyond. From static websites, data solutions to robust enterprise applications; our modular, adaptable solutions are designed to grow with your business.",
@@ -309,7 +309,7 @@ htmltools::tags$div(
   
   htmltools::tags$div(
         "Embrace the digital transformation with Kwiz Computing Technologies – your partner in pioneering enterprise applications and driving growth.",
-        style = "text-align: right;", class = "card-text")
+        style = "text-align: right; padding-bottom: 50px;", class = "card-text")
 ```
 
 ------------------------------------------------------------------------
@@ -329,7 +329,7 @@ navset_card_tab(
     title =  # Add a div tag for the card text
       htmltools::tags$div(
         "Enterprise Applications |",
-        style = "color: #1b4a9c; background-color: ; border-radius: 10px; text-align: center;"),
+        style = "color: #1b4a9c; background-color: ; border-radius: 10px; text-align: center; padding-top: 50px;"),
       
     card_body(
       style = "text-align: right;",
@@ -342,14 +342,14 @@ navset_card_tab(
       htmltools::tags$div(
         "Unleash the power of R and Shiny with us! We go beyond data, leveraging their robust functionality for general software development.",
         class = "card-text",
-        style = "text-align: center; margin-left: 15%; margin-right: 15%;"),
+        style = "text-align: center; margin-left: 15%; margin-right: 15%; padding: 50px;"),
       
       htmltools::tags$p(),
       
       htmltools::tags$div(
         "Our expertise lies in integrating these tools with cloud resources, APIs, and other programming languages and applications. We're all about creating modular, scalable enterprise applications that are as dynamic and adaptable as your business needs. With us, you're not just building an application, you're building a future!",
         class = "card-text",
-        style = "text-align: center; margin-left: 15%; margin-right: 15%;")),
+        style = "text-align: center; margin-left: 15%; margin-right: 15%; padding-bottom: 50px;")),
     
     card_body(
       style = "background-color: #1b4a9c;",
@@ -379,7 +379,7 @@ navset_card_tab(
     title =  # Add a div tag for the card text
       htmltools::tags$div(
         "Interactive Websites |",
-        style = "color: #1b4a9c;  background-color: ; border-radius: 10px; text-align: center;"),
+        style = "color: #1b4a9c;  background-color: ; border-radius: 10px; text-align: center; padding-top: 50px;"),
     
     card_body(
       style = "text-align: right;",
@@ -393,14 +393,14 @@ navset_card_tab(
       htmltools::tags$div(
         "Dive into the world of interactive websites with us! We leverage the power of Quarto in R to build dynamic, data-driven websites.",
         class = "card-text",
-        style = "text-align: center; margin-left: 15%; margin-right: 15%;"),
+        style = "text-align: center; margin-left: 15%; margin-right: 15%; padding: 50px;"),
       
       htmltools::tags$p(),
       
       htmltools::tags$div(
         "Our creations don't just look good - they're smart, seamlessly integrating crucial data analytics right on the site. We believe in the power of data communication, and our websites reflect that. With us, your website won't just tell your story, it'll tell the story behind your data!",
         class = "card-text",
-        style = "text-align: center; margin-left: 15%; margin-right: 15%;")),
+        style = "text-align: center; margin-left: 15%; margin-right: 15%; padding-bottom: 50px;")),
     
     card_body(
       style = "background-color: #1b4a9c;",
@@ -431,7 +431,7 @@ navset_card_tab(
     title =    # Add a div tag for the card text
       htmltools::tags$div(
         "API Development and Integration |",
-        style = "color: #1b4a9c;  background-color: ; border-radius: 10px; text-align: center;"),
+        style = "color: #1b4a9c;  background-color: ; border-radius: 10px; text-align: center; padding-top: 50px;"),
       
     card_body(
       style = "text-align: right",
@@ -446,7 +446,7 @@ navset_card_tab(
       htmltools::tags$div(
         "Step into the future with our API's! We harness the power of the R development framework to build robust Plumber APIs.",
         class = "card-text",
-        style = "text-align: center; margin-left: 15%; margin-right: 15%;"),
+        style = "text-align: center; margin-left: 15%; margin-right: 15%; padding: 50px;"),
       
       htmltools::tags$p(),
         
@@ -454,7 +454,7 @@ navset_card_tab(
       htmltools::tags$div(
         "Our APIs are versatile, designed to integrate seamlessly with applications and websites, irrespective of the language they’re written in. We’re not just about code; we’re about transforming your business with scalable solutions that speak your language!",
         class = "card-text",
-        style = "text-align: center; margin-left: 15%; margin-right: 15%;")),
+        style = "text-align: center; margin-left: 15%; margin-right: 15%; padding-bottom: 50px;")),
     
     card_body(
       style = "background-color: #1b4a9c;",
@@ -486,7 +486,7 @@ navset_card_tab(
     title =   # Add a div tag for the card text
       htmltools::tags$div(
         "Cloud Solutions",
-        style = "color: #1b4a9c;  background-color: ; border-radius: 10px; text-align: center;"),
+        style = "color: #1b4a9c;  background-color: ; border-radius: 10px; text-align: center; padding-top: 50px;"),
     
     card_body(
       style = "text-align: right",
@@ -500,14 +500,14 @@ navset_card_tab(
       htmltools::tags$div(
         "Embrace the cloud with us! We excel in designing and developing cloud-based solutions using AWS, integrating storage, database, compute, and security services.",
         class = "card-text",
-        style = "text-align: center; margin-left: 15%; margin-right: 15%;"),
+        style = "text-align: center; margin-left: 15%; margin-right: 15%; padding: 50px;"),
       
       htmltools::tags$p(),
       
       htmltools::tags$div(
         "Our focus is on building robust and highly scalable enterprise applications that can grow with your business. With us, you're not just getting a service, you're getting a future-proof solution that puts you ahead of the curve!",
         class = "card-text",
-        style = "text-align: center; margin-left: 15%; margin-right: 15%;"
+        style = "text-align: center; margin-left: 15%; margin-right: 15%; padding-bottom: 50px;"
       )),
     
     card_body(
@@ -565,7 +565,7 @@ layout_column_wrap(
       
       card_body(
         htmltools::tags$div(
-        "About Jean")
+        "About Jean", style = "padding: 50px;")
       )
     ),
     
@@ -582,7 +582,7 @@ layout_column_wrap(
       
       card_body(
         htmltools::tags$div(
-        "About Vincent")
+        "About Vincent", style = "padding: 50px;")
       )
     ),
     
@@ -599,7 +599,7 @@ layout_column_wrap(
       
       card_body(
         htmltools::tags$div(
-        "About Raini")
+        "About Raini", style = "padding: 50px;")
       )
     )
   
