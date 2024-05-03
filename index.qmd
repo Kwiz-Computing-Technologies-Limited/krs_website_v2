@@ -381,7 +381,7 @@ navset_card_tab(
     title =  # Add a div tag for the card text
       htmltools::tags$div(
         "Interactive Websites |",
-        style = "color: #1b4a9c;  background-color: ; border-radius: 10px; text-align: center; padding-top: 50px; padding-right: 10%;"),
+        style = "color: #1b4a9c;  background-color: ; border-radius: 10px; text-align: center; padding-top: 50px; padding-right: 0%;"),
     
     card_body(
       style = "text-align: right;",
@@ -433,7 +433,7 @@ navset_card_tab(
     title =    # Add a div tag for the card text
       htmltools::tags$div(
         "API Development and Integration |",
-        style = "color: #1b4a9c;  background-color: ; border-radius: 10px; text-align: center; padding-top: 50px; padding-right: 10%;"),
+        style = "color: #1b4a9c;  background-color: ; border-radius: 10px; text-align: center; padding-top: 50px; padding-right: 0%;"),
       
     card_body(
       style = "text-align: right",
