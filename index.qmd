@@ -311,7 +311,9 @@ htmltools::tags$div(
 #| column: screen-inset-shaded
 #| margin-left: "10%"
 
-layout_columns(
+layout_column_wrap(
+  width = 0.5,
+  style = "margin-left: 20%; margin-right: 20%;",
   # services card 1
   card(
     style = "background-color:#e9945b;",
