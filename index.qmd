@@ -210,7 +210,7 @@ layout_column_wrap(
   width = 0.5,
   
   card_body(
-    style = "min-width: 300px",
+    style = "min-width: ",
     
     # Render the slideshow
     htmltools::browsable(
