@@ -119,11 +119,6 @@ tags$style("
   .card {
     border-bottom: 2px solid #1b4a9c;
   }
-  
- 
-  
-  
-  
 
   /* Style the card image */
   .card-image {
@@ -185,8 +180,6 @@ tags$style("
     opacity: 0.8;
     border-radius: 10px;
   }
-  
-  
 ")
 ```
 
@@ -280,9 +273,7 @@ layout_column_wrap(
 <a href="pages/services.qmd">
 
 <h1 style="color:#e9945b; background-color: ;">
-
 Explore Our Solutions
-
 </h1>
 
 </a>
@@ -319,13 +310,10 @@ htmltools::tags$div(
 ```{r services, echo=FALSE, message=FALSE, warning=FALSE}
 #| column: screen-inset-shaded
 #| margin-left: "10%"
-# Render the mission and vision cards
-navset_card_tab(
 
-  full_screen = TRUE,
-  
+layout_columns(
   # services card 1
-  nav_panel(
+  card(
     style = "background-color:#e9945b;",
 
     title =  # Add a div tag for the card text
@@ -353,29 +341,12 @@ navset_card_tab(
         class = "card-text",
         style = "text-align: center; margin-left: 15%; margin-right: 15%; padding-bottom: 50px;")),
     
-    card_body(
-      style = "background-color: #1b4a9c;",
-      # Render the slideshow
-      htmltools::browsable(
-        tags$html(
-          tags$head(
-            # Use Bootstrap 5
-            tags$link(
-              rel = "stylesheet",
-              href = "https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
-              )),
-        
-        tags$body(
-          slideshow_right_slide(enterprise, slide_id = "enterprise_media", interval = 20000),
-          # Add some custom CSS for the animations
-          card_animation_slide()
-          ))))
-    ),
-  
-  nav_spacer(), nav_spacer(),
+card_body(
+  tags$button(tags$a(href = "/pages/krs_services.qmd#Enterprise", "Go to Enterprise")))
+),
   
   # services card 2
-  nav_panel(
+  card(
     
     style = "background-color:#e9945b;",
     title =  # Add a div tag for the card text
@@ -404,30 +375,11 @@ navset_card_tab(
         class = "card-text",
         style = "text-align: center; margin-left: 15%; margin-right: 15%; padding-bottom: 50px;")),
     
-    card_body(
-      style = "background-color: #1b4a9c;",
-      
-      # Render the slideshow
-      htmltools::browsable(
-        tags$html(
-          tags$head(
-            # Use Bootstrap 5
-            tags$link(
-              rel = "stylesheet",
-              href = "https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
-              )),
-        
-        tags$body(
-          slideshow_right_slide(websites, slide_id = "websites_media", interval = 20000),
-          # Add some custom CSS for the animations
-          card_animation_slide()
-          )))
-      )),
+    card_body(tags$button(tags$a(href = "/pages/krs_services.qmd#Websites", "Go to Interactive Websites")))),
   
-  nav_spacer(), nav_spacer(),
-  
+
   # services card 3
-  nav_panel(
+  card(
     
     style = "background-color:#e9945b;",
     title =    # Add a div tag for the card text
@@ -458,31 +410,12 @@ navset_card_tab(
         class = "card-text",
         style = "text-align: center; margin-left: 15%; margin-right: 15%; padding-bottom: 50px;")),
     
-    card_body(
-      style = "background-color: #1b4a9c;",
-      
-      # Render the slideshow
-      htmltools::browsable(
-        tags$html(
-          tags$head(
-            # Use Bootstrap 5
-            tags$link(
-              rel = "stylesheet",
-              href = "https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
-              )),
-        
-        tags$body(
-          slideshow_right_slide(apis, slide_id = "api_media", interval = 20000),
-          # Add some custom CSS for the animations
-          card_animation_slide()
-          ))))
+    card_body(tags$button(tags$a(href = "/pages/krs_services.qmd#APIs", "Go to APIs")))
     ),
-  
-  nav_spacer(), nav_spacer(),
   
   
   # services card 4
-  nav_panel(
+  card(
     
     style = "background-color:#e9945b;",
     title =   # Add a div tag for the card text
@@ -512,32 +445,50 @@ navset_card_tab(
         style = "text-align: center; margin-left: 15%; margin-right: 15%; padding-bottom: 50px;"
       )),
     
-    card_body(
-      style = "background-color: #1b4a9c;",
-      
-      # Render the slideshow
-      htmltools::browsable(
-        tags$html(
-          tags$head(
-            # Use Bootstrap 5
-            tags$link(
-              rel = "stylesheet",
-              href = "https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
-              )),
-        
-        tags$body(
-          slideshow_right_slide(cloud, slide_id = "cloud_media", interval = 20000),
-          # Add some custom CSS for the animations
-          card_animation_slide()
-          ))))
+    card_body(tags$button(tags$a(href = "/pages/krs_services.qmd#Cloud", "Go to Cloud Solutions")))
     )
 )
 
 ```
 
+
 ------------------------------------------------------------------------
 :::
+::: {#Contact_Us}
+```{r contact_us, echo=FALSE, message=FALSE, warning=FALSE}
+#| column: "screen-inset-shaded"
 
+layout_column_wrap(
+  width = 1,
+  
+  card_body(
+    style = "margin-left: 30%; margin-right: 30%;",
+    card_title("Leave us a Message", style = "text-align: center;"),
+    
+    tags$div(
+      tags$label("Name:"),
+      textInput("name", label = NULL)),
+  
+    tags$div(
+      tags$label("Email:"),
+      textInput("Email", label = NULL)),
+    
+    tags$div(
+      tags$label("Phone:"),
+      textInput("Phone", label = NULL)),
+    
+    tags$div(
+      tags$label("Message:"),
+      textAreaInput("Message", label = NULL, height = "200px")),
+  ),
+  
+  card_body(
+    style = "margin-left: 30%; margin-right: 30%;",
+    card_title("Book an Appointment", style = "text-align: center;")
+  )
+)
+```
+:::
 ::: {#About}
 <h1 style="color:#e9945b; background-color: ;">
 

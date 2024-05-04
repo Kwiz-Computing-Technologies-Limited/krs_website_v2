@@ -27,10 +27,6 @@ website:
             href: index.qmd#About
           - text: "Testimonials"
             href: index.qmd#Testimonials
-
-      - text: "Services"
-        href: pages/services.qmd
-
         
       - text: "Resources"
         menu:
