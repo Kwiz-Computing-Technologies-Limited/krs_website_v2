@@ -488,6 +488,10 @@ layout_column_wrap(
       textInput("Phone", label = NULL)),
     
     tags$div(
+      tags$label("Subject:"),
+      textInput("Subject", label = NULL)),
+    
+    tags$div(
       tags$label("Message:"),
       textAreaInput("Message", label = NULL, height = "200px")),
   ),
@@ -499,6 +503,9 @@ layout_column_wrap(
 )
 ```
 :::
+
+------------------------------------------------------------------------
+
 ::: {#About}
 <h1 style="color:#e9945b; background-color: ;">
 
