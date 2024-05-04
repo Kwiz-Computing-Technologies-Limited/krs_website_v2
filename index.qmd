@@ -312,11 +312,12 @@ htmltools::tags$div(
 #| margin-left: "10%"
 
 layout_column_wrap(
-  width = 0.5,
-  style = "margin-left: 20%; margin-right: 20%;",
+  style = "margin-left: 5%; margin-right: 5%;",
+  fillable = TRUE,
+  gap = "5px",
   # services card 1
   card(
-    style = "background-color:#e9945b;",
+    style = "background-color:#e9945b; min-width: 240px;",
 
     title =  # Add a div tag for the card text
       htmltools::tags$div(
@@ -334,7 +335,7 @@ layout_column_wrap(
       htmltools::tags$div(
         "Unleash the power of R and Shiny with us! We go beyond data, leveraging their robust functionality for general software development.",
         class = "card-text",
-        style = "text-align: center; margin-left: 15%; margin-right: 15%; padding: 50px;"),
+        style = "text-align: center; margin-left: 0%; margin-right: 0%; padding: 50px;"),
       
       htmltools::tags$p(),
       
@@ -350,7 +351,7 @@ card_body(
   # services card 2
   card(
     
-    style = "background-color:#e9945b;",
+    style = "background-color:#e9945b; min-width: 240px;",
     title =  # Add a div tag for the card text
       htmltools::tags$div(
         "Interactive Websites |",
@@ -368,7 +369,7 @@ card_body(
       htmltools::tags$div(
         "Dive into the world of interactive websites with us! We leverage the power of Quarto in R to build dynamic, data-driven websites.",
         class = "card-text",
-        style = "text-align: center; margin-left: 15%; margin-right: 15%; padding: 50px;"),
+        style = "text-align: center; margin-left: 0%; margin-right: 0%; padding: 50px;"),
       
       htmltools::tags$p(),
       
@@ -383,7 +384,7 @@ card_body(
   # services card 3
   card(
     
-    style = "background-color:#e9945b;",
+    style = "background-color:#e9945b; min-width: 240px;",
     title =    # Add a div tag for the card text
       htmltools::tags$div(
         "API Development and Integration |",
@@ -402,7 +403,7 @@ card_body(
       htmltools::tags$div(
         "Step into the future with our API's! We harness the power of the R development framework to build robust Plumber APIs.",
         class = "card-text",
-        style = "text-align: center; margin-left: 15%; margin-right: 15%; padding: 50px;"),
+        style = "text-align: center; margin-left: 0%; margin-right: 0%; padding: 50px;"),
       
       htmltools::tags$p(),
         
@@ -419,7 +420,7 @@ card_body(
   # services card 4
   card(
     
-    style = "background-color:#e9945b;",
+    style = "background-color:#e9945b; min-width: 240px;",
     title =   # Add a div tag for the card text
       htmltools::tags$div(
         "Cloud Solutions |",
@@ -437,7 +438,7 @@ card_body(
       htmltools::tags$div(
         "Embrace the cloud with us! We excel in designing and developing cloud-based solutions using AWS, integrating storage, database, compute, and security services.",
         class = "card-text",
-        style = "text-align: center; margin-left: 15%; margin-right: 15%; padding: 50px;"),
+        style = "text-align: center; margin-left: 0%; margin-right: 0%; padding: 50px;"),
       
       htmltools::tags$p(),
       
