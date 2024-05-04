@@ -14,7 +14,7 @@ website:
     logo-href: "/index.qmd"
     background: "#e9945b"
     foreground: "#e9945b"
-    pinned: true
+    pinned: false
     collapse: true
     right:
       - text: "Main Menu"

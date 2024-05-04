@@ -47,7 +47,7 @@ tags$style("
   .title {
     text-align: center;
     color: #1b4a9c;
-    font-size: 26px; 
+    font-size: 20px; 
     margin-left: 30%; 
     margin-right: 30%;
   }
@@ -68,7 +68,7 @@ tags$style("
   a {
     text-align: center;
     text-decoration: none;
-    font-size: 22px;
+    font-size: 20px;
   }
 
   button:hover, a:hover {
@@ -317,7 +317,7 @@ layout_column_wrap(
   gap = "5px",
   # services card 1
   card(
-    style = "background-color:#e9945b; min-width: 240px;",
+    style = "background-color:#e9945b; min-width: 200px;",
 
     title =  # Add a div tag for the card text
       htmltools::tags$div(
@@ -335,7 +335,7 @@ layout_column_wrap(
       htmltools::tags$div(
         "Unleash the power of R and Shiny with us! We go beyond data, leveraging their robust functionality for general software development.",
         class = "card-text",
-        style = "text-align: center; margin-left: 0%; margin-right: 0%; padding: 50px;"),
+        style = "text-align: center; margin-left: 0%; margin-right: 0%; padding-top: 50px; padding-bottom: 50px;"),
       
       htmltools::tags$p(),
       
@@ -346,13 +346,13 @@ layout_column_wrap(
     
 card_body(
   style = "align: center;",
-  tags$button(tags$a(href = "/pages/krs_services.qmd#Enterprise", "Go to Enterprise")))
+  tags$button(tags$a(href = "", "Go to Enterprise")))
 ),
   
   # services card 2
   card(
     
-    style = "background-color:#e9945b; min-width: 240px;",
+    style = "background-color:#e9945b; min-width: 200px;",
     title =  # Add a div tag for the card text
       htmltools::tags$div(
         "Interactive Websites |",
@@ -370,7 +370,7 @@ card_body(
       htmltools::tags$div(
         "Dive into the world of interactive websites with us! We leverage the power of Quarto in R to build dynamic, data-driven websites.",
         class = "card-text",
-        style = "text-align: center; margin-left: 0%; margin-right: 0%; padding: 50px;"),
+        style = "text-align: center; margin-left: 0%; margin-right: 0%; padding-top: 50px; padding-bottom: 50px;"),
       
       htmltools::tags$p(),
       
@@ -381,13 +381,13 @@ card_body(
     
     card_body(
       style = "align: center;",
-      tags$button(tags$a(href = "/pages/krs_services.qmd#Websites", "Go to Interactive Websites")))),
+      tags$button(tags$a(href = "", "Go to Interactive Websites")))),
   
 
   # services card 3
   card(
     
-    style = "background-color:#e9945b; min-width: 240px;",
+    style = "background-color:#e9945b; min-width: 200px;",
     title =    # Add a div tag for the card text
       htmltools::tags$div(
         "API Development and Integration |",
@@ -406,7 +406,7 @@ card_body(
       htmltools::tags$div(
         "Step into the future with our API's! We harness the power of the R development framework to build robust Plumber APIs.",
         class = "card-text",
-        style = "text-align: center; margin-left: 0%; margin-right: 0%; padding: 50px;"),
+        style = "text-align: center; margin-left: 0%; margin-right: 0%; padding-top: 50px; padding-bottom: 50px;"),
       
       htmltools::tags$p(),
         
@@ -418,14 +418,14 @@ card_body(
     
     card_body(
       style = "align: center;",
-      tags$button(tags$a(href = "/pages/krs_services.qmd#APIs", "Go to APIs")))
+      tags$button(tags$a(href = "", "Go to APIs")))
     ),
   
   
   # services card 4
   card(
     
-    style = "background-color:#e9945b; min-width: 240px;",
+    style = "background-color:#e9945b; min-width: 200px;",
     title =   # Add a div tag for the card text
       htmltools::tags$div(
         "Cloud Solutions |",
@@ -443,7 +443,7 @@ card_body(
       htmltools::tags$div(
         "Embrace the cloud with us! We excel in designing and developing cloud-based solutions using AWS, integrating storage, database, compute, and security services.",
         class = "card-text",
-        style = "text-align: center; margin-left: 0%; margin-right: 0%; padding: 50px;"),
+        style = "text-align: center; margin-left: 0%; margin-right: 0%; padding-top: 50px; padding-bottom: 50px;"),
       
       htmltools::tags$p(),
       
@@ -455,7 +455,7 @@ card_body(
     
     card_body(
       style = "align: center;",
-      tags$button(tags$a(href = "/pages/krs_services.qmd#Cloud", "Go to Cloud Solutions")))
+      tags$button(tags$a(href = "", "Go to Cloud Solutions")))
     )
 )
 
