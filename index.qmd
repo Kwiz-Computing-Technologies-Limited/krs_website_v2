@@ -342,9 +342,10 @@ layout_column_wrap(
       htmltools::tags$div(
         "Our expertise lies in integrating these tools with cloud resources, APIs, and other programming languages and applications. We're all about creating modular, scalable enterprise applications that are as dynamic and adaptable as your business needs. With us, you're not just building an application, you're building a future!",
         class = "card-text",
-        style = "text-align: center; margin-left: 15%; margin-right: 15%; padding-bottom: 50px;")),
+        style = "text-align: center; margin-left: 0%; margin-right: 0%; padding-bottom: 50px;")),
     
 card_body(
+  style = "align: center;",
   tags$button(tags$a(href = "/pages/krs_services.qmd#Enterprise", "Go to Enterprise")))
 ),
   
@@ -376,9 +377,11 @@ card_body(
       htmltools::tags$div(
         "Our creations don't just look good - they're smart, seamlessly integrating crucial data analytics right on the site. We believe in the power of data communication, and our websites reflect that. With us, your website won't just tell your story, it'll tell the story behind your data!",
         class = "card-text",
-        style = "text-align: center; margin-left: 15%; margin-right: 15%; padding-bottom: 50px;")),
+        style = "text-align: center; margin-left: 0%; margin-right: 0%; padding-bottom: 50px;")),
     
-    card_body(tags$button(tags$a(href = "/pages/krs_services.qmd#Websites", "Go to Interactive Websites")))),
+    card_body(
+      style = "align: center;",
+      tags$button(tags$a(href = "/pages/krs_services.qmd#Websites", "Go to Interactive Websites")))),
   
 
   # services card 3
@@ -411,9 +414,11 @@ card_body(
       htmltools::tags$div(
         "Our APIs are versatile, designed to integrate seamlessly with applications and websites, irrespective of the language they’re written in. We’re not just about code; we’re about transforming your business with scalable solutions that speak your language!",
         class = "card-text",
-        style = "text-align: center; margin-left: 15%; margin-right: 15%; padding-bottom: 50px;")),
+        style = "text-align: center; margin-left: 0%; margin-right: 0%; padding-bottom: 50px;")),
     
-    card_body(tags$button(tags$a(href = "/pages/krs_services.qmd#APIs", "Go to APIs")))
+    card_body(
+      style = "align: center;",
+      tags$button(tags$a(href = "/pages/krs_services.qmd#APIs", "Go to APIs")))
     ),
   
   
@@ -445,10 +450,12 @@ card_body(
       htmltools::tags$div(
         "Our focus is on building robust and highly scalable enterprise applications that can grow with your business. With us, you're not just getting a service, you're getting a future-proof solution that puts you ahead of the curve!",
         class = "card-text",
-        style = "text-align: center; margin-left: 15%; margin-right: 15%; padding-bottom: 50px;"
+        style = "text-align: center; margin-left: 0%; margin-right: 0%; padding-bottom: 50px;"
       )),
     
-    card_body(tags$button(tags$a(href = "/pages/krs_services.qmd#Cloud", "Go to Cloud Solutions")))
+    card_body(
+      style = "align: center;",
+      tags$button(tags$a(href = "/pages/krs_services.qmd#Cloud", "Go to Cloud Solutions")))
     )
 )
 
