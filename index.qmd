@@ -50,6 +50,23 @@ title: " "
 }
 
 
+@keyframes bounceButton {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+
+#bouncebutton-text {
+  animation: bounceButton 4s infinite;
+}
+
+
 @keyframes slideInTop {
   0% {
     transform: translateY(-100%);
@@ -332,7 +349,7 @@ layout_column_wrap(
           style = "color: black;",
           href = "https://wa.link/ujtz0p",
           tags$div(
-            id = "bounce-text",
+            id = "bouncebutton-text",
             "Contact Us"
           ))),
   
@@ -424,7 +441,7 @@ layout_column_wrap(
     
 card_body(
   style = "align: center;",
-  tags$button(tags$a(href = "", tags$div(id = "bounce-text", "Go to Enterprise"))))
+  tags$button(tags$a(href = "", tags$div(id = "bouncebutton-text", "Go to Enterprise"))))
 ),
   
   # services card 2
@@ -459,7 +476,7 @@ card_body(
     
     card_body(
       style = "align: center;",
-      tags$button(tags$a(href = "", tags$div(id = "bounce-text", "Go to Interactive Websites"))))),
+      tags$button(tags$a(href = "", tags$div(id = "bouncebutton-text", "Go to Interactive Websites"))))),
   
 
   # services card 3
@@ -496,7 +513,7 @@ card_body(
     
     card_body(
       style = "align: center;",
-      tags$button(tags$a(href = "", tags$div(id = "bounce-text", "Go to APIs"))))
+      tags$button(tags$a(href = "", tags$div(id = "bouncebutton-text", "Go to APIs"))))
     ),
   
   
@@ -533,7 +550,7 @@ card_body(
     
     card_body(
       style = "align: center;",
-      tags$button(tags$a(href = "", tags$div(id = "bounce-text", "Go to Cloud Solutions"))))
+      tags$button(tags$a(href = "", tags$div(id = "bouncebutton-text", "Go to Cloud Solutions"))))
     )
 )
 
@@ -575,7 +592,7 @@ layout_column_wrap(
     
     card_body(
       style = "align: center; background-color: #e9945b",
-      tags$button(tags$a(href = "", tags$div(id = "bounce-text", "Submit"))))
+      tags$button(tags$a(href = "", tags$div(id = "bouncebutton-text", "Submit"))))
   ),
   
   card_body(
