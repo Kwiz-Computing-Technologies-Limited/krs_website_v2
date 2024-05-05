@@ -27,6 +27,77 @@ title: " "
 ```
 <!-- /Sendinblue Conversations {/literal} -->
 
+
+```{=html}
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+
+#bounce-text {
+  animation: bounce 4s infinite;
+}
+
+
+@keyframes slideInTop {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  25.00% { /* 1s / 4s = 0.2500 or 25.00% */
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
+#slideintop-text {
+  animation: slideInTop 4s infinite;
+}
+
+
+@keyframes slideInBottom {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  25.00% { /* 1s / 4s = 0.2500 or 25.00% */
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
+#slideinbottom-text {
+  animation: slideInBottom 4s infinite;
+}
+</style>
+</head>
+```
+
+```{=html}
+
+```
+
 ```{r functions, echo=FALSE, message=FALSE, warning=FALSE}
 source("./pages/functions/sliding_cards.R")
 source("./pages/functions/landingpage_plotly.R")
@@ -181,6 +252,9 @@ tags$style("
     border-radius: 10px;
   }
 ")
+
+# animate texts
+# system("quarto add mcanouil/quarto-animate")
 ```
 
 ::: {#Home .column-page}
@@ -190,6 +264,7 @@ card_header(
   style = "text-align: center; padding: 31%;",
   
   htmltools::tags$div(
+    id = "bounce-text",
   "Fullstack R for Enterprise and Research",
   style = "font-size:24px; color: #e9945b; text-align: center; font-weight: bold;"))
 
@@ -246,7 +321,7 @@ layout_column_wrap(
         htmltools::tags$image(
           src = "./pages/images/chat_whatsapp.jpeg",
           class = "card-image",
-          style = "border-radius: 10px;",
+          style = "border-radius: 10px; padding: 25%;",
           )),
       
    htmltools::tags$p(),
@@ -256,7 +331,10 @@ layout_column_wrap(
         htmltools::tags$a(
           style = "color: black;",
           href = "https://wa.link/ujtz0p",
-          "Contact Us")),
+          tags$div(
+            id = "bounce-text",
+            "Contact Us"
+          ))),
   
    htmltools::tags$p(),
   
@@ -346,7 +424,7 @@ layout_column_wrap(
     
 card_body(
   style = "align: center;",
-  tags$button(tags$a(href = "", "Go to Enterprise")))
+  tags$button(tags$a(href = "", tags$div(id = "bounce-text", "Go to Enterprise"))))
 ),
   
   # services card 2
@@ -381,7 +459,7 @@ card_body(
     
     card_body(
       style = "align: center;",
-      tags$button(tags$a(href = "", "Go to Interactive Websites")))),
+      tags$button(tags$a(href = "", tags$div(id = "bounce-text", "Go to Interactive Websites"))))),
   
 
   # services card 3
@@ -418,7 +496,7 @@ card_body(
     
     card_body(
       style = "align: center;",
-      tags$button(tags$a(href = "", "Go to APIs")))
+      tags$button(tags$a(href = "", tags$div(id = "bounce-text", "Go to APIs"))))
     ),
   
   
@@ -455,7 +533,7 @@ card_body(
     
     card_body(
       style = "align: center;",
-      tags$button(tags$a(href = "", "Go to Cloud Solutions")))
+      tags$button(tags$a(href = "", tags$div(id = "bounce-text", "Go to Cloud Solutions"))))
     )
 )
 
@@ -466,14 +544,14 @@ card_body(
 :::
 ::: {#Contact_Us}
 ```{r contact_us, echo=FALSE, message=FALSE, warning=FALSE}
-#| column: "screen-outset-shaded"
+#| column: "body-outset"
 
 layout_column_wrap(
   width = 1,
   
   card_body(
     style = "margin-left: 0%; margin-right: 0%;",
-    card_title("Leave us a Message", style = "text-align: center;"),
+    card_title("Leave us a Message", style = "text-align: center; color: #1b4a9c;"),
     
     tags$div(
       tags$label("Name:"),
@@ -494,11 +572,15 @@ layout_column_wrap(
     tags$div(
       tags$label("Message:"),
       textAreaInput("Message", label = NULL, height = "200px")),
+    
+    card_body(
+      style = "align: center; background-color: #e9945b",
+      tags$button(tags$a(href = "", tags$div(id = "bounce-text", "Submit"))))
   ),
   
   card_body(
     style = "margin-left: 0%; margin-right: 0%;",
-    card_title("Book an Appointment", style = "text-align: center;")
+    card_title("Book an Appointment", style = "text-align: center; color: #1b4a9c;")
   )
 )
 ```
