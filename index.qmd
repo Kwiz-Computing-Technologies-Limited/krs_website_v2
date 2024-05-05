@@ -187,7 +187,7 @@ tags$style("
 ```{r landingpage, echo=FALSE, message=FALSE, warning=FALSE}
 # Add a div tag for the card text
 card_header(
-  style = "text-align: center; padding: 50px;",
+  style = "text-align: center; padding: 31%;",
   
   htmltools::tags$div(
   "Fullstack R for Enterprise and Research",
