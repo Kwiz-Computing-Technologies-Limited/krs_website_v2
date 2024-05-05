@@ -466,13 +466,13 @@ card_body(
 :::
 ::: {#Contact_Us}
 ```{r contact_us, echo=FALSE, message=FALSE, warning=FALSE}
-#| column: "screen-inset-shaded"
+#| column: "screen-outset-shaded"
 
 layout_column_wrap(
   width = 1,
   
   card_body(
-    style = "margin-left: 30%; margin-right: 30%;",
+    style = "margin-left: 0%; margin-right: 0%;",
     card_title("Leave us a Message", style = "text-align: center;"),
     
     tags$div(
@@ -497,7 +497,7 @@ layout_column_wrap(
   ),
   
   card_body(
-    style = "margin-left: 30%; margin-right: 30%;",
+    style = "margin-left: 0%; margin-right: 0%;",
     card_title("Book an Appointment", style = "text-align: center;")
   )
 )
