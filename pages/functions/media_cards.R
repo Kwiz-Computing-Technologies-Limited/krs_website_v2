@@ -8,7 +8,8 @@ mission_vision_card = list(
         style = "font-size:24px; text-align: center; font-weight: bold; background-color: ;"),
     
     body1 = card_body(
-      style = "min-height: 300px; padding: 50px;",
+      style = "min-height: 300px;  padding-left: 10px; padding-right: 10px; 
+      padding-top: 20%; padding-bottom: 20%;",
       
       # Add a div tag for the card text
       htmltools::tags$div(
@@ -25,7 +26,8 @@ mission_vision_card = list(
         style = "font-size:24px; text-align: center; font-weight: bold; background-color: ;"),
     
     body1 = card_body(
-      style = "min-height: 300px; padding: 50px;",
+      style = "min-height: 300px; padding-left: 10px; padding-right: 10px; 
+      padding-top: 20%; padding-bottom: 20%;",
       
       # Add a div tag for the card text
       htmltools::tags$div(
