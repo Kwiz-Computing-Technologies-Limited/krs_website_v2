@@ -605,7 +605,7 @@ layout_column_wrap(
       card_header(
         htmltools::tags$div(
         "Kwizera, Jean Victor: Cofounder - Technology",
-        style = "color: #1b4a9c; background-color: #e9945b; border-radius: 10px;")
+        style = "color: #1b4a9c; background-color: ; border-radius: 10px;")
       ),
       
       card_image(file = "./pages/images/logo/Kwiz_Main_Logo.jpg",
@@ -622,7 +622,7 @@ layout_column_wrap(
       card_header(
         htmltools::tags$div(
         "Iragena, Vincent De Paul: Cofounder - Business Development",
-        style = "color: #1b4a9c; background-color: #e9945b; border-radius: 10px;")
+        style = "color: #1b4a9c; background-color: ; border-radius: 10px;")
       ),
       
       card_image(file = "./pages/images/logo/Kwiz_Main_Logo.jpg",
@@ -639,7 +639,7 @@ layout_column_wrap(
       card_header(
         htmltools::tags$div(
         "Raini, Catherine Nyasuguta: Project Management and Planning",
-        style = "color: #1b4a9c; background-color: #e9945b; border-radius: 10px;")
+        style = "color: #1b4a9c; background-color: ; border-radius: 10px;")
       ),
       
       card_image(file = "./pages/images/logo/Kwiz_Main_Logo.jpg",
