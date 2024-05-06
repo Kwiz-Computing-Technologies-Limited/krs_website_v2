@@ -278,7 +278,7 @@ tags$style("
 ```{r landingpage, echo=FALSE, message=FALSE, warning=FALSE}
 # Add a div tag for the card text
 card_header(
-  style = "text-align: center; padding: 31%;",
+  style = "text-align: center; padding: 31%; border-bottom: 0px;",
   
   htmltools::tags$div(
     id = "bounce-text",
@@ -287,7 +287,7 @@ card_header(
 
 
 card_body(
-  style = "text-align: right; padding: 50px;",
+  style = "text-align: center; padding: 50px;",
   
   htmltools::tags$div(
   "Welcome to Kwiz Computing Technologies, your partners in digital transformation! We believe in the power of R, leveraging its robust functionality for data and beyond. From static websites, data solutions to robust enterprise applications; our modular, adaptable solutions are designed to grow with your business.",
@@ -385,19 +385,19 @@ htmltools::tags$div(
   
   htmltools::tags$div(
         "Founded in February 2022 as ‘Kwiz Research Services’ and evolving into a limited company by January 2023, Kwiz Computing Technologies stands at the forefront of digital innovation.",
-        style = "text-align: right;", class = "card-text")
+        style = "text-align: center;", class = "card-text")
   
   htmltools::tags$p()
   
   htmltools::tags$div(
         "Specializing in full stack R development, we offer a unique blend of expertise in statistics, computing methods, and big data solutions. Our commitment to excellence in solutions architecture, planning, and project management ensures that we deliver cutting-edge, end-to-end solutions tailored to propel your business into the future.",
-        style = "text-align: right;", class = "card-text")
+        style = "text-align: center;", class = "card-text")
   
   htmltools::tags$p()
   
   htmltools::tags$div(
         "Embrace the digital transformation with Kwiz Computing Technologies – your partner in pioneering enterprise applications and driving growth.",
-        style = "text-align: right; padding-bottom: 50px;", class = "card-text")
+        style = "text-align: center; padding-bottom: 50px;", class = "card-text")
 ```
 
 ------------------------------------------------------------------------
@@ -407,17 +407,13 @@ htmltools::tags$div(
 #| margin-left: "10%"
 
 layout_column_wrap(
+  width = 0.5,
   style = "margin-left: 5%; margin-right: 5%;",
   fillable = TRUE,
   gap = "5px",
   # services card 1
   card(
-    style = "background-color:#e9945b; min-width: 200px;",
-
-    title =  # Add a div tag for the card text
-      htmltools::tags$div(
-        "Enterprise Applications |",
-        style = "color: #1b4a9c; background-color: ; border-radius: 2%; text-align: center; padding-top: 50px; padding-left: 10%;"),
+    style = "background-color: white; min-width: 200px;",
       
     card_body(
       style = "text-align: right;",
@@ -430,7 +426,7 @@ layout_column_wrap(
       htmltools::tags$div(
         "Unleash the power of R and Shiny with us! We go beyond data, leveraging their robust functionality for general software development.",
         class = "card-text",
-        style = "text-align: center; margin-left: 0%; margin-right: 0%; padding-top: 50px; padding-bottom: 50px;"),
+        style = "text-align: center; margin-left: 0%; margin-right: 0%; padding-top: 50px; padding-bottom: 50px; background-color: #e9945b;"),
       
       htmltools::tags$p(),
       
@@ -447,15 +443,10 @@ card_body(
   # services card 2
   card(
     
-    style = "background-color:#e9945b; min-width: 200px;",
-    title =  # Add a div tag for the card text
-      htmltools::tags$div(
-        "Interactive Websites |",
-        style = "color: #1b4a9c;  background-color: ; border-radius: 10px; text-align: center; padding-top: 50px; padding-right: 0%;"),
+    style = "background-color: white; min-width: 200px;",
     
     card_body(
       style = "text-align: right;",
-      
       htmltools::tags$div(
         "Interactive Websites",
         
@@ -465,7 +456,7 @@ card_body(
       htmltools::tags$div(
         "Dive into the world of interactive websites with us! We leverage the power of Quarto in R to build dynamic, data-driven websites.",
         class = "card-text",
-        style = "text-align: center; margin-left: 0%; margin-right: 0%; padding-top: 50px; padding-bottom: 50px;"),
+        style = "text-align: center; margin-left: 0%; margin-right: 0%; padding-top: 50px; padding-bottom: 50px; background-color: #e9945b;"),
       
       htmltools::tags$p(),
       
@@ -481,16 +472,10 @@ card_body(
 
   # services card 3
   card(
-    
-    style = "background-color:#e9945b; min-width: 200px;",
-    title =    # Add a div tag for the card text
-      htmltools::tags$div(
-        "API Development and Integration |",
-        style = "color: #1b4a9c;  background-color: ; border-radius: 10px; text-align: center; padding-top: 50px; padding-right: 0%;"),
+    style = "background-color: white; min-width: 200px;",
       
     card_body(
       style = "text-align: right",
-      
       
       htmltools::tags$div(
         "API Development and Integration",
@@ -501,7 +486,7 @@ card_body(
       htmltools::tags$div(
         "Step into the future with our API's! We harness the power of the R development framework to build robust Plumber APIs.",
         class = "card-text",
-        style = "text-align: center; margin-left: 0%; margin-right: 0%; padding-top: 50px; padding-bottom: 50px;"),
+        style = "text-align: center; margin-left: 0%; margin-right: 0%; padding-top: 50px; padding-bottom: 50px;  background-color: #e9945b;"),
       
       htmltools::tags$p(),
         
@@ -519,12 +504,7 @@ card_body(
   
   # services card 4
   card(
-    
-    style = "background-color:#e9945b; min-width: 200px;",
-    title =   # Add a div tag for the card text
-      htmltools::tags$div(
-        "Cloud Solutions |",
-        style = "color: #1b4a9c;  background-color: ; border-radius: 10px; text-align: center; padding-top: 50px; padding-right: 10%;"),
+    style = "background-color: white; min-width: 200px;",
     
     card_body(
       style = "text-align: right",
@@ -538,7 +518,7 @@ card_body(
       htmltools::tags$div(
         "Embrace the cloud with us! We excel in designing and developing cloud-based solutions using AWS, integrating storage, database, compute, and security services.",
         class = "card-text",
-        style = "text-align: center; margin-left: 0%; margin-right: 0%; padding-top: 50px; padding-bottom: 50px;"),
+        style = "text-align: center; margin-left: 0%; margin-right: 0%; padding-top: 50px; padding-bottom: 50px;  background-color: #e9945b;"),
       
       htmltools::tags$p(),
       

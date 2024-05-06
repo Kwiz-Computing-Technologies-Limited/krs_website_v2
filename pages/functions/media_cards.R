@@ -221,7 +221,7 @@ testimonials_cards = list(
       
       # Add a div tag for the card text
       htmltools::tags$div(
-        style = "background-color: ; margin-right: 30%; text-align: right; padding: 50px;",
+        style = "background-color: ; margin-right: 30%; text-align: center; padding: 50px;",
         class = "card-text",
 
         "Charity Begins at Home!",
