@@ -278,7 +278,7 @@ tags$style("
 ```{r landingpage, echo=FALSE, message=FALSE, warning=FALSE}
 # Add a div tag for the card text
 card_header(
-  style = "text-align: center; padding: 31%; border-bottom: 0px;",
+  style = "text-align: center; padding-top: 31%; padding-left: 31%; padding-right: 31%; border-bottom: 0px;",
   
   htmltools::tags$div(
     id = "bounce-text",
