@@ -571,7 +571,7 @@ layout_column_wrap(
       textAreaInput("Message", label = NULL, height = "200px")),
     
     card_body(
-      style = "align: center; background-color: #e9945b",
+      style = "align: center; border-radius: 10px;",
       tags$button(tags$a(href = "", tags$div(id = "bouncebutton-text", "Submit"))))
   ),
   
