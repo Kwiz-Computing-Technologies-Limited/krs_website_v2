@@ -12,18 +12,20 @@ title: " "
 <!-- Sendinblue Conversations {literal} -->
 
 ```{=html}
+<!-- Brevo Conversations {literal} -->
 <script>
     (function(d, w, c) {
-        w.SibConversationsID = '643fda89e758061ca338bf4f';
+        w.BrevoConversationsID = '663a19e88235fa2e294f512b';
         w[c] = w[c] || function() {
             (w[c].q = w[c].q || []).push(arguments);
         };
         var s = d.createElement('script');
         s.async = true;
-        s.src = 'https://conversations-widget.sendinblue.com/sib-conversations.js';
+        s.src = 'https://conversations-widget.brevo.com/brevo-conversations.js';
         if (d.head) d.head.appendChild(s);
-    })(document, window, 'SibConversations');
+    })(document, window, 'BrevoConversations');
 </script>
+<!-- /Brevo Conversations {/literal} -->
 ```
 <!-- /Sendinblue Conversations {/literal} -->
 
@@ -422,7 +424,7 @@ htmltools::tags$div(
 ------------------------------------------------------------------------
 
 ```{r services, echo=FALSE, message=FALSE, warning=FALSE}
-#| column: screen-inset-shaded
+#| column: page
 #| margin-left: "10%"
 
 layout_column_wrap(
