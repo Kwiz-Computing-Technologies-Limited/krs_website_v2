@@ -214,36 +214,38 @@ testimonials_cards = list(
       width = 1/2,
       
       # Add a div tag for the card text
-      tags$a(
-        href = "https://www.kwizresearch.com/",
+      tags$div(
+        tags$div(
+          style = "padding-left: 30%; padding-right: 30%;",
+          tags$a(
+            href = "https://www.kwizresearch.com/",
+            
+            htmltools::tags$img(
+              src = "/pages/images/logo/Kwiz_White_bg_Logo.jpg",
+              style = "max-width: 150px; height: auto;"))
+        ),
+        tags$p(),
         
-        htmltools::tags$img(
-          src = "/pages/images/logo/Kwiz_White_bg_Logo.jpg",
-          style = "max-width: 60%; height: auto;")),
+        tags$div(
+          style = "padding-left: 30%; padding-right: 30%;",
+          "Charity Begins at Home!",
+          "This website is created using Quarto in R, and we love it just as you do 🫡🫡",
+          "We are not only honing our skills and demonstrating our expertise and commitment to innovation, 
+        but also deepening our understanding of Your and our needs."
+        )
+      ),
       
       # Add a div tag for the card text
       htmltools::tags$div(
         style = "background-color: ; margin-right: 30%; text-align: center; padding: 50px;",
         class = "card-text",
-
-        "Charity Begins at Home!",
-        tags$p(),
+        id = "bouncebutton-text",
         
-        "At Kwiz Computing Technologies, we believe in the power of data, the potential of technology and full-stack
-        R as a wholistic development framework for data science and software development.",
-        tags$p(),
-        
-        "We have harnessed these tools to create our own website (using Quarto in R), 
-        successfully integrated cloud APIs; deploying resources on AWS for storage, databases, security, web hosting, compute, ...
-        to ensure optimal performance and scalability",
-        tags$p(),
-        
-        "not only honing our skills and demonstrating our expertise and commitment to innovation, 
-        but also deepening our understanding of our clients' needs.",
-        tags$p(),
-        
-        "We're proud of what we've built - because at Kwiz  Computing Technologies, we don't just deliver solutions, we are empowered by them.")
-    )),
+        tags$h2("We Like:"),
+        tags$li("The Beautiful UI"),
+        tags$li("Interactive Inteface"),
+        tags$li("Smooth experience")
+    ))),
   
   # card 2
   list(
@@ -251,19 +253,34 @@ testimonials_cards = list(
       width = 1/2,
       
       # Add a div tag for the card text
-      tags$a(
-        href = "https://canarytourske.onrender.com",
+      tags$div(
+        tags$div(
+          style = "padding-left: 30%; padding-right: 30%;",
+          tags$a(
+            href = "https://canarytourske.onrender.com",
+            
+            htmltools::tags$img(
+              src = "./pages/images/testimonials/canary_tours_logo.jpeg",
+              style = "max-width: 150px; height: auto;"))
+        ),
         
-        htmltools::tags$img(
-          src = "./pages/images/testimonials/canary_tours_logo.jpeg",
-          style = "max-width: 60%; height: auto;")),
+        tags$p(),
+        
+        tags$div(
+          style = "padding-left: 30%; padding-right: 30%;",
+          "Feedback 2"
+        )
+      ),
       
       # Add a div tag for the card text
       htmltools::tags$div(
-        style = "background-color: ; margin-right: 30%; text-align: right;",
-        "Feedback 2"
-        )
-    ))
+        style = "background-color: ; margin-right: 30%; text-align: center; padding: 50px;",
+        class = "card-text",
+        id = "bouncebutton-text",
+        
+        tags$h2("We Like:"),
+        tags$li(""),
+      )))
 )
 
 
