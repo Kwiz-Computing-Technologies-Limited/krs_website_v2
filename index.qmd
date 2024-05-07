@@ -338,7 +338,7 @@ layout_column_wrap(
             )),
         
         tags$body(
-          slideshow_right_slide(mission_vision_card, slide_id = "mission_vision_slide", interval = 8000),
+          slideshow_right_slide(mission_vision_card, slide_id = "mission_vision_slide", interval = 12000),
           # Add some custom CSS for the animations
           card_animation_slide()
           )))
@@ -705,7 +705,7 @@ htmltools::browsable(
     tags$body(
       tags$div(
         style = "padding-left: 15%; padding-right: 15%;",
-        slideshow_left_slide_v2(testimonials_cards, slide_id = "testimonials_slide", interval = 10000)
+        slideshow_left_slide_v2(testimonials_cards, slide_id = "testimonials_slide", interval = 12000)
       ))
   ))
 ```
