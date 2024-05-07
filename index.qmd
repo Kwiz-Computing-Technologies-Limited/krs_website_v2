@@ -36,16 +36,16 @@ title: " "
 <head>
 <style> 
 @keyframes drawK {
-  0% { transform: translate(-100px, 240px); } /* Bottom Left */
-  8% { transform: translate(-100px, 0); } /* Top Left */
-  16% { transform: translate(100px, 0); } /* Top Right */
-  24% { transform: translate(-100px, 160px); } /* Middle left */
-  32% { transform: translate(100px, 240px); } /* Bottom Right */
-  40% { transform: translate(-100px, 160px); } /* Middle left */
-  48% { transform: translate(100px, 0); } /* Top Right */
-  56% { transform: translate(-100px, 0); } /* Top Left */
-  64% { transform: translate(-100px, 240px); } /* Bottom Left */
-  100% { transform: translate(-100px, 240px); } /* Bottom Left */
+  0% { transform: translate(-90px, 240px); } /* Bottom Left */
+  8% { transform: translate(-90px, 0); } /* Top Left */
+  16% { transform: translate(90px, 0); } /* Top Right */
+  24% { transform: translate(-90px, 160px); } /* Middle left */
+  32% { transform: translate(90px, 240px); } /* Bottom Right */
+  40% { transform: translate(-90px, 160px); } /* Middle left */
+  48% { transform: translate(90px, 0); } /* Top Right */
+  56% { transform: translate(-90px, 0); } /* Top Left */
+  64% { transform: translate(-90px, 240px); } /* Bottom Left */
+  100% { transform: translate(-90px, 240px); } /* Bottom Left */
 }
 
 #drawK-text {
