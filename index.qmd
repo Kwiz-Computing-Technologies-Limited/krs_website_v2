@@ -304,7 +304,7 @@ card_header(
   htmltools::tags$div(
     id = "drawK-text",
   "Fullstack R for Enterprise and Research",
-  style = "font-size:20px; color: #e9945b; text-align: center; font-weight: bold;"))
+  style = "font-size:24px; color: #e9945b; text-align: center; font-weight: bold;"))
 
 
 card_body(
