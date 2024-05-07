@@ -687,7 +687,6 @@ Testimonials
 
 ```{r testimonials, echo=FALSE, message=FALSE, warning=FALSE}
 #| column: screen-inset-shaded
-#| margin-left: 20%
 # Render the slideshow
 htmltools::browsable(
   tags$html(
@@ -700,9 +699,10 @@ htmltools::browsable(
     ),
     
     tags$body(
-      slideshow_left_slide_v2(testimonials_cards, slide_id = "testimonials_slide", interval = 10000),
-    )
-  )
-)
+      tags$div(
+        style = "padding-left: 15%; padding-right: 15%;",
+        slideshow_left_slide_v2(testimonials_cards, slide_id = "testimonials_slide", interval = 10000)
+      ))
+  ))
 ```
 :::

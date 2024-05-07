@@ -229,9 +229,7 @@ testimonials_cards = list(
         tags$div(
           style = "padding-left: 30%; padding-right: 30%;",
           "Charity Begins at Home!",
-          "This website is created using Quarto in R, and we love it just as you do 🫡🫡",
-          "We are not only honing our skills and demonstrating our expertise and commitment to innovation, 
-        but also deepening our understanding of Your and our needs."
+          "This website is created using Quarto in R, and we love it just as you do 🫡🫡"
         )
       ),
       
@@ -240,6 +238,9 @@ testimonials_cards = list(
         style = "background-color: ; margin-right: 30%; text-align: center; padding: 50px;",
         class = "card-text",
         id = "bouncebutton-text",
+        
+        "We are not only honing our skills and demonstrating our expertise and commitment to innovation, 
+        but also deepening our understanding of Your and our needs.",
         
         tags$h2("We Like:"),
         tags$li("The Beautiful UI"),
